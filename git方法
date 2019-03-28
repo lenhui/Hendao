@@ -1,0 +1,65 @@
+git clone 网址（仓库网址）//克隆文件
+git status//查看当前状态
+git add .//添加所有文件到缓存区
+git commit -m '说明'
+git push origin master//压缩到主分区
+
+git branch test//创建分支
+git checkout test //切换分支
+
+{//合并分支
+https://www.cnblogs.com/NotEnough/p/9435966.html；
+
+    第一步： git branch brh（分支名称） //创建分支
+
+    3、切换分支
+    第二步： git checkout brh //切换到分支brh
+    
+    第三步： git add .//添加所有文件
+
+    第四步： git commit -m “xxx” //描述
+
+    第五步： git push -u origin brh 《=====》 git push origin brh //将文件压入分支
+    
+    第六步： git checkout master //切换到主分区
+    
+    第七步： git merge brh //分支合并
+
+    第八步： git push -u origin master ////将文件压入主分区
+
+
+    第九步： git branch -d brh //删除子分支
+
+
+    第十步：  git push origin --delete brh //删除远程子分支
+}
+
+
+git回退命令reset
+
+git log ：查看日志（历史更新）
+
+git reset --hard commit_id     //退到/进到 指定commit的sha码 commit_id:239afed0857cc2e77c17c01014077808619af64d
+
+$ git reset --hard commit_id(commit字符)
+
+$ git push origin HEAD --force
+
+
+git status : 比较本地与git仓库项目区别；
+
+git add . :将所有文件增加至本地git的缓冲区,注意.和add中间有个空格；
+
+git commit -m "<提交说明>" ：将修改的代码提交至本地仓库，提交说明有双引号；
+
+git push ：将本地仓库代码传至线上；
+
+git pull : 将线上的代码更新到本地；
+
+git checkout  <分支名称> ：将编码切换到这个分支下；
+
+git merge origin/<分支名称> : 将分支名称与主分支合并。
+
+从本地向线上提交项目：git add . => git commit -m "提交说明" => git push
+
+将子分支合并到主分支：git checkout master => git merge origin/<分支名称> => git push
