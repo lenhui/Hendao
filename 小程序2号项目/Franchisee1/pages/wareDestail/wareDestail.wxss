@@ -1,0 +1,74 @@
+/* pages/wareDestail/wareDestail.wxss */
+.headTitle{
+  width: 60%;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin:0 auto;
+  color:#0786D3;
+  font-size:50rpx;
+}
+.describe{
+  width: 90%;
+  height: 120rpx;
+  white-space: wrap;
+  margin: 0 auto;
+  font-size: 30rpx;
+  text-indent: 60rpx;
+  display: -webkit-box;
+ -webkit-box-orient: vertical;
+ -webkit-line-clamp:4;
+ overflow: hidden;
+}
+.detailsTitle{
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-left:30rpx;
+  color:#0786D3;
+}
+.pic{
+  width:90%;
+  margin:0 auto;
+  height:900rpx;
+}
+/* 立即预约 */
+.operation{
+ position: fixed;
+ bottom:0rpx;
+ width: 100%;
+ margin: 0 auto;
+ margin-top:50rpx;
+ /* margin-bottom:30rpx; */
+ display: flex;
+ justify-content: space-between;
+ background: #fff;
+ color:#707070;
+ font-size: 30rpx;
+}
+.operation .edit{
+  width:30%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right:1px solid #ccc;
+  border-top:1px solid #ccc;
+}
+.operation .lower{
+  width:30%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-right:1px solid #ccc;
+  border-top:1px solid #ccc;
+}
+.operation .del{
+  width:30%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+   text-align: center;
+  align-items: center;
+  border-top:1px solid #ccc;
+}

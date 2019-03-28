@@ -1,0 +1,19 @@
+<!--pages/demo/date.wxml-->
+<graceHeader title="日期+时间选择组件" desc="页面路径 pages/demo/date"></graceHeader>
+<view class="grace-padding grace-bg-white grace-common-mt grace-common-border">
+	<view class="grace-h3 grace-center"></view>
+	<view class="grace-form">
+		<form bindsubmit="formSubmit">
+			<view class="grace-items">
+				<view class="grace-label">出发日期</view>
+				<input type="text" class='input' name="startDate" disabled="{{true}}" value="{{date1}}" bindtap="showDate1"></input>
+			</view>
+			<view class="grace-items">
+				<view class="grace-label">出发时间</view>
+				<input type="text" class='input' name="endDate" disabled="{{true}}" value="{{date2}}" bindtap="showDate2"></input>
+			</view>
+		</form>
+	</view>
+	<graceDate show="{{show1}}" isTime="{{false}}" bind:changeDate="changeDate1"></graceDate>
+	<graceDate show="{{show2}}" currentHour="{{12}}" currenMinute="{{58}}" bind:changeDate="changeDate2"></graceDate>
+</view>

@@ -1,0 +1,30 @@
+<!--pages/Customer/Customer.wxml-->
+<view class="tip">
+  <view>选择联系</view>
+  <button open-type='contact' class='kefu' session-from='weapp' size="18">在线客服
+  <image src="../images/Customer1.png" style="width:50rpx;height:50rpx"></image>
+  </button> 
+  <view class="other">也可以在下方留言给我们</view>
+  </view>
+<view class="textarea">
+<textarea placeholder='请留言' style="font-size:30rpx;background: #fff;width:94%;padding-left:30rpx;height:200rpx;padding-top:20rpx" bindinput="contentInput" value="{{content}}"></textarea>
+</view>
+<view class="info">
+  <text>留下一下信息，方便与您及时联系</text>
+</view>
+<view class="name">
+  <view class="text">
+  <text>姓名：</text>
+  </view>
+  <input type="text" placeholder='(必填)' bindinput="nameInput" value="{{name}}"></input>
+</view>
+<view class="name">
+<view class="text">
+  <text>手机：</text>
+  </view>
+  <input type='number' placeholder='(必填)' bindinput="telInput" value="{{tel}}"></input>
+</view>
+<!-- 提交留言 -->
+<view class="btn" bindtap='submit'>
+  <text>提交留言</text>
+</view>

@@ -1,0 +1,94 @@
+<!--pages/register/register.wxml-->
+<view class="body">
+<view class="row">
+  <view class="info">
+    <input type="text" class="info-tel" placeholder="请输入您的姓名" bindinput='handleName' />
+  </view>
+</view>
+<view class="row">
+  <view class="info">
+    <input type="text" class="info-tel" placeholder="请输入您的用户名" bindinput='handleUserName' />
+  </view>
+</view>
+<view class="row">
+  <view class="info">
+    <input type="number" class="info-tel" placeholder="请输入您的手机号" bindinput='handleTel' />
+  </view>
+  <view class="btn" bindtap='getCode' disabled="{{disabled}}" style="background-color:{{color}}">{{getCode}}</view>
+</view>
+<view class="row">
+  <view class="info">
+    <input type="number" class="info-tel" placeholder="请输入您的验证码" bindinput='handleCode' />
+  </view>
+</view>
+<view class="row">
+  <view class="info">
+    <input type="password" class="info-tel" placeholder="请输入您的密码" bindinput='handlePwd' />
+  </view>
+</view>
+<view class="row">
+  <view class="info">
+    <input type="password" class="info-tel" placeholder="请再次确认您的密码" bindinput='handleAgain' />
+  </view>
+</view>
+<view class="row">
+  <view class="info">
+    <input type="type" class="info-tel" placeholder="请填写您的服务名称" bindinput='handleServerName' />
+  </view>
+</view>
+<!-- <view class="row" bindtap='jumpType'>
+  <view class="info">
+    <view class="left">
+      <text>请选择您的服务类型(可多选)</text>
+    </view>
+    <view class="right">
+      <text>></text>
+    </view>
+  </view>
+</view> -->
+ <!-- 项目2 -->
+		<view class="grace-accordion-items">
+			<view class="grace-accordion-title {{accordionActive == 'grace-accordion-2' ? 'grace-current' : ''}}" id="grace-accordion-2" bindtap="changeAccordion">
+				请选择您的服务类型
+				<text class="grace-list-imgs-arrow grace-iconfont icon-arrow-up" wx:if="{{accordionActive == 'grace-accordion-2'}}"></text>
+				<text class="grace-list-imgs-arrow grace-iconfont icon-arrow-down" wx:else></text>
+			</view>
+			<view class="grace-accordion-body" wx:if="{{accordionActive == 'grace-accordion-2'}}">
+				<view class="grace-list" style='border:none;'>
+        <block wx:for="{{checkboxBox}}" wx:key="">
+          <view class='items'>
+            <view class='title'>
+              <checkbox-group class="radio-group" bindchange='radioChange' data-id="{{item.id}}">
+    <label class="radio">
+    <checkbox value="" checked="{{item.checked}}" color="#feb70f" />{{item.type}}
+    </label>
+    </checkbox-group>
+            </view>
+          </view>
+        </block>
+					
+				</view>
+			</view>
+		</view>
+
+    <!-- 所在地址 -->
+<!-- 选择地理位置 -->
+<view class="section" bindtap="changeAccordion">
+  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+     <view class="picker">
+        <view>所在地区：</view>
+        <view>{{region[0]}}</view>
+        <view>{{region[1]}}</view>
+        <view>{{region[2]}}</view>
+        <!-- <text class="grace-list-imgs-arrow grace-iconfont icon-arrow-up" wx:if="{{accordionActive == 'grace-accordion-2'}}"></text>
+				<text class="grace-list-imgs-arrow grace-iconfont icon-arrow-down" wx:else></text> -->
+      </view>
+  </picker>
+</view>
+  <view class="address">
+  <!-- <input placeholder='详细地址：如道路、门牌号、小区、楼栋号、单元室等' style="padding-left:20rpx;font-size:30rpx;height:100rpx;line-height:100rpx"></input> -->
+    <textarea placeholder="详细地址：如道路、门牌号、小区、楼栋号、单元室等(选填)" bindinput='handleDesAdr'></textarea>
+  </view>
+<!-- 所在地址结束 -->
+<button class="submit" bindtap='submit'>提交</button>
+</view>

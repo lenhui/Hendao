@@ -1,0 +1,9 @@
+/* pages/navigation/navigation.wxss */
+/* page/near/near.wxss */
+page{
+  height: 100%;
+}
+#myMap{
+  width: 100%;
+  height: 100%;
+}

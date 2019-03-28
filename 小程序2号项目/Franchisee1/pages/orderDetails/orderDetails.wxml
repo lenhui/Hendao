@@ -1,0 +1,80 @@
+<!--pages/orderDetails/orderDetails.wxml-->
+<view class="container-orderText">
+	<!-- 订单详情 -->
+  <view class="orderText">
+    <view class="orderTitle">
+      <text>订单详情</text>
+      <text class="state" wx:if="{{status == 1}}">待接单</text>
+      <text class="state" wx:if="{{status == 6}}">服务中订单</text>
+      <text class="state" wx:if="{{status == 4}}">已完成</text>
+    </view>
+  </view>
+	<view class="text-box">
+		<view class="order-id">
+			<text>订单编号：{{orderLists.orderNumber}}</text>
+		</view>
+		<view class="order-id">
+			<text>预约项目：{{contentName}}</text>
+		</view>
+		<view class="order-id">
+			<text>下单时间：{{orderDate}}</text>
+		</view>
+    <view class="order-id">
+			<text>上门服务时间：{{orderDate}}</text>
+		</view>
+    <view class="order-id">
+      <view>
+        <text>用户图片详情：</text>
+      </view>
+      <view class="image-lists">
+        <block wx:for="{{imageLists}}">
+          <view class="image-item">
+            <image src="{{item}}" style="height:100%;width:100%"></image>
+          </view>
+        </block>
+      </view>
+			<!-- <text>下单时间:{{item.orderTime}}</text> -->
+		</view>
+		<view class="order-id">
+			<text>备注：{{orderLists.detail}}</text>
+		</view>
+	</view>
+	<!-- 客户信息 -->
+	<view class="customerText">
+	  <view class="customerTitle">
+	    <text>客户信息</text>
+	  </view>
+	</view>
+	<view class="text-box">
+		<view class="order-id">
+			<text>客户姓名：{{customerLists.name}}</text>
+		</view>
+		<view class="order-id">
+			<text>目的地：{{customerLists.address}}{{customerLists.addressDetail}}</text>
+		</view>
+		<!-- <view class="order-id">
+			<text>距离我：</text><text class="distance">{{item.distance}}</text>
+		</view> -->
+	</view>
+	<!-- 评论 -->
+	<view class="commentText">
+	  <view class="commentTitle">
+	    <text>评论我</text>
+			<!-- 星标 -->
+			<view style="width:35%;margin-right:40rpx">
+			   <graceStar value="{{startNum}}" canTap="{{false}}"></graceStar>
+			</view>
+		    <!-- 星标结束 -->
+	  </view>
+	</view>
+	<view class="comment-box">
+		<view class="comment-man" wx:if="{{status == 4}}">
+			<image src="{{user.avatarUrl}}" style="width:80rpx;height:80rpx"></image>
+			<text>{{user.nickName}}[{{commentDate}}]</text>
+		</view>
+		<view class="comment-content" >
+			<text>{{commentContent}}</text>
+		</view>
+	</view>
+</view>
+

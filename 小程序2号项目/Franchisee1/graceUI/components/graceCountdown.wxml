@@ -1,0 +1,8 @@
+<!--graceUI/components/countdown.wxml-->
+<view class="grace-countdown">
+	<view class="grace-countdown-numbers" style="border-color:{{borderColor}}; color:{{fontColor}}; background:{{bgrColor}};">{{h}}</view>
+	<view class="grace-countdown-splitor" style="color:{{splitorColor}}">:</view>
+	<view class="grace-countdown-numbers" style="border-color:{{borderColor}}; color:{{fontColor}}; background:{{bgrColor}};">{{i}}</view>
+	<view class="grace-countdown-splitor" style="color:{{splitorColor}}">:</view>
+	<view class="grace-countdown-numbers" style="border-color:{{borderColor}}; color:{{fontColor}}; background:{{bgrColor}};">{{s}}</view>
+</view>

@@ -1,0 +1,88 @@
+<!--pages/management/management.wxml-->
+<!-- 全部类别 -->
+<view class="shoppType">
+<!-- 默认排序 -->
+<view class="section">
+  <view class="section__title"></view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+    <view class='com-selectBox'>
+    <view class='com-sContent' bindtap='selectToggle2'>
+        <view class='com-sTxt'>
+          <view bindtap="{{BeginSearch}}" style="color:{{colorInput}}" class="text">
+            <text>{{array[index]}}</text>
+          </view>
+        </view>
+        <image src='../../pages/images/Arrow.png'  class='com-sBtn'  animation="{{animationData2}}"></image>
+    </view>
+</view>
+    </view>
+  </picker>
+</view>
+<!-- 区域 -->
+<view class="section">
+  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <view class="picker">
+    <view class='com-selectBox'>
+    <view class='com-sContent' bindtap='selectToggle'>
+        <view class='com-sTxt'>
+          <view bindtap="{{BeginSearch}}" style="color:{{colorInput}}" class="text">
+            <block wx:if="{{region[1] == '全部'}}">
+          {{region[0]}}
+        </block>
+        <block wx:elif="{{region[1] != '全部' && region[2] == '全部'}}">
+          {{region[1]}}
+        </block>
+         <block wx:else="{{region[2] != customItem || region[2] == '区域'}}">
+          {{region[2]}}
+        </block>
+          </view>
+        </view>
+        <image src='../../pages/images/Arrow.png'  class='com-sBtn'  animation="{{animationData}}"></image>
+    </view>
+</view>
+    </view>
+  </picker>
+</view>
+</view>
+<!-- 订单列表 -->
+  <view bindchange="change" current-item-id="{{docid}}" class="box">
+  <!-- <scroll-view bindscroll="scroll" scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}rpx;" bindscrolltolower="bindDownLoad" bindscroll="scroll" class="ordering"> -->
+   <view class="ordering">
+    <block wx:for="{{list}}" wx:key="">
+      <view class="nav" bindtap='jumPage' data-id="{{item.id}}" data-level="{{item.level}}" data-bioaji="red" wx:if="{{item.status == 1}}">
+        <view class="rows">
+          <view class="title">
+          <text class="red">（已被抢）</text>
+            <text>{{item.title}}</text>
+          </view>
+          <view class="des">
+            <text>{{item.mainContent}}</text>
+          </view>
+          <view class="date">
+            <text>{{item.date}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="nav" bindtap='jumPage' data-id="{{item.id}}" data-level="{{item.level}}" wx:else>
+        <view class="rows">
+          <view class="title">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="des">
+            <text>{{item.mainContent}}</text>
+          </view>
+          <view class="date">
+            <text>{{item.date}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class="hasmoreData" hidden='{{hasmoreData}}'>
+　　　　<view class="hasmoreData-text">暂无更多数据</view>
+　　</view>
+</view>
+  <!-- </scroll-view> -->
+</view>
+ 
+

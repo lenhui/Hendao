@@ -1,0 +1,5 @@
+<!--graceUI/components/graceAlert.wxml-->
+<view class="grace-alert {{show ? 'ganimate-show' : ''}}" hidden='{{!show}}'>
+	<view class='icon gaicon icon-{{msgtype}} {{msgtype}}'></view>
+	<view class="grace-alert-msg">{{msg}}</view>
+</view>

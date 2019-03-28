@@ -1,0 +1,151 @@
+/* pages/payment/payment.wxss */
+page{
+  background: #eee;
+}
+.lists-box{
+  background: #fff;
+}
+.lists-box .list-item{
+  height: 130rpx;
+  width: 90%;
+  margin:0 auto;
+  /* line-height: 100rpx; */
+  /* font-size:40rpx; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom:1px solid #eee;
+}
+.lists-box .list-item view text{
+   color:#808080;
+   font-size:35rpx;
+}
+.lists-box .line{
+  width:100%;
+  height: 1rpx;
+  /* background: red; */
+}
+.lists-box .list-item view .red{
+  color:#feb70f;
+}
+/* 支付方式 */
+.payment{
+  background: #fff;
+  margin-top:30rpx;
+}
+.payment .payment-method .left{
+  display: flex;
+  align-items: center;
+}
+.payment .payment-method{
+  width: 90%;
+  margin:0 auto;
+  display: flex;
+  align-items: center;
+  height:130rpx;
+  justify-content: space-between;
+}
+.payment .payment-method view text{
+  font-size:33rpx;
+  color:#808080;
+  margin-left:30rpx;
+}
+.payment-btn{
+  height: 130rpx;
+  width: 95%;
+  margin:0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:200rpx;
+  font-size:33rpx;
+  color:#fff;
+  background: #feb70f;
+  border-radius: 10rpx;
+}
+.cover{
+  position: fixed;
+  top:0;
+  height: 100%;
+  width:100%;
+  background: rgba(0,0,0,0.5)
+}
+/* 支付界面 */
+.payment-box{
+  position: fixed;
+  top:40%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 90%;
+  margin:0 auto;
+  background: #fff;
+  border-radius: 10rpx;
+  margin-top:30rpx;
+}
+.payment-box .title{
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+  /* margin-top:10rpx; */
+}
+.payment-box .title text{
+  font-size: 40rpx;
+}
+.payment-box .bianhao{
+  width: 90%;
+  margin:0 auto;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  font-size: 35rpx;
+  color:#808080;
+}
+.payment-box .bianhao .money{
+  color:#feb70f;
+  font-size: 48rpx;
+}
+.payment-box .pwd-input{
+  height: 120rpx;
+  display: flex;
+  width: 90%;
+  margin:0 auto;
+  background: #eee;
+}
+.payment-box .pwd-input input{
+  height: 120rpx;
+  line-height: 100rpx;
+  width: 100%;
+  text-align: left;
+  /* border:1px solid #000; */
+  padding-left:20rpx;
+  font-size: 40rpx;
+  color:#808080;
+}
+.box-bottom{
+  height: 120rpx;
+  width:90%;
+  margin:0 auto;
+  margin-top:50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.box-bottom .left{
+  width:47%;
+  text-align: center;
+  background: #eee;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 40rpx;
+}
+.box-bottom .right{
+  width:47%;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  background:#feb70f; 
+  color:#fff;
+  font-size: 40rpx;
+}

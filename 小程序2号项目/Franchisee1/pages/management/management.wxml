@@ -1,0 +1,75 @@
+
+<view class="content-container">
+      <!--左侧导航栏-->
+  <scroll-view class="classify-container" scroll-y="true" style="height:{{scrollHeight}}rpx">
+    <view class="classify {{classifySeleted==classify.id?'active':''}}" wx:for="{{goodsList}}" wx:for-item="classify" wx:key="id" data-id="{{classify.id}}" bindtap="tapClassify">
+      <view class="name">{{classify.classifyName}}</view>
+    </view>
+  </scroll-view> 
+      <!-- 右侧导航栏 -->
+  <scroll-view class="goods-container" scroll-y="true" scroll-into-view="{{classifyViewed}}" bindscroll="onGoodsScroll" style="height:{{scrollHeight}}rpx">
+    <view wx:for="{{goodsList}}" wx:for-item="classify" wx:key="id" class="class-common" id="{{classify.id}}">
+       <view class="title">{{classify.classifyName}}</view>
+        <!--列表栏-->
+        <view class="goods" wx:for="{{classify.goods}}" wx:for-item="id" wx:key="*this" bindtap="jumpTos" bindlongpress="edit">
+          <image class="pic" src="{{goods[id].pic}}"></image>
+          <view class="right">
+            <view class="rightText">
+               <view class="name ellipsis">{{goods[id].name}}</view>
+               <view class="sold">描述信息......</view>
+            </view>
+						<!-- 复选框 -->
+						<view class="state2" wx:if="{{editState}}">
+							<checkbox-group class="radio-group" catchtap='radioChange' data-index="{{index}}">
+								<label class="radio">
+								<checkbox value="" checked="{{item.checked}}" color="#06C2F6" />
+								</label>
+							</checkbox-group>
+						</view>
+						<!-- 复选框结束 -->
+            <!-- <view class="{{operText}}" catchtap='operation' data-id="{{goods[id].id}}">
+              <text>操作</text>
+            </view> -->
+						<!-- 操作编辑 -->
+						<!-- <view class="{{opera}}">
+            <view class="edit" catchtap='jumpEdit'>
+             <image src="../images/edit.png" style="width:40rpx;height:40rpx;"></image>
+             <text>编辑</text>
+            </view>
+            <view class="edit" catchtap='jumpDown' data-id="{{each.id}}">
+             <image src="../images/down.png" style="width:40rpx;height:40rpx;"></image>
+             <text>下架</text>
+            </view>
+            <view class="del" bindtap='jumpDel' data-id="{{each.id}}">
+             <image src="../images/del.png" style="width:40rpx;height:40rpx;"></image>
+             <text>删除</text>
+            </view>
+          </view> -->
+						<!-- 操作编辑结束 -->
+          </view>
+            <!-- <view class="price">￥{{item.price}}</view> -->
+        </view>
+     </view>
+  </scroll-view>
+        <!-- 添加服务 -->
+ <view class="add" catchtap='jumpAdd'>
+  <image src="../images/add.png" style="width:100%;height:100%;"></image>
+ </view>
+ <!-- 编辑 -->
+ <view class="operation" wx:if="{{editState}}">
+   <!-- <view class="edit" catchtap='jumpEdit'> -->
+   <!-- <image src="../images/edit.png" style="width:40rpx;height:40rpx;"></image> -->
+     <!-- <text>编辑</text> -->
+   <!-- </view> -->
+   <view class="{{lower}}" catchtap='jumpDown'>
+     <!-- <image src="../images/down.png" style="width:40rpx;height:40rpx;"></image> -->
+     <text>下架</text>
+   </view>
+   <view class="del" catchtap='jumpCancel'>
+   <!-- <image src="../images/del.png" style="width:40rpx;height:40rpx;"></image> -->
+     <text>取消</text>
+   </view>
+ </view>
+ <!-- 编辑结束 -->
+ </view>
+

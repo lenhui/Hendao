@@ -1,0 +1,38 @@
+/* pages/severType/severType.wxss */
+page{
+  background: #eee;
+}
+.radio-group{
+  /* width: 95%;
+  margin:0 auto; */
+  /* margin-top:35rpx; */
+ display: flex;
+ flex-direction: column;
+ font-size: 33rpx;
+}
+.radio{
+  padding-left:30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;
+  /* margin-top:30rpx;  */
+  border-top:1px solid #eee;
+}
+radio .wx-radio-input{
+    /* border-radius: 50%;  */
+    width:40rpx;
+    height: 0rpx;
+    border:none;
+}
+radio .wx-radio-input.wx-radio-input-checked::before{
+    /* border-radius: 50%; */
+    /* width: 44rpx; 
+    height: 44rpx; 
+    line-height: 44rpx; */
+    border:none;
+    text-align: center;
+    font-size: 60rpx; /* 对勾大小 26rpx */
+    color:#06C2F6; /* 对勾颜色 */
+    background: transparent;
+    border-color: transparent;
+}

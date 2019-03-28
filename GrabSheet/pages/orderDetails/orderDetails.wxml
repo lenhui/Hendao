@@ -1,0 +1,139 @@
+<!--pages/allOrder/allOrder.wxml-->
+<!--pages/tender/tender.wxml-->
+<!--pages/active/active.wxml-->
+<view class="container">
+  <!-- <block wx:for="{{contentData}}"> -->
+  <view class="headTitle">
+    <view class="text">{{contentTitle}}</view>
+    <view class="date">
+    <text>{{contentDate}}</text>
+  </view>
+  </view>
+  <!-- 图片 -->
+  <view wx:if="{{login}}">
+  <!-- <block wx:for="{{activePic}}"> -->
+    <!-- 联系电话 -->
+    <view class="tel">
+      <view class="name">
+        <view class="left">
+          <text>联系人：</text>
+        </view>
+        <view class="right">
+          <text>{{contentName}}</text>
+        </view>
+      </view>
+      <view class="telCall">
+      <view class="left">
+          <text>联系电话：</text>
+        </view>
+        <view class="right">
+          <text>{{contentPhone}}</text>
+        </view>
+      </view>
+      <view class="bottom">
+        <view class="call">
+          <view class="callIcon">
+          <image src="../images/call.png" style="width:100%;height:100%"></image>
+        </view>
+        <view class="telNum" bindtap='telCall'>
+          <text>拨打电话</text>
+        </view>
+        </view>
+        <view class="orderState" wx:if="{{orderState == 0}}" bindtap='orderState'>
+        <text>确定完成订单</text>
+        </view>
+        <view class="orderStated" wx:else>
+        <text>已完成</text>
+        </view>
+      </view>
+
+      <!-- <view class="bottom">
+      <view class="call">
+        <view class="callIcon">
+          <image src="../images/call.png" style="width:100%;height:100%"></image>
+        </view>
+        <view class="telNum">
+          <text>拨打电话</text>
+        </view>
+      </view>
+       <view class="orderState">
+         <view>
+          <text>待处理订单</text>
+        </view>
+        </view> -->
+        <!-- </view> -->
+    </view>
+    <!-- 详细描述 -->
+    <view class="detailTitle">
+      <text>详细描述</text>
+    </view>
+    <!-- 详情内容 -->
+    <view class="destailContent">
+      <view class="main-title">
+        <text>{{contentMain}}</text>
+      </view>
+      <view class="textdes">
+        <text>{{contentDes}}</text>
+      </view>
+      <!-- 联系方式 -->
+      <view class="contact-method">
+        <view>
+          <text>十二、联系方式：</text>
+        </view>
+        <view class="desInfo">
+          <text>{{contactMethod}}</text>
+        </view>
+        <!-- <view class="desInfo">
+          <view class="title">
+            <text>招标代理机构：</text>
+          </view>
+          <view class="mechanism">
+            <text>广东恒道有限公司{{mechanism}}</text>
+          </view>
+        </view>
+        <view class="desInfo">
+          <view class="title">
+            <text>详细地址：</text>
+          </view>
+          <view class="mechanism">
+            <text>{{province}}{{city}}{{area}}{{address}}</text>
+          </view>
+        </view> -->
+      </view>
+       <!-- <view class="relevant">
+      <text>相关信息</text>
+    </view>
+    <block wx:for="{{relevants}}" wx:key="">
+    <view bindtap='jumpPage' class="nav" data-id="{{item.id}}" data-level="{{item.level}}">
+      <view class="listAll">
+       <view class="leftText">
+          <text>【{{item.date}}】</text>
+          <text>【{{item.city}}】</text>
+          <text>{{item.title}}</text>
+        </view>
+        <view class="rightDate">
+          <text>{{item.dateDes}}</text>
+        </view>
+      </view>
+      </view>
+    </block> -->
+    </view>
+  <!-- </block> -->
+  <!-- 声明 -->
+  <!-- <view class="say">
+    <text>声明：所载文章、图片、数据等内容以及相关文章评论纯属个人观点和网友自行上传，并不代表本站立场，如发现有违法信息或侵权行为，请留言，或直接与本站管理员联系，我们将在收到您的信息后24小时内做出删除处理</text>
+  </view> -->
+  </view>
+  
+    <!-- 商标信息 -->
+  <view class="contact">
+    <text>Copyright © {{companyInfo.company}}</text>
+    <view bindtap='telCall1'>
+    <text>资讯热线：{{companyInfo.phone}}</text>
+    </view>
+    <view bindtap='telCall2'>
+    <text>固话热线：{{companyInfo.landline}}</text>
+    </view>
+  </view>
+  <!-- 商标信息结束 -->
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "服务管理",
+  "navigationBarBackgroundColor": "#feb70f",
+	 "enablePullDownRefresh": true,
+  "navigationBarTextStyle": "white"
+}

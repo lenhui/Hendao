@@ -1,0 +1,88 @@
+
+<view class="body">
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class="row">
+  <view class="info">
+  <view>
+    <text>姓名：</text>
+    </view>
+  <!-- <text>姓名：</text> -->
+    <input type="text" class="info-tel" name="name" value="{{name}}" disabled='disabled' bindtap='handleName' placeholder-style="color:#ccc" />
+  </view>
+</view>
+<view class="row">
+  <view class="info">
+    <view>
+    <text>用户名：</text>
+    </view>
+    <input type="text" class="info-tel" name="userName" value="{{userName}}" disabled='disabled' bindtap ='handleUsername' placeholder-style="color:#ccc" />
+  </view>
+</view>
+<view class="row">
+  <view class="info">
+  <view>
+    <text>密码：</text>
+    </view>
+  <!-- <text>密码：</text> -->
+    <input type="password" class="info-tel" name="password" value="{{password}}" placeholder="请输入您的密码" placeholder-style="color:#ccc" bindblur="loseFocus" />
+  </view>
+</view>
+<view class="row">
+  <view class="info">
+  <view>
+    <text>确认密码：</text>
+    </view>
+  <!-- <text>确认密码：</text> -->
+    <input type="password" class="info-tel" name="apassword" value="{{password}}" placeholder="请确认您的密码" placeholder-style="color:#ccc" bindblur="loseFocusA" />
+  </view>
+</view>
+<view class="row">
+  <view class="info">
+  <view>
+    <text>手机号：</text>
+    </view>
+  <!-- <text>手机号：</text> -->
+    <input type="number" class="info-tel" name="phone" value="{{phone}}" placeholder="请输入您的手机号" placeholder-style="color:#ccc" />
+  </view>
+</view>
+<view class="row">
+  <view class="info">
+  <view>
+    <text>邮箱号：</text>
+    </view>
+  <!-- <text>邮箱号：</text> -->
+    <input type="text" class="info-tel" name="email" value="{{email}}" placeholder="请输入您的邮箱号"          placeholder-style="color:#ccc"/>
+  </view>
+</view>
+ 
+<view class="row">
+  <view class="info">
+  <view>
+    <text>所在公司：</text>
+    </view>
+  <!-- <text>确认密码：</text> -->
+    <input type="text" class="info-tel" name="company" value="{{company}}" placeholder="请输入您所在公司" placeholder-style="color:#ccc" />
+  </view>
+</view>
+<view class="row">
+  <view class="info">
+  <view>
+    <text>所在职位：</text>
+    </view>
+  <!-- <text>所在职位：</text> -->
+    <input type="text" class="info-tel" name="position" value="{{position}}" placeholder="请输入您所在职位" placeholder-style="color:#ccc" />
+  </view>
+</view>
+<view class="row">
+  <view class="info">
+  <view>
+    <text>所属行业：</text>
+    </view>
+  <!-- <text>所属行业：</text> -->
+    <input type="text" class="info-tel" name="industry" value="{{industry}}" placeholder="请输入您所属行业" placeholder-style="color:#ccc" />
+  </view>
+</view>
+<button class="submit" formType="submit">提交</button>
+</form>
+<!-- formType="submit" -->
+</view>

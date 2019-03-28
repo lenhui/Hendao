@@ -1,0 +1,6 @@
+/* graceUI/components/graceSpeaker.wxss */
+.grace-swiper-msg{width:100%; margin:0; padding:3px 0; display:flex; flex-wrap:nowrap;}
+.grace-swiper-msg-icon{width:20px; margin:5px; flex-shrink:0;}
+.grace-swiper-msg-icon image{width:20px; height:20px;}
+.grace-swiper-msg swiper{width:100%; height:30px;}
+.grace-swiper-msg swiper-item{line-height:30px;}

@@ -1,0 +1,78 @@
+/* page/feedBack/feedBack.wxss */
+.textarea-wrp{
+  padding-left:30rpx;
+  padding-right: 30rpx;
+  padding-top:20rpx;
+  border-top:1px solid #bfbfbf;
+  border-bottom:1px solid #bfbfbf;
+  font-size: 30rpx;
+}
+/* 上传照片 */
+.Upload{
+  width: 100%;
+  height: 180rpx;
+  /* line-height: 180rpx; */
+  /* margin: 0 auto; */
+  display:flex;
+  align-items: center; 
+}
+.Upload>image{
+  margin-left:20rpx; 
+}
+.photoBox{
+  width: 120rpx;
+  height: 120rpx;
+  border:1px solid #bfbfbf;
+  margin-left:20rpx;
+  position: relative;
+}
+.photoBox1{
+  display: none
+}
+.photoBox>image{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%)
+}
+.pic{
+  position: relative;
+}
+/* 删除图片 */
+.close{
+  position: absolute;
+  right: 0
+}
+.textDes{
+  width:50%;
+  font-size: 25rpx;
+  height: 180rpx;
+  line-height: 180rpx;
+  margin-left:20rpx;
+}
+.line{
+  width: 100%;
+  border-bottom:1px solid #bfbfbf;
+}
+/* 输入邮箱 */
+input{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left:20rpx;
+  font-size: 30rpx;
+}
+/* 提交 */
+.submit{
+  position: relative;
+  top:150rpx; 
+  width: 70%;
+  height: 100rpx;
+  line-height:100rpx;
+  margin: 0 auto;
+  background: #06C2F6;
+  color:#fff;
+  border:1px solid #eee;
+  border-radius: 40rpx;
+  text-align: center;
+  font-size:30rpx;
+}

@@ -1,0 +1,84 @@
+<!--pages/demo/tabfullpage.wxml-->
+<scroll-view class="grace-tab-title grace-center" scroll-x="true" id="grace-tab-title">
+	<view wx:for="{{tabs}}" style="width:20%" wx:for-index="index" wx:for-item="tab" class="{{tabCurrentIndex == index ? 'grace-tab-current' : ''}}" id="tabTag-{{index}}" wx:key="unique" bindtap="tabChange">{{tab.name}}</view>
+</scroll-view>
+<swiper class="grace-tab-swiper-full" current="{{swiperCurrentIndex}}" bindchange="swiperChange" style="height:{{tabHeight}}px;">
+	<!-- 循环新闻项目 -->
+	<swiper-item wx:for="{{newsAll}}" wx:for-item="news" wx:for-index="newsIndex" wx:key="unique">
+		<scroll-view scroll-y="true" data-scindex="{{newsIndex}}" bindscrolltolower="scrollend">
+			<view class="grace-news-list" style="padding:25rpx; width:700rpx;">
+				<view wx:for="{{news}}">
+					<view class="text-box" bindtap='jumpDestail' data-orderInfo="{{item.order_number}}">
+						<view class="text-top">
+							<view class="text-top-left">
+								<view class="server-type">
+									<text>{{item.type_one_name}}</text>
+								</view>
+								<view class="contact">
+									<text>{{item.order.name}}{{item.order.phone}}</text>
+								</view>
+							</view>
+							<view class="text-top-right">
+								<text>{{item.state}}</text>
+							</view>
+						</view>
+						<view class="text-center">
+							<view class="order-id">
+								<view class="pic">
+								</view>
+								<view class="order-num">
+									<text>订单ID：{{item.order_number}}</text>
+								</view>
+							</view>
+							<view class="order-time">
+								<view class="pic">
+								</view>
+								<view class="order-num">
+									<text>下单时间：{{item.create_time}}</text>
+								</view>
+								<view class="order-phone" catchtap='callPhone' data-phone="{{item.order.phone}}">
+									<image src="../images/phone.png" style="width:50rpx;height:50rpx"></image>
+								</view>
+							</view>
+              <view class="service-time">
+									<text>上门服务时间：{{item.service_time}}</text>
+								</view>
+							<view class="address">
+								<view class="pic">
+								</view>
+								<view class="order-num">
+									<text>目的地：{{item.order.address}}{{item.order.addressDetail}}</text>
+								</view>
+							</view>
+							<!-- <view class="remarks"> -->
+								<view class="remarks-text">
+									<text>备注：{{item.order.detail}}</text>
+								</view>
+								<!-- <text>备注：请准时服务</text> -->
+							</view>
+						<!-- </view> -->
+             <view class="address-copy">
+                <text class="copy" catchtap='copyAddress' data-address="{{item.order.address}}{{item.order.addressDetail}}">复制地址</text>
+                </view>
+						<view class="text-bottom">
+							<view class="position" catchtap='navigation' data-addrName="{{item.order.addressName}}" data-address="{{item.order.address}}" data-latitude="{{item.order.latitude}}" data-longitude="{{item.order.longitude}}">
+								<text>查看路线</text>
+							</view>
+              <!-- 判断订单的状态 -->
+							<view class="serverState" wx:if="{{item.state == '待接单'}}" catchtap='receipt' data-orderInfo="{{item.order_number}}" data-checkStatus="{{item.checkStatus}}">
+								<text>{{item.content}}</text>
+							</view>
+              <view class="serverState" wx:elif="{{item.state == '待服务'}}" catchtap='severing' data-orderInfo="{{item.order_number}}" data-checkStatus="{{item.checkStatus}}" data-status="{{item.status}}">
+								<text>{{item.content}}</text>
+							</view>
+              <view class="serverState" wx:elif="{{item.state == '已完成'}}">
+								<text>{{item.content}}</text>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+      <graceLoading loadingType="{{tabs[newsIndex].loadingType}}"></graceLoading>
+		</scroll-view>
+	</swiper-item>
+</swiper>

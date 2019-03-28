@@ -1,0 +1,67 @@
+<view class="container1">
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="name">
+    <input type="text" placeholder="联系人" bindinput='handleName'></input>
+  </view>
+  <view class="tel">
+    <input type="number" placeholder="手机号码" bindinput='handlePhone'></input>
+  </view>
+	<view class="time-box">
+		<view class="grace-form">
+			<form bindsubmit="formSubmit">
+				<view class="grace-items">
+					<view class="grace-label">服务时间</view>
+					<input type="text" class='input' name="endDate" disabled="{{true}}" value="{{date2}}" bindtap="showDate2"></input>
+				</view>
+			</form>
+		</view>
+		<graceDate show="{{show1}}" isTime="{{false}}" bind:changeDate="changeDate1"></graceDate>
+		<graceDate show="{{show2}}" currentHour="{{12}}" currenMinute="{{58}}" bind:changeDate="changeDate2"></graceDate>
+	</view>
+  <!-- 选择地理位置 -->
+<view class="section">
+  <!-- <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}"> -->
+     <view class="picker" bindtap="chooseLocation">
+        <view>所在地区：</view>
+        <view>{{address}}</view>
+        <!-- <view>{{region[0]}}</view>
+        <view>{{region[1]}}</view>
+        <view>{{region[2]}}</view> -->
+        <!-- <view class="Arrow"><text>></text></view> -->
+      </view>
+  <!-- </picker> -->
+</view>
+  <view class="address">
+  <input placeholder='详细地址：如道路、门牌号、小区、楼栋号、单元室等' style="padding-left:20rpx;font-size:30rpx;height:100rpx;line-height:100rpx" bindinput='handleDesAdr'></input>
+    <!-- <textarea placeholder="详细地址：如道路、门牌号、小区、楼栋号、单元室等"></textarea> -->
+  </view>
+    <view class="title">
+    <text>上传问题/需求图片（必填）</text>
+    </view>
+    <!-- 上传照片 -->
+    <view class="Upload">
+      <block wx:for="{{pic}}" wx:key="{{item.id}}">
+      <image src="{{item}}" style="width:120rpx;height:120rpx" data-index="{{index}}" bindlongpress="deletePic"></image>
+      </block>
+      <view class="{{photoBox}}" bindtap="chooseimage">
+        <image src="../../pages/images/photo.png" style="width:60rpx;height:60rpx"></image>
+    </view>
+</view>
+  <!-- </view> -->
+<!-- </view> --> 
+<!-- 文本框 -->
+<view class="remarks">
+	<text>备注：</text>
+   <input placeholder='' style="padding-left:20rpx;font-size:30rpx;height:100rpx;line-height:100rpx" bindinput='beizhu'></input>
+</view>
+<view class="btn">
+  <view class="left">
+    <text>定金：</text>
+    <text>30</text>
+  </view>
+  <view class="right" bindtap='submit'>
+    <text>提交订单</text>
+  </view>
+</view>
+</form>
+</view>

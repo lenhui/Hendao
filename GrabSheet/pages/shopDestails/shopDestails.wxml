@@ -1,0 +1,68 @@
+<!--pages/shopDestails/shopDestails.wxml-->
+<view class="container">
+  <!-- 商品展示图 -->
+  <block wx:for="{{shopDestails}}" wx:key="{{item.image}}">
+  <view class="imgShow">
+    <image src="{{item.image}}" style="width:100%;height:100%"></image>
+  </view>
+  <!-- 商品详情 -->
+  <view class="rows">
+    <view class="left">
+      <view class="title">
+        <text>{{item.name}}</text>
+      </view>
+      <!-- <view class="price">
+        <text>￥{{item.price}}</text>
+      </view> -->
+    </view>
+    <navigator url="../shop/shop" class="right" hover-class='none'>
+      <text>进入商城></text>
+    </navigator>
+  </view>
+  <!-- 供货机构 -->
+  <view class="rows1">
+    <view class="left">
+      <view class="name">
+        <text>供货机构</text>
+      </view>
+      <view class="mechanism">
+        <text>{{item.companyName}}</text>
+      </view>
+    </view>
+    <view class="right">
+      <view class="popularity">
+        <text>人气</text>
+      </view>
+      <view class="num">
+        <text>{{item.count}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 商品详情 -->
+  <view class="details">
+    <view class="text">商品详情</view>
+  </view>
+  <view class="detailsText">
+    <view class="destail">
+      <!-- <image src="{{item.detailsPic}}" style="width:100%;height:100%;"></image> -->
+      <text>{{item.detail}}</text>
+    </view>
+    <view class="tel">
+      <view bindtap='telCall'>{{item.consulting_way}}</view>
+      <view>或服务热线：4001053808</view>
+       <view>必卓工程欢迎来电咨询！</view>
+    </view>
+  </view>
+  </block>
+   <!-- 商标信息 -->
+  <view class="contact">
+    <text>Copyright © {{companyInfo.company}}</text>
+    <view bindtap='telCall1'>
+    <text>资讯热线：{{companyInfo.phone}}</text>
+    </view>
+    <view bindtap='telCall2'>
+    <text>固话热线：{{companyInfo.landline}}</text>
+    </view>
+  </view>
+  <!-- 商标信息结束 -->
+</view>

@@ -1,0 +1,28 @@
+
+<view class="content-container">
+      <!--左侧导航栏-->
+      <scroll-view class="classify-container" scroll-y="true" style="height:{{scrollHeight}}rpx">
+              <view class="classify {{classifySeleted==classify.id?'active':''}}" wx:for="{{goodsList}}" wx:for-item="classify" wx:key="id" data-id="{{classify.id}}" bindtap="tapClassify">
+                <view class="name">{{classify.classifyName}}</view>
+              </view>
+      </scroll-view> 
+      <!-- 右侧导航栏 -->
+      <scroll-view class="goods-container" scroll-y="true" style="height:{{scrollHeight}}rpx" scroll-into-view="{{classifyViewed}}" bindscroll="onGoodsScroll">
+        <view wx:for="{{goodsList}}" wx:for-item="classify" wx:key="id" id="{{classify.id}}">
+          <view class="title">{{classify.classifyName}}</view>
+          <!--列表栏-->
+          <view class="goods" wx:for="{{classify.goods}}" wx:for-item="id" wx:key="*this" bindtap="jumpTos" data-goodsid="{{id}}">
+            <image class="pic" src="{{goods[id].pic}}"></image>
+            <view class="rightText">
+            <view class="name ellipsis">{{goods[id].name}}</view>
+            <view class="sold">描述信息......</view>
+            </view>
+            <!-- <view class="price">￥{{item.price}}</view> -->
+            <!-- <view class="addCart" bindtap="tapAddCart" data-id="{{id}}">
+            <image src="/imgs/shop/plus.png"></image>
+            </view> -->
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+

@@ -1,0 +1,103 @@
+/* page/cart/cart.wxss */
+page{
+  background: #eee;
+}
+.head{
+  width:100%;
+  height: 250rpx;
+  background: #06C2F6;
+}
+.head .goodsShop{
+  height: 150rpx;
+  line-height: 150rpx;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 37rpx;
+  color:#fff;
+  /* color:#E96F1E */
+}
+.List{
+  width: 90%;
+  margin: 0 auto;
+  margin-top:-100rpx;
+  display: flex;
+  /* border-radius: 30rpx; */
+  flex-direction: column
+  
+}
+.cartList{
+  height:200rpx;
+  background: #fff;
+  border-bottom:1px solid #eee;
+  margin-bottom:10rpx;
+  /* border-radius: 30rpx; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.listleft{
+  width: 30%;
+  height: 150rpx;
+  display: flex;
+  justify-content: center;
+}
+.listleft image{
+  width: 90%;
+  height: 150rpx;
+  margin: 0 auto;
+  border-radius: 20rpx;
+}
+.listRight{
+  width: 65%;
+  margin-right: 12rpx;
+  font-size: 28rpx;
+}
+.listTitle{
+  width: 100%;
+  line-height: 40rpx;
+  font-size: 35rpx;
+   white-space:normal !important;
+  display: -webkit-box;
+ -webkit-box-orient: vertical;
+ -webkit-line-clamp:2;
+ overflow: hidden;
+}
+.rightBottom{
+  margin-top:30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.goodsPrice{
+  width: 50%;
+  font-size: 35rpx;
+  color:red;
+}
+.count{
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 35rpx;
+}
+.minus{
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border:1px solid #666;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 35rpx;
+}
+.add{
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: #E96F1E;
+  border-radius: 50%;
+  text-align: center;
+  color:#fff;
+  font-size: 35rpx;
+}
+
+

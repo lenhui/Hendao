@@ -1,0 +1,119 @@
+/* pages/shopDestails/shopDestails.wxss */
+page{
+  background: #eee;
+}
+.imgShow{
+  width: 100%;
+  height: 450rpx;
+  border:1px solid #eee;
+}
+.rows{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom:1px solid #eee;
+  background: #fff;
+  height: 130rpx;
+
+  /* line-height: 60rpx; */
+}
+.rows .left{
+  margin-left:30rpx;
+  line-height: 80rpx;
+}
+.rows .left .title{
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.rows .left .price{
+  color:#E96F1E;
+}
+.rows .right{
+  margin-right: 30rpx;
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  background: #E96F1E;
+  font-size: 30rpx;
+  color:#fff;
+}
+.rows1{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-bottom:1px solid #eee;
+}
+.rows1 .left{
+  width:50%;
+  text-align: center;
+  border-right:1px solid #eee;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+.rows1 .left .name{
+  color:#8293A8;
+}
+.rows1 .right{
+  width:50%;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+.rows1 .right .popularity{
+   color:#8293A8;
+}
+/* 商品详情 */
+.details{
+  width:100%;
+  margin-top:10rpx;
+  background: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom:1px solid #eee;
+}
+.details .text{
+  margin-left:10rpx;
+  width: 180rpx;
+  text-align: center;
+  border-bottom: 1px solid #8293A8; 
+}
+.detailsText{
+  width:100%;
+  background: #fff;
+  padding-bottom:50rpx;
+}
+.detailsText .destail{
+  width: 95%;
+  margin: 0 auto;
+  line-height: 60rpx;
+  font-size: 33rpx;
+  padding-top:10rpx;
+  /* text-indent: 40rpx; */
+  /* height:1000rpx; */
+}
+.detailsText .tel{
+  margin-top:30rpx;
+  margin-left:20rpx;
+  line-height: 60rpx;
+  font-size: 33rpx; 
+}
+.contact{
+  width:100%;
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 50rpx;
+  color:#707070;
+  padding-top:10rpx;
+  padding-bottom:30rpx;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

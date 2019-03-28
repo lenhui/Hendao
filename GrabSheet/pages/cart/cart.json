@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "Broadcast": "../../Component/broadcast/broadcast",
+    "Iconimg": "../../Component/Icon/Icon"
+  },
+  "navigationBarTitleText": "购物车",
+  "navigationBarBackgroundColor": "#06C2F6",
+  "navigationBarTextStyle": "white"
+}

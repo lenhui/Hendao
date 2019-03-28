@@ -1,0 +1,37 @@
+<!--pages/demo/search.wxml-->
+<view>
+	<!-- 搜索条 -->
+	<view class="grace-gradient-bg" style="width:96%; padding:20rpx 2%; flex-wrap:nowrap;">
+		<view class="grace-search">
+      <view class="grace-search-btns">
+        <image src="https://staticimgs.oss-cn-beijing.aliyuncs.com/scan.png" mode='widthFix'></image>
+      </view>
+      <view class="grace-search-in">
+        <view class="grace-search-icon"></view>
+        <input type="search" bindinput="searchChange" bindconfirm="searchNow" value="{{searchKey}}" placeholder="关键字"></input>
+        <view class="grace-search-icon grace-search-clear" bindtap="clearKey" wx:if="{{searchClose}}"></view>
+      </view>
+		</view>
+	</view>
+	<!-- 搜索历史 -->
+	<view style="width:94%; padding:15rpx 3%;">
+		<view class="grace-title grace-nowrap grace-space-between">
+			<view class="grace-h5">搜索历史</view>
+			<view class="grace-more-r grace-search-remove"></view>
+		</view>
+		<view class="grace-tips">
+			<view>关键字</view>
+			<view>关键字</view>
+			<view>关键字</view>
+		</view>
+	</view>
+	<!-- 热门 -->
+	<view style="width:94%; padding:15rpx 3%;">
+		<view class="grace-h5">热门搜索</view>
+		<view class="grace-tips">
+			<view>关键字</view>
+			<view>关键字</view>
+			<view>关键字</view>
+		</view>
+	</view>
+</view>

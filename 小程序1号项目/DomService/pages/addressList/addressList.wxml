@@ -1,0 +1,36 @@
+<scroll-view class="scroll" scroll-y="true">
+  <view wx:for="{{addressList}}">
+    <view class="product-name-wrap">
+    <!-- 默认选中框 -->
+    <checkbox-group class="radio-group" bindchange="radioChange">    
+     <label class="radio">   
+     <checkbox value="{{item.value}}" checked="{{item.checked}}" 
+     color="red" />
+     <!-- 中心内容 -->
+     
+     <!-- 中心内容结束 -->
+    </label>
+   </checkbox-group>
+    <!-- 默认选中框结束 -->
+    <view>
+      <view class="ui-list-item-info">{{item.consignee}}
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text> {{item.mobile}}
+      </view>
+      <view class="ui-list-item-address">
+        {{item.address}}
+      </view>
+      <view class="ui-list-item-time">
+        <p>{{item.transportDay}}</p>
+        <p class="ui-list-item-del" data-id="{{index}}" bindtap="delAddress">删除</p>
+        <!-- <text class="ui-list-item-del" data-id="{{index}}" bindtap="delAddress">修改</text> -->
+      </view>
+      </view> 
+    </view>
+    <!-- 分割线 -->
+    <view class="separate"></view>
+  </view>
+</scroll-view>
+<view class="add-address" bindtap="addAddress">
+  <image class="add-img"  src="../images/add.png"></image>
+  <text>新增地址</text>
+</view>

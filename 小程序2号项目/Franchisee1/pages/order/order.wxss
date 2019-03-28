@@ -1,0 +1,126 @@
+/* page/myOrder/myOrder.wxss */
+.grace-tab-title.grace-center{
+	display: flex;
+	justify-content: space-around !important;
+	text-align: none !important;
+}
+.service-time{
+  color:#878787 !important;
+}
+.address-copy{
+  width:100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.copy{
+ /* text-align: right; */
+  color:#001D26;
+  font-size: 23rpx;
+}
+.order-state-number{
+	font-size: 20rpx;
+	margin-top:30rpx;
+	background: red;
+	display: block;
+	color:#fff;
+	border-radius: 50%;
+}
+.grace-tab-current{
+	width: 30%;
+	display: flex;
+	color:#06C2F6;
+	border-bottom:6rpx solid #06C2F6 !important;
+}
+.text-box{
+	color:#878787;
+	margin-bottom:30rpx;
+}
+.text-top{
+	display: flex;
+	height: 120rpx;
+	align-items: center;
+	justify-content: space-between;
+	border-top:1px solid #eee;
+	border-bottom:1px solid #eee;
+}
+.text-top .text-top-left{
+	display: flex;
+	height: 120rpx;
+	align-items: center;
+}
+.text-top .text-top-left .server-type{
+	background:#06C2F6;
+	color:#fff;
+	height: 60rpx;
+	line-height: 60rpx;
+	padding-left:20rpx;
+	padding-right:20rpx;
+	border-top-right-radius:50rpx;
+	border-bottom-right-radius: 50rpx;
+	font-size: 32rpx;
+}
+.text-top .text-top-left .contact{
+	margin-left:10rpx;
+	font-size: 32rpx;
+}
+.text-top-right{
+	font-size: 32rpx;
+	color:#D49457
+}
+.text-center-top .left{
+	display: flex;
+}
+.order-id,.order-time,.address,.remarks{
+	display: flex;
+	height: 50rpx;
+	align-items: center;
+	font-size: 30rpx;
+}
+.remarks-text{
+  color:#878787 !important;
+}
+.order-id view,.order-time view,.address view,.remarks view{
+	color:#878787 !important;
+}
+.order-phone{
+	margin-left:215rpx;
+	/* width:60rpx; */
+	/* height:60rpx; */
+	/* border: 1px solid #06C2F6; */
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.text-bottom{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	height: 100rpx;
+	align-items: center;
+	border-top:1px solid #eee;
+	border-bottom:1px solid #eee;
+	margin-top:20rpx;
+}
+.text-bottom .position{
+	width: 50%;
+	height: 100rpx;
+	line-height: 100rpx;
+	text-align: center;
+	border-right: 1px solid #eee;
+	color:#06C2F6;
+}
+.text-bottom .serverState{
+	width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	text-align: center;
+	color:#06C2F6;
+}
+::-webkit-scrollbar {
+ width: 0;
+ height: 0;
+ color: transparent;
+}

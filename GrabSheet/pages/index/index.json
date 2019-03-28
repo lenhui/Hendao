@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "Broadcast": "../../Component/broadcast/broadcast",
+    "Iconimg": "../../Component/Icon/Icon"
+  },
+  "navigationBarTitleText": "清洗招标平台",
+  "navigationBarBackgroundColor": "#06C2F6",
+  "navigationBarTextStyle": "white"
+}

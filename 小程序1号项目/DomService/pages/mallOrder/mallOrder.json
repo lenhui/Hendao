@@ -1,0 +1,7 @@
+{
+ "component": true,
+"usingComponents": {},
+"navigationBarTitleText": "商城订单",
+"navigationBarBackgroundColor": "#feb70f",
+"navigationBarTextStyle": "white"
+}

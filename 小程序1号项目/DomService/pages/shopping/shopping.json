@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "Broadcast": "../../Component/broadcast/broadcast",
+    "Iconimg": "../../Component/Icon/Icon"
+  },
+  "navigationBarTitleText": "商城页面",
+  "navigationBarBackgroundColor": "#feb70f",
+  "navigationBarTextStyle": "white"
+}

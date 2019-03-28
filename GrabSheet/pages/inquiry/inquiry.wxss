@@ -1,0 +1,144 @@
+/* pages/inquiry/inquiry.wxss */
+/* pages/active/active.wxss */
+page{
+  background: #fff;
+}
+.headTitle{
+  padding-top:10rpx;
+  padding-bottom:10rpx;
+  background: #eee;
+  font-weight: 800;
+  width: 100%;
+  white-space:normal !important;
+  display: -webkit-box;
+ -webkit-box-orient: vertical;
+ -webkit-line-clamp:2;
+ overflow: hidden;
+ line-height: 60rpx;
+}
+.headTitle .text{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.date{
+  font-size: 30rpx;
+  font-weight: 400;
+  color:#bfbfbf;
+  margin-left: 20rpx;
+}
+.nav{
+  background: #fff;
+}
+.inquiry_box{
+  padding-bottom:20rpx;
+  background: #fff
+}
+.mainContent{
+  font-size: 30rpx;
+  padding-top:20rpx;
+  padding-left: 10rpx;
+  text-indent: 2rem;
+  line-height: 60rpx;
+  background: #fff;
+}
+.img{
+  width:100%;
+  height: 450rpx;
+}
+.contentText{
+  font-size: 30rpx;
+  text-indent: 40rpx;
+  padding-left:15rpx;
+  padding-right: 15rpx;
+  line-height: 65rpx;
+}
+/* 查看更多行业信息 */
+.inquiryMore{
+  width: 95%;
+  margin:0 auto;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  margin-top:40rpx;
+  background: #fff;
+  color:#707070;
+  border:1px solid #bfbfbf;
+}
+.content{
+  font-size: 30rpx;
+  padding-left: 10rpx;
+  text-indent: 2rem;
+  line-height: 60rpx;
+  background: #fff;
+}
+.activePic{
+width: 100%;
+/* height: 300rpx; */
+/* margin-top:10rpx; */
+/* margin-bottom:10rpx; */
+}
+.say{
+  /* width: 90%; */
+  margin: 0 auto;
+  /* margin-top:30rpx; */
+  padding:20rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  background:#fff;
+  color:#707070;
+  margin-bottom:40rpx; 
+}
+/* 相关信息 */
+.relevant{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-top:1px solid #bfbfbf;
+  border-bottom:1px solid #bfbfbf;
+  background: #eee;
+  font-weight: 800;
+  font-size: 33rpx;
+}
+.relevant text{
+  margin-left: 20rpx;
+}
+.listAll{
+  background: #fff;
+  display: flex;
+  line-height: 60rpx;
+  border-bottom:1px solid #eee;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30rpx;
+  color:#707070;
+}
+.listAll .leftText{
+  width: 72%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left:20rpx;
+}
+.listAll .rightDate{
+  margin-right: 20rpx;
+  font-size: 33rpx;
+}
+.contact{
+  width:100%;
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 50rpx;
+  color:#707070;
+  padding-top:30rpx;
+  padding-bottom:30rpx;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

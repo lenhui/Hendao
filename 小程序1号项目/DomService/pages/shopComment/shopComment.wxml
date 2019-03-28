@@ -1,0 +1,29 @@
+<!--pages/comment/comment.wxml-->
+<view class="container">
+<view class="listAll" bindtap='jumpshopDes'>
+        <view class="leftOrder">
+          <image src="../images/2.jpg" style="width:200rpx;height:200rpx"></image>
+        </view>
+        <view class="rightorder">
+          <view class="title">
+            <text>海天招牌拌饭酱（香辣香菇味）300g海天出品</text>
+          </view>
+          <view class="bottom">
+          <view class="price">
+          <text class="dollar">￥22</text>
+          <text>{{item.price}}元</text>
+          </view>
+          <view class="number">
+            <text>共{{item.num}}1件</text>
+          </view>
+          </view>
+        </view>
+      </view>
+	<!-- 用户评论 -->
+	<view class="comment-textarea">
+		<textarea name="" id="" placeholder="不错,不错,快递很快，东西也很好用!"></textarea>
+	</view>
+	<view class="tijiao">
+		<text>提交</text>
+	</view>
+</view>

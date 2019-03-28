@@ -1,0 +1,88 @@
+/* pages/addressList/addressList.wxss */
+page{  
+  display: flex;  
+  flex-direction: column;  
+  height: 100%;  
+}  
+.product-name-wrap{
+  margin: 0px 10px;
+  font-size: 14px;
+  color: #404040;
+  display: flex;
+}
+.ui-list-item-info{
+  margin: 5px 0px;
+}
+.ui-list-item-address{
+  color: #585c64;
+}
+.ui-list-item-time{
+  margin: 5px 0px;
+}
+.ui-list-item-del{
+  position: absolute;
+  right: 10px;
+  color: #585c64;
+}
+/* 分割线 */
+
+.separate {
+  margin: 5px 0px;
+  height: 2rpx;
+  background-color: #f2f2f2;
+}
+.add-address{
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 150px;
+  height: 35px;
+  border: 1px #000 solid;
+  line-height: 35px;
+  text-align: center;
+  color: #000;
+  border-radius: 5rpx;
+  display: block;
+}
+.add-img{
+  margin-right: 15rpx;
+  width: 15px;
+  height: 15px;
+}
+.radio-group{
+  /* width: 95%;
+  margin:0 auto; */
+  /* margin-top:35rpx; */
+ display: flex;
+ flex-direction: column;
+ font-size: 33rpx;
+}
+.radio{
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;
+  /* margin-top:30rpx;  */
+  /* border-top:1px solid #eee; */
+}
+.radio checkbox{
+  transform:scale(0.8,0.8)
+}
+checkbox .wx-radio-input{
+    border-radius: 50%; 
+    width:30rpx;
+    height: 30rpx;
+    border:none;
+}
+checkbox .wx-radio-input.wx-radio-input-checked::before{
+    /* border-radius: 50%;
+    width: 44rpx; 
+    height: 44rpx; 
+    line-height: 44rpx; */
+    border:none;
+    text-align: center;
+    font-size: 60rpx; /* 对勾大小 26rpx */
+    color:red; /* 对勾颜色 */
+    /* background: transparent;
+    border-color: transparent; */
+}

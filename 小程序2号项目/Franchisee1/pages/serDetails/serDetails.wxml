@@ -1,0 +1,52 @@
+<!--pages/serDetails/serDetails.wxml-->
+<!-- <text>pages/serDetails/serDetails.wxml</text> -->
+<view class="body" style="margin-bottom:100rpx;">
+  <view class="headTitle">
+    <text>专业的空调清洗服务</text>
+  </view>
+  <view class="describe">
+    <text>家用中央空调在装修水电进场前就要开始安装，并且需要充分考虑用户的房屋结构、生活习惯、排线布管等方面进行设计。在大金Proshop店，专业的空调工程师会综合考虑用户的需求为您打造个性化的空气解决方案。家用中央空调在装修水电进场前就要开始安装，并且需要充分考虑用户的房屋结构、生活习惯、排线布管等方面进行设计。在大金Proshop店，专业的空调工程师会综合考虑用户的需求为您打造个性化的空气解决方案。</text>
+  </view>
+  <view class="detailsView">
+    <view class="detailsTitle">
+      <text>专业的服务</text>
+    </view>
+    <view class="pic">
+      <image src="../images/des1.jpg" style="width:100%;height:100%"></image>
+    </view>
+    <view class="detailsTitle">
+      <text>设备展示</text>
+    </view>
+    <view class="pic">
+      <image src="../images/dev9.png" style="width:100%;height:100%"></image>
+    </view>
+    <view class="pic">
+      <image src="../images/dev2.jpg" style="width:100%;height:100%"></image>
+    </view>
+    <view class="pic">
+      <image src="../images/dev3.jpg" style="width:100%;height:100%"></image>
+    </view>
+  </view>
+  <view class="detailsTitle">
+      <text>项目优势</text>
+    </view>
+    <view class="pic">
+      <image src="../images/dev6.jpg" style="width:100%;height:100%;"></image>
+    </view>
+    <!-- 立即预约 -->
+    <view class="operation">
+      <view class="edit" bindtap='jumpEdit'>
+      <image src="../images/edit.png" style="width:40rpx;height:40rpx;"></image>
+        <text>编辑</text>
+      </view>
+      <view class="lower" bindtap='jumpDown'>
+        <image src="../images/down.png" style="width:40rpx;height:40rpx;"></image>
+        <text>下架</text>
+      </view>
+     <!-- <view class="del">
+      <image src="../images/del.png" style="width:40rpx;height:40rpx;"></image>
+        <text>删除</text>
+      </view> -->
+    </view>
+</view>
+

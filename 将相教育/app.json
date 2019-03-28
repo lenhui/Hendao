@@ -1,0 +1,55 @@
+{
+  "pages": [ 
+    "pages/index/index",
+    "pages/videos/videos",
+    "pages/feedBack/feedBack",
+    "pages/corporate/corporate",
+    "pages/corpdestail/corpdestail",
+    "pages/wxLogin/wxLogin",
+    "pages/customer/customer",
+    "pages/uploadVideo/uploadVideo",
+    "pages/severType/severType",
+    "pages/login/login",
+    "pages/mine/mine",
+    "pages/search/search",
+    "pages/channel/channel",
+    "pages/playing/playing",
+    "pages/logs/logs"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "腾讯视频",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#2f2f2f",
+    "selectedColor": "#06C2F6",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "text": "首页",
+        "iconPath": "pages/images/index.png",
+        "selectedIconPath": "pages/images/index-xuanzhong.png",
+        "pagePath": "pages/index/index"
+      },{
+        "text": "留言",
+        "iconPath": "pages/images/liuyan.png",
+        "selectedIconPath": "pages/images/liuyan-xuanzhong.png",
+        "pagePath": "pages/feedBack/feedBack"
+      },
+      {
+        "text": "我的",
+        "iconPath": "pages/images/my.png",
+        "selectedIconPath": "pages/images/my-xuanzhong.png",
+        "pagePath": "pages/mine/mine"
+      }
+    ]
+  }
+}

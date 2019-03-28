@@ -1,0 +1,23 @@
+<!--pages/nearSerive/nearSerive.wxml-->
+<view class="body">
+  <view class="pic">
+    <image src="../images/franchiser2.jpg" style="width:100%;height:350rpx"></image>
+  </view>
+  <view class="content">
+    <view class="title">
+      <text>加盟商简介</text>
+    </view>
+    <view class="des">
+      <text>广东洁邦环保工程有限公司（简称洁邦家政）成立于2010年，是一家专注于精细化现代家政服务和工程保洁的实体公司。公司开创一站式家政服务商业模式，注重标准化服务和清洁产品自主研发，凭借灵活的经营模式和高标准服务体系赢得众多终端客户认可。2016年，洁邦家政借助互联网成熟的渠道、专业技术经验、质量上乘的产品口碑和创新研发技术，建立了以生产、销售、技术培训、营销推广、O2O服务模式于一体的多元化整合营销体系，为有志于环保科技行业创业者提供一站式的解决方案，为社会各届战略合作伙伴提供坚实的营运基础和雄厚的技术保障。</text>
+    </view>
+    <view class="title">
+      <text>品牌优势</text>
+    </view>
+    <view class="des">
+      <text>洁邦家政以家庭服务为核心设计所有产品及流程，行业首家家政服务套餐会员卡模式，大幅度提高了客户满意度和员工稳定性的同时，显著提升公司的盈利能力与员工的收入水平。通过向客户提供有执行标准的加盟服务，颠覆传统家政行业无法控制服务品质、无法累积客户与员工的中介模式。</text>
+    </view>
+  </view>
+  <view class="contact" bindtap='chooseServer'>
+    <text>选择服务</text>
+  </view>
+</view>

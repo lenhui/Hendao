@@ -1,0 +1,83 @@
+/* pages/Customer/Customer.wxss */
+.tip{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-top:30rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  margin-bottom:20rpx;
+  position: relative;
+}
+.kefu{
+  /* width: 300rpx; */
+  display: flex;
+  align-items: center;
+  font-size: 35rpx;
+  /* background: #06C2F6; */
+  color: #feb70f;
+  border-radius: 50rpx;
+  background: none;
+  margin-left:-25rpx; 
+}
+button::after {
+    border: none;
+}
+.other{
+  position: absolute;
+  right: 35rpx;
+  margin-left:-40rpx;
+}
+.textarea{
+  margin-top:20rpx;
+  width: 90%;
+  margin: 0 auto;
+  border:1px solid #bfbfbf;
+}
+.info{
+  width: 90%;
+  margin: 0 auto;
+  margin-top:30rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  margin-bottom:20rpx;
+}
+.name{
+  width: 90%;
+  margin:0 auto;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  font-size: 30rpx;
+  border:1px solid #bfbfbf;
+  margin-bottom:30rpx;
+}
+
+.name text{
+  display: inline-block;
+  width: 100rpx;
+  margin-left: 10rpx;
+}
+
+.name input{
+  height: 80rpx;
+  line-height: 80rpx;
+}
+/* 提交留言 */
+.btn{
+  width: 90%;
+  margin: 0 auto;
+  margin-top:50rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background: #feb70f;
+  color:#fff;
+  font-size: 33rpx;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

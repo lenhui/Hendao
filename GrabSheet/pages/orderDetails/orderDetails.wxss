@@ -1,0 +1,194 @@
+/* pages/allOrder/allOrder.wxss */
+/* pages/tender/tender.wxss */
+/* pages/active/active.wxss */
+page{
+  background: #eee;
+}
+.headTitle{
+  padding-top:10rpx;
+  padding-bottom:10rpx;
+  background: #eee;
+  font-weight: 800;
+  width: 100%;
+  white-space:normal !important;
+ line-height: 60rpx;
+}
+.headTitle .text{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.date{
+  font-size: 30rpx;
+  font-weight: 400;
+  color:#bfbfbf;
+  margin-left: 20rpx;
+}
+.activePic{
+width: 100%;
+height: 1200rpx;
+}
+.say{
+  margin-top:30rpx;
+  width: 90%;
+  margin: 0 auto;
+  padding:20rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  background: #eee;
+  color:#8293A8;
+  margin-bottom:60rpx; 
+}
+/* 相关信息 */
+.relevant{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-top:1px solid #bfbfbf;
+  border-bottom:1px solid #bfbfbf;
+  background: #eee;
+  font-weight: 800;
+  font-size: 33rpx;
+}
+.relevant text{
+  margin-left: 20rpx;
+}
+.listAll{
+  background: #fff;
+  display: flex;
+  line-height: 60rpx;
+  border-bottom:1px solid #eee;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30rpx;
+  color:#707070;
+}
+.listAll .leftText{
+  width: 72%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left:20rpx;
+}
+.listAll .rightDate{
+  margin-right: 20rpx;
+}
+/* 查看更多招标信息 */
+.tenderMore{
+  width: 95%;
+  margin:0 auto;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  margin-top:40rpx;
+  background: #fff;
+  color:#707070;
+  border:1px solid #bfbfbf;
+}
+.contact{
+  width:100%;
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 50rpx;
+  color:#707070;
+  padding-top:10rpx;
+  margin-top:30rpx;
+  padding-bottom:30rpx;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color:#fff;
+  margin-top:30rpx;
+}
+/* 联系方式 */
+.tel{
+  width:100%;
+  background: #fff;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  padding-top:20rpx;
+  padding-bottom:20rpx;
+}
+.tel .name,.tel .telCall{
+  display: flex;
+  justify-content: center;
+}
+.tel .telCall .right{
+  color:#E96F1E
+}
+.call{
+  width:30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:#06C2F6; 
+}
+.call .callIcon{
+  width: 60rpx;
+  height: 60rpx;
+}
+.orderState{
+  width:30%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+   background:#E96F1E; 
+}
+.orderStated{
+  width:30%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+   background:#06C2F6; 
+}
+.detailTitle{
+  width:100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 33rpx;
+  font-weight: 800;
+  margin-left: 20rpx;
+}
+.destailContent{
+  width:100%;
+  background: #fff;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  padding-top:20rpx;
+  padding-bottom:20rpx;
+   /* margin-right: 20rpx; */
+}
+.destailContent .main-title{
+  width: 95%;
+  margin-left:20rpx;
+  text-indent: 60rpx;
+  /* margin: 0 auto; */
+}
+.destailContent .textdes{
+  width: 95%;
+  margin-left:20rpx;
+  text-indent: 60rpx;
+}
+.contact-method{
+  width: 95%;
+  margin-left:20rpx;
+  /* line-height: 60rpx; */
+}
+.desInfo{
+  display: flex;
+}
+.desInfo .tite{
+  /* width:200rpx; */
+}
+

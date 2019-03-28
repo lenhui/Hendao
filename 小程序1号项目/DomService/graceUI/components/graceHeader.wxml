@@ -1,0 +1,16 @@
+<!--graceUI/components/graceHeader.wxml-->
+<navigator class="grace-header" url="{{url}}" open-type='{{openType}}' wx:if="{{url != ''}}">
+  <view class="logo"><image src="{{imgurl}}" mode="widthFix"></image></view>
+  <view class="content">
+    <view class="title grace-blod">{{title}}</view>
+    <view class="desc">{{desc}}</view>
+  </view>
+  <view class="icon-right"></view>
+</navigator>
+<view class="grace-header" url="{{url}}" open-type='{{openType}}' wx:else>
+  <view class="logo"><image src="{{imgurl}}" mode="widthFix"></image></view>
+  <view class="content">
+    <view class="title grace-blod">{{title}}</view>
+    <view class="desc">{{desc}}</view>
+  </view>
+</view>

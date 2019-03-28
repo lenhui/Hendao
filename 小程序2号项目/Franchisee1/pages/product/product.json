@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "navigationBarTitleText": "商品详情",
+  "navigationBarBackgroundColor": "#06C2F6",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "graceSwiper": "../../graceUI/components/graceSwiper",
+    "graceNumberBox": "../../graceUI/components/graceNumberBox",
+    "Broadcast": "../../Component/broadcast/broadcast"
+  }
+}

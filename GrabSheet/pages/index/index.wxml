@@ -1,0 +1,132 @@
+<!--page/index/index.wxml-->
+<!-- 引入轮播图组件 -->
+<view class="body">
+<view class="head">
+  <view class="posSearch">
+    <!-- 位置定位 -->
+    <view class="position">
+      <image src="../../pages/images/pos.png" style="width:50rpx;height:50rpx"></image>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+         <block wx:if="{{region[1] == '全部'}}">
+          {{region[0]}}
+        </block>
+        <block wx:elif="{{region[1] != '全部' && region[2] == '全部'}}">
+          {{region[1]}}
+        </block>
+         <block wx:else="{{region[2] != customItem}}">
+          {{region[2]}}
+        </block>
+        </view>
+       </picker>
+      </view>
+    <view class="search" bindtap='search'>
+        <image src="../../pages/images/search.png" style="width:50rpx;height:50rpx"></image>
+        <text>请输入关键词</text>
+  </view> 
+  </view>
+  <Broadcast img-urls="{{imgUrls}}"></Broadcast>
+ </view> 
+ 
+<!-- 图标区开始 -->
+ <view class="pic">
+  <Iconimg icon-array="{{iconArray}}" width-size="{{Width}}" height-size="{{Height}}"></Iconimg>
+</view>
+ <!-- 图标区结束 -->
+ <!-- 下单用户 -->
+  <view class="orderUser">
+    <view class="notice">
+    <image src="../../pages/images/notice.png" style="width:50rpx;height:50rpx;margin:0 auto"></image>
+    <text>公告</text>
+    </view>
+    <swiper class="swiper_container" vertical="true" autoplay='true' circular="true" interval="2000" scroll-with-animation="true"> 
+  <block wx:for="{{msgList}}" wx:key=""> 
+    <navigator url="/pages/index/index?title={{item.url}}" open-type="navigate">  
+      <swiper-item>  
+        <view class="swiper_item">{{item.content}}</view>  
+      </swiper-item> 
+    </navigator> 
+  </block>
+</swiper>
+  </view>
+  <!-- 下单用户结束 -->
+ <!-- 附近服务商 -->
+  <view class="chosen">
+    <navigator class="title" hover-class='none' url="../activeMore/activeMore">
+      <text>|公司活动</text>
+      <text class="title1">更多></text>
+    </navigator>
+    <view class="img">
+      <block wx:for="{{imgList}}" wx:key="">
+        <view  class="nav" bindtap='jumpDetail' data-id="{{item.id}}">
+           <image src="{{item.image}}" style="width:100%;height:200rpx"></image>
+           <view class="title">
+            {{item.title}}
+           </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 附近服务商结束 -->
+  <!-- 招标展示 -->
+<!-- Tab横向切换 -->
+  <!-- <view class="body"> -->
+  <view class="info">
+    <view class="{{selected?'active':'default'}}" bindtap="selected">招标</view>
+    <view class="{{selected1?'active':'default'}}" bindtap="selected1">热点资讯</view>
+  </view>
+  <!-- 招标信息 -->
+  <view class="{{selected?'show':'hidden'}}">
+    <block wx:for="{{tenderLists}}" wx:key="">
+    <view class="nav" bindtap="jumpTender" data-id="{{item.id}}">
+      <view class="listAll">
+       <view class="leftText">
+          <text>【{{item.date}}】</text>
+          <text>{{item.title}}</text>
+        </view>
+        <view class="iconRight">
+          <text>></text>
+        </view>
+      </view>
+      </view>
+    </block>
+    <view class="more" bindtap='jumpInfo'>
+    <view class="text">
+      <text>进入分类信息频道</text>
+      </view>
+    </view>
+  </view>
+  <!-- 热点资讯 -->
+  <view class="{{selected1?'show':'hidden'}}">
+    <block wx:for="{{hotList}}" wx:key="">
+    <view bindtap='jumpInquiry' class="nav" data-id="{{item.id}}">
+      <view class="listAll">
+        <view class="leftText">
+          <text>【{{item.date}}】</text>
+          <text>{{item.title}}</text>
+        </view>
+        <view class="iconRight">
+          <text>></text>
+        </view>
+      </view>
+      </view>
+    </block>
+   <view class="more" bindtap='jumpInquiryAll'>
+    <view class="text">
+      <text>进入热点资讯频道</text>
+      </view>
+    </view>
+  </view>
+  <!-- 招标展示结束 -->
+  <!-- 商标信息 -->
+  <view class="contact">
+    <text>Copyright © {{companyInfo.company}}</text>
+    <view bindtap='telCall1'>
+    <text>资讯热线：{{companyInfo.phone}}</text>
+    </view>
+    <view bindtap='telCall2'>
+    <text>固话热线：{{companyInfo.landline}}</text>
+    </view>
+  </view>
+  <!-- 商标信息结束 -->
+ </view>

@@ -1,0 +1,9 @@
+<!--graceUI/components/graceSwiper.wxml-->
+<swiper class="grace-swiper" autoplay="true" indicator-dots="{{indicatorDots}}" indicator-color="rgba(255, 255, 255, 1)" indicator-active-color="#00B26A" style='height:{{swiperHeight}}px;' interval="{{interval}}">
+	<swiper-item wx:for="{{items}}" wx:key="index">
+		<navigator url='{{item.path}}' open-type='{{item.openType}}'>
+			<image src='{{item.imgUrl}}' bindload='imgLoad' id="{{swiperId}}-item-1" mode='widthFix'></image>
+			<view class="title" wx:if="{{!indicatorDots}}">{{item.title}}</view>
+		</navigator>
+	</swiper-item>
+</swiper>

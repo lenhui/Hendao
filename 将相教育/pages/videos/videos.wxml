@@ -1,0 +1,30 @@
+<scroll-view class="grace-tab-title grace-center" scroll-x="true" id="grace-tab-title">
+	<view wx:for="{{tabs}}" style="width:20%" wx:for-index="index" wx:for-item="tab" class="{{tabCurrentIndex == index ? 'grace-tab-current' : ''}}" id="tabTag-{{index}}" wx:key="{{tab.id}}" bindtap="tabChange" data-departmentId="{{tab.id}}" wx:if="{{memberLevel == 1}}">{{tab.name}}</view>
+</scroll-view>
+<view class="container1">
+  <view class="video-card" id="video{{index}}" wx:for="{{videoList}}" wx:key="index">
+    <view class="video-box" style="height: {{item.styleHight}}px;">
+      <video 
+        wx:if="{{item.isPlay}}" 
+        src="{{item.src}}" 
+        class="video-video videoCss"
+        initial-time="{{item.currentTime}}"
+        controls="{{!false}}"
+        autoplay="{{true}}"
+        loop="{{true}}"
+        bindtimeupdate="eventPlayupdate"
+        bindfullscreenchange="eventFullScreen"
+        data-index="{{index}}" direction="90" show-progress="true"
+        >
+      </video>
+      <image wx:if="{{!item.isPlay}}" class="video-cover" mode="aspectFill" src="{{item.cover}}" bindtap="eventPlay" data-index="{{index}}"></image>
+    </view>
+    <view class="video-info">
+      <view class="video-title">{{item.title}}</view>
+       <view class="longline"></view>
+    </view>
+  </view>
+</view>
+<view class="cover" wx:if="{{isClick}}"></view>
+<view class="videoLoad" wx:if="{{videoHave == false}}">此部门暂未上传视频~~</view>
+<view class="videoLoad" wx:elif="{{videoMore == false}}">没有更多数据啦~~</view>

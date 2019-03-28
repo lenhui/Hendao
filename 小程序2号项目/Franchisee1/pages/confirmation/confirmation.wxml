@@ -1,0 +1,128 @@
+<!--pages/confirmation/confirmation.wxml-->
+<!-- <text>pages/confirmation/confirmation.wxml</text> -->
+<view class="container">
+<!-- 选择收货地址 -->
+<view class="address1" wx:if="{{isAddress}}" bindtap='jumpAddress'>
+  <view class="title1">
+    <text>请选择收货地址</text>
+  </view>
+  <view class="tips">
+    <text>(收货不便时，可选择自提服务)</text>
+  </view>
+</view>
+<!-- 确定收货地址 -->
+<view class="address2" wx:else bindtap='jumpAddress'>
+  <view class="consignee">
+    <text>收货人：李女士  15434345434</text>
+  </view>
+  <view class="position">
+  <image src="../images/position.png" style="width:50rpx;height:50rpx"></image>
+  <view class="posText">
+    <text>广东省广州市天河区鱼珠街道珠江村16号</text>
+  </view>
+  </view>
+  <view class="tips">
+    <text>(收货不便时，可选择自提服务)</text>
+  </view>
+</view>
+<!-- 选择收货地址结束 -->
+<!-- 商品展示 -->
+<view class="shop-info">
+  <view class="left">
+    <image src="../images/dev9.png" style="width:90%;height:90%"></image>
+  </view>
+  <view class="right">
+    <view class="title">
+      <text>商品标题.....</text>
+    </view>
+    <view class="price">
+      <text>￥6543.00</text>
+      <view class="number">
+        <text>X</text>
+        <text>1</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 商品展示结束 -->
+<!-- 优惠信息 -->
+<view class="discount">
+  <view class="discount-item">
+    <view class="left">
+      <text>优惠券</text>
+    </view>
+    <view class="right">
+      <text>无可用</text>
+      <text>></text>
+    </view>
+  </view>
+
+  <view class="discount-item">
+    <view class="left">
+      <text>运费</text>
+    </view>
+    <view class="right">
+      <text>￥10.00</text>
+      <!-- <text>></text> -->
+    </view>
+  </view>
+</view>
+<view class="total">
+  <view class="total-item">
+    <view class="left">
+      <text>商品总额</text>
+    </view>
+    <view class="right">
+      <text>￥6288.00</text>
+    </view>
+  </view>
+  <view class="total-item">
+    <view class="left">
+      <text>优惠</text>
+    </view>
+    <view class="right">
+      <text>-￥10.00</text>
+    </view>
+  </view>
+  <view class="total-item">
+    <view class="left">
+      <text>运费</text>
+    </view>
+    <view class="right">
+      <text>+￥10.00</text>
+    </view>
+  </view>
+</view>
+<view class="realPay">
+  <text>实付金额：</text>
+  <text>￥6388.00</text>
+</view>
+<view class="wxPay" bindtap='pay'>
+  <text>微信支付</text>
+</view>
+<view class="cover" wx:if="{{confirm}}"></view>
+ <!-- 支付界面 -->
+  <view class="payment-box" wx:if="{{confirm}}">
+    <view class="title">
+      <text>请输入支付密码</text>
+    </view>
+    <view class="bianhao">
+      <text>订单编号：19867857687</text>
+    </view>
+    <view class="bianhao">
+      <text>支付金额：</text>
+      <text class="money">30.00</text>
+    </view>
+    <view class="pwd-input">
+      <input type="number" placeholder='请输入支付密码' maxlength='6'></input>
+    </view>
+    <view class="box-bottom">
+      <view class="left" catchtap='cancel'>
+        <text>取消</text>
+      </view>
+       <view class="right" catchtap='confirm'>
+        <text>确定</text>
+      </view>
+    </view>
+  </view>
+</view>

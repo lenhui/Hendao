@@ -1,0 +1,47 @@
+<!--pages/comment/comment.wxml-->
+<view class="container">
+	<view class="comment-top">
+		<view class="img">
+			<image src="{{imageList}}"></image>
+		</view>
+		<view class="right-comment">
+			<view class="comment-title">
+				<text>服务评分</text>
+			</view>
+			<!-- 星际评分 -->
+			<view class="comment-text">
+	<view style="width:70%;">
+		<graceStar value="{{val}}" starNum="5" bind:starChange="starChange"></graceStar>
+		<!-- <text>很好</text> -->
+	</view>
+	<view class="text">
+		<text>{{commentText}}</text>
+		</view>
+	</view>
+	<!-- 星际评分结束 -->
+	</view>
+   </view>
+	<!-- 用户评论 -->
+	<view class="comment-textarea">
+		<textarea name="" id="" placeholder="不错,不错,服务非常好!" value='{{conent}}' bindinput='conentInput'></textarea>
+	</view>
+  <!-- 上传图片 -->
+  <view class="">
+  
+  </view>
+  <view class="Upload">
+    <block wx:for="{{pic}}" wx:key="{{item.id}}">
+      <image src="{{item}}" style="width:120rpx;height:120rpx" data-index="{{index}}" bindlongpress="deletePic"></image>
+    </block>
+    <view class="{{photoBox}}" bindtap="chooseimage">
+      <image src="../../pages/images/photo.png" style="width:60rpx;height:60rpx"></image>
+    </view>
+    <!-- <view class="textDes">
+      <text>最多三张</text>
+      <text style="color:#feb70f">（长按可删除）</text>
+    </view> -->
+</view>
+	<view class="tijiao" bindtap='submit'>
+		<text>提交</text>
+	</view>
+</view>

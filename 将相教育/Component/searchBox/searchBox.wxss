@@ -1,0 +1,14 @@
+/* page/component/Componet/searchBox/searchBox.wxss */
+.search-sTxt{
+  display: flex;
+  width: 90%;
+  height: 100rpx;
+  align-items: center;
+  background: #1ABC9C;
+}
+.icon{
+  margin-left:20rpx;
+}
+.search-input{
+  margin-left:20rpx;
+}

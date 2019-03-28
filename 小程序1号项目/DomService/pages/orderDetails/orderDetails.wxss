@@ -1,0 +1,249 @@
+/* pages/orderDetails/orderDetails.wxss */
+page{
+  background: #FFFFFF;
+}
+/* .cantainer{
+  width:100%;
+} */
+.orderState{
+  width:100%;
+  height: 100rpx;
+  background: #feb70f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 100rpx;
+}
+.orderState .state{
+  margin-left:50rpx;
+  color:#fff;
+  font-size: 35rpx;
+}
+.orderState .img{
+  margin-right:50rpx;
+  color:#fff;
+  font-size: 40rpx;
+}
+/* 订单信息 */
+.order-info{
+  width:90%;
+  margin:0 auto;
+  margin-top:-80rpx;
+  height: 300rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  /* box-shadow:0 1px 4px rgba(255, 255, 255, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset; */
+  border:1px solid #eee;
+  box-shadow: 5px 0px 5px -5px #eee;
+  margin-bottom:50rpx;
+}
+.contact{
+  height: 300rpx;
+}
+.contact-man{
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  margin-top:30rpx;
+}
+.contact-man .pic{
+  margin-left:20rpx;
+}
+.contact-man .name{
+  font-size: 35rpx;
+}
+.contact-man .name{
+  font-size: 40rpx;
+  font-weight: 600;
+  margin-left:10rpx;
+}
+.contact-man .contact-phone{
+  margin-left:50rpx;
+  font-size: 35rpx;
+  font-weight: 600
+}
+.contact-address{
+  width:100%;
+  /* padding-left:30rpx; */
+  margin:0 auto;
+  margin-top:20rpx;
+  letter-spacing:3rpx;
+  font-size: 33rpx;
+  /* display: flex; */
+  text-align: left;
+  margin-left:20rpx;
+}
+.order-code{
+ width:100%;
+ /* display: flex; */
+ margin-top:30rpx;
+ margin-left:60rpx;
+}
+.order-code .code{
+  /* text-align: right; */
+  font-size: 32rpx;
+}
+.order-code .codema{
+  /* display: flex; */
+  /* justify-content: flex-end; */
+ 
+}
+.order-code .codema canvas{
+  /* text-align: right; */
+  /* margin-right: 0 */
+  margin-left:-20rpx;
+}
+.order-message{
+  margin-bottom:20rpx;
+}
+.order-item{
+  display: flex;
+  width:80%;
+  margin: 0 auto;
+  border-bottom:1px solid #eee;
+  align-items: center;
+  height: 130rpx;
+}
+.order-item .order-title{
+  font-size: 35rpx;
+  font-weight: 600;
+}
+.line{
+  width:130%;
+  margin-left:-10%;
+  transform: translateX(-10%);
+  height: 30rpx;
+  background: #eee;
+}
+.order-item .order-number{
+  font-size: 35rpx;
+  margin-left:20rpx;
+}
+.order-item .copy{
+  margin-left:30rpx;
+}
+.server-item{
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+  width:80%;
+  margin:0 auto;
+  justify-content: space-between;
+}
+.server-item .left{
+  font-size: 33rpx;
+  font-weight: 600;
+}
+.server-item .right{
+  font-size: 33rpx;
+  color:#feb70f;
+}
+.server-item .right1{
+  font-size:40rpx;
+  color:#feb70f;
+}
+.order-btn{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top:40rpx;
+  margin-bottom:50rpx;
+}
+.order-btn .del-order{
+  width:30%;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  border:1px solid #bfbfbf;
+  border-radius: 10rpx;
+  color:#808080;
+  margin-right: 20rpx;
+  font-size: 33rpx;
+}
+.order-btn .angin-order{
+  width:30%;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #feb70f;
+  color:#fff;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+  font-size: 33rpx;
+}
+
+
+/* page {
+    background-color: #439057;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding-bottom: 10rpx;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    box-sizing: border-box;
+    width: 710rpx;
+    margin-top: 40rpx;
+    border-radius: 10rpx;
+    background-color: #fff;
+}
+
+.header {
+    height: 140rpx;
+    background-color: #f0f0f0;
+    border-radius: 10rpx 10rpx 0 0;
+}
+
+.barcode {
+    display: flex;
+    height: 320rpx;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.barnum {
+    width: 670rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 38rpx;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 10rpx;
+    white-space: nowrap;
+}
+
+.barcode > canvas {
+    width: 680rpx;
+    height: 200rpx;  
+}
+
+.qrcode {
+    height: 420rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.qrcode > canvas {
+    width: 420rpx;
+    height: 420rpx;
+} */
+/* --------------------- 
+作者：十二指环 
+来源：CSDN 
+原文：https://blog.csdn.net/wtdask/article/details/73776356 
+版权声明：本文为博主原创文章，转载请附上博文链接！ */

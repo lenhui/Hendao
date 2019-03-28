@@ -1,0 +1,5 @@
+<!--graceUI/components/graceMaskView.wxml-->
+<view class="grace-mask-view" style="background:{{bgcolor}};" wx:if="{{show}}">
+  <slot></slot>
+</view>
+<view class="grace-mask" wx:if="{{show}}"></view>

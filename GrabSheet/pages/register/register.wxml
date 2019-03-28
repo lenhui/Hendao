@@ -1,0 +1,85 @@
+<!--pages/register/register.wxml-->
+<view class="body">
+<view class="row">
+  <view class="info">
+  <view>
+    <text>姓名：</text>
+    </view>
+  <!-- <text>姓名：</text> -->
+    <input type="text" class="info-tel" placeholder="请输入您的真实姓名" bindinput='handleName' placeholder-style="color:#ccc" />
+  </view>
+</view>
+<view class="row">
+  <view class="info">
+    <view>
+    <text>用户名：</text>
+    </view>
+    <input type="text" class="info-tel" placeholder="请填写您的用户名" bindinput='handleUsername' placeholder-style="color:#ccc" />
+  </view>
+</view>
+<view class="row">
+  <view class="info">
+  <view>
+    <text>密码：</text>
+    </view>
+  <!-- <text>密码：</text> -->
+    <input type="password" class="info-tel" placeholder="请输入你的密码" bindinput='handlePwd' placeholder-style="color:#ccc" bindblur="loseFocus" />
+  </view>
+</view>
+<view class="row">
+  <view class="info">
+  <view>
+    <text>确认密码：</text>
+    </view>
+  <!-- <text>确认密码：</text> -->
+    <input type="password" class="info-tel" placeholder="请再次确认你的密码" bindinput='handleAgain' placeholder-style="color:#ccc" bindblur="loseFocusA" />
+  </view>
+</view>
+ <view class="row">
+  <view class="info">
+  <view>
+    <text>手机号：</text>
+    </view>
+  <!-- <text>手机号：</text> -->
+    <input type="number" class="info-tel" placeholder="请输入您的手机号" bindinput='handleTel' placeholder-style="color:#ccc"/>
+  </view>
+  <!-- <view class="btn" bindtap='getCode' disabled="{{disabled}}" style="background-color:{{color}}">{{getCode}}</view> -->
+</view>
+<view class="row">
+  <view class="info">
+  <view>
+    <text>邮箱号：</text>
+    </view>
+  <!-- <text>邮箱号：</text> -->
+    <input type="text" class="info-tel" placeholder="请输入您的邮箱号" bindinput='handleEmail'         placeholder-style="color:#ccc"/>
+  </view>
+</view>
+<view class="row">
+  <view class="info">
+  <view>
+    <text>所在公司：</text>
+    </view>
+  <!-- <text>确认密码：</text> -->
+    <input type="text" class="info-tel" placeholder="请输入您所在公司" bindinput='handleCompany' placeholder-style="color:#ccc" />
+  </view>
+</view>
+<view class="row">
+  <view class="info">
+  <view>
+    <text>所在职位：</text>
+    </view>
+  <!-- <text>所在职位：</text> -->
+    <input type="text" class="info-tel" placeholder="请输入您所在职位" bindinput='handlePosition' placeholder-style="color:#ccc" />
+  </view>
+</view>
+<view class="row">
+  <view class="info">
+  <view>
+    <text>所属行业：</text>
+    </view>
+  <!-- <text>所属行业：</text> -->
+    <input type="text" class="info-tel" placeholder="请输入您所属行业" bindinput='handleIndustry' placeholder-style="color:#ccc" />
+  </view>
+</view>
+<button class="submit" bindtap='submit'>提交</button>
+</view>

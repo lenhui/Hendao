@@ -1,0 +1,34 @@
+/* Componet/Icon/Icon.wxss */
+.icon-box{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.icon-nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  /* width: 18%; */
+  margin-top:25rpx;
+}
+.pic-box{
+  display:flex;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  width:90rpx;
+  height: 90rpx;
+}
+.slide-image{
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.Text{
+  width: 100%;
+  font-size: 25rpx;
+  margin-top:8rpx;
+  margin-bottom:25rpx;
+}

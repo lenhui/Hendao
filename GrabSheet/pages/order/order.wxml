@@ -1,0 +1,33 @@
+<!--pages/management/management.wxml-->
+  <view class="box">
+  <view class="ordering">
+    <block wx:for="{{ordering}}" wx:key="">
+      <view bindtap='jumpAllOrder' bindlongpress="delete" data-index="{{index}}" data-id="{{item.id}}" class="nav">
+        <view class="rows">
+          <view class="title">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="des">
+            <text>{{item.mainContent}}</text>
+          </view>
+          <view class="bottom">
+            <view class="date">
+            <text>{{item.date}}</text>
+          </view>
+          <view class="delOrder" catchtap='delOrder' data-id="{{item.id}}" data-index="{{index}}" wx:if="{{item.memberOrderStatus == 1}}">
+            <text>删除订单</text>
+          </view>
+          <view class="delOrder" wx:else>
+            <text>待处理</text>
+          </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view class="hasmoreData" hidden='{{hasmoreData}}'>
+　　　　<view class="hasmoreData-text">暂无更多数据</view>
+　　</view>
+  </view>
+</view> 
+
+

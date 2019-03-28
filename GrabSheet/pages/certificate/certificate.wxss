@@ -1,0 +1,95 @@
+/* page/myOrder/myOrder.wxss */
+ /* Tab横向切换 */
+  page{
+    background-color:#eee;
+  }
+.nav{
+  width: 100%;
+  height: 100rpx;
+  align-items: center;
+  display: flex;
+  font-size: 30rpx;
+  justify-content: space-around;
+  margin-top:-50rpx;
+  background: #fff
+}
+.default{
+  width: 33.3%;
+  text-align: center;
+}
+.red{
+  width: 33.3%;
+  text-align: center;
+  color:#06C2F6;
+  border-bottom:1px solid #06C2F6;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.show{
+  display:block;
+  text-align:center;
+  /* line-height:200rpx; */
+}
+.hidden{
+  display:none;
+  text-align:center;
+}
+/* 全部订单 */
+.listAll{
+  width: 95%;
+  margin: 0 auto;
+ height: 100%;
+  display: flex;
+  /* margin-bottom: 20rpx; */
+}
+/* 订单左侧 */
+.leftOrder{
+  width: 100%;
+  height: 1200rpx;
+}
+.leftOrder image{
+  /* border-radius: 15rpx; */
+}
+.explain{
+  font-size: 30rpx;
+  background: #fff;
+  padding-bottom:30rpx;
+}
+.explain .title{
+  font-size: 33rpx;
+  font-weight: 800;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left: 20rpx;
+}
+.content{
+  width: 90%;
+  margin: 0 auto;
+  line-height: 60rpx;
+}
+.call{
+  width: 90%;
+  margin: 0 auto;
+  font-size: 33rpx;
+  margin-top:30rpx;
+  font-weight: 800;
+}
+.contact{
+  width:100%;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  font-size: 30rpx;
+  text-align: center;
+  height: 50rpx;
+  line-height: 50rpx;
+  color:#707070;
+  padding-top:10rpx;
+  padding-bottom:10rpx;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+

@@ -1,0 +1,26 @@
+/* pages/product/product.wxss */
+.grace-product-attr-btn button{
+  background: #feb70f;
+}
+.grace-product-share{
+  width: 136rpx;
+}
+.garce-padding{
+  position: relative;
+}
+button::after{
+ border-radius: 0;
+ border:none;
+ background: none;
+}
+.grace-product-share{
+  position: absolute;
+  right: 0rpx;
+  border-radius: 0;
+  border:none;
+  background: none;
+}
+.grace-product-info image{
+  height: 100rpx;
+}
+

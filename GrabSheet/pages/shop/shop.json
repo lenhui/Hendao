@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "SearchBox": "../../Component/searchBox/searchBox",
+    "DropArray": "../../Component/select/select"
+  },
+  "navigationBarTitleText": "商品展示",
+  "navigationBarBackgroundColor": "#06C2F6",
+  "enablePullDownRefresh": true,
+  "navigationBarTextStyle": "white"
+}

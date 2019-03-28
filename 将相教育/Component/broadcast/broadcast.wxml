@@ -1,0 +1,11 @@
+<!--Componet/broadcast/broadcast.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" class="swiper-box"
+  autoplay="autoplay" interval="{{interval}}" duration="{{duration}}" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+  <block wx:for="{{imgUrls}}" wx:key="{{image}}" >
+    <swiper-item>
+      <navigator url="{{item.linkUrl}}" class="swiper-nav">
+        <image src="{{item.image}}" class="slide-image" width="355" height="150" style="height:380rpx;"/>
+      </navigator>
+    </swiper-item>
+  </block>
+</swiper>

@@ -1,0 +1,44 @@
+<!--pages/houClean/houClean.wxml-->
+<view class="body">
+<!-- 搜索你想要的商品 -->
+<view class="goodsSearch">
+<view class="searchGoods" bindtap="searchJump">
+  <image src="{{searchImg}}" style="width:50rpx;height:50rpx"></image>
+  <text class="goods">搜索你想要的服务</text>
+</view>
+</view>
+<!-- 搜索框结束 -->
+ <!-- <view class="head">
+    <image src="{{headImg}}" class="headImg"></image>
+  </view> -->
+ 
+<view class="content-container">
+      <!--左侧导航栏-->
+      <scroll-view class="classify-container" scroll-y="true" style="height:{{scrollHeight}}rpx">
+              <view class="classify {{classifySeleted==classify.id?'active':''}}" wx:for="{{goodsList}}" wx:for-item="classify" wx:key="id" data-id="{{classify.id}}" bindtap="tapClassify">
+                <view class="name">{{classify.classifyName}}</view>
+              </view>
+      </scroll-view> 
+      <!-- 右侧导航栏 -->
+      <scroll-view class="goods-container" scroll-y="true" style="height:{{scrollHeight}}rpx" scroll-into-view="{{classifyViewed}}" bindscroll="onGoodsScroll">
+        <view wx:for="{{goodsList}}" wx:for-item="classify" wx:key="id" id="{{classify.id}}">
+          <view class="title">{{classify.classifyName}}</view>
+          <!--列表栏-->
+          <view class="goods goodsList" wx:for="{{classify.goods}}" wx:for-item="id" wx:key="*this" bindtap="jumpTos" data-id="{{goods[id]}}">
+            <image class="pic" src="{{goods[id].pic}}"></image>
+            <view class="rightText">
+            <view class="name ellipsis">{{goods[id].name}}</view>
+            <!-- <view class="price1">计价方式：20.00元/次</view> -->
+            <view class="sold">￥{{goods[id].price}}</view>
+            </view>
+            <!-- <view class="price">￥{{item.price}}</view> -->
+            <!-- <view class="addCart" bindtap="tapAddCart" data-id="{{id}}">
+            <image src="/imgs/shop/plus.png"></image>
+            </view> -->
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+
+
+</view>

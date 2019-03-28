@@ -1,0 +1,27 @@
+<!--pages/information/information.wxml-->
+<view class="box">
+  <view class="ordering">
+    <!-- <view wx:if="{{login}}"> -->
+    <block wx:for="{{list}}">
+      <view bindtap='jumpPage' class="nav" data-id="{{item.id}}">
+        <view class="rows">
+          <view class="title">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="des">
+            <text>{{item.mainContent}}</text>
+          </view>
+          <view class="bottom">
+            <view class="date">
+            <text>{{item.date}}</text>
+          </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <!-- </view> -->
+    <view class="hasmoreData" hidden='{{hasmoreData}}'>
+　　　　<view class="hasmoreData-text">暂无更多数据</view>
+　　</view>
+  </view>
+</view> 

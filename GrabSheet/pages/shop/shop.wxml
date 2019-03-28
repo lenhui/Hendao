@@ -1,0 +1,79 @@
+<!-- 全部类别 -->
+<view class="shoppType">
+<view class="section">
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+　　<view class="picker classOne">
+       <!-- <view class='com-selectBox'> -->
+        <view class='com-sContent' bindtap='selectToggle'>
+        <view class='com-sTxt'>
+          <view bindtap="{{BeginSearch}}" style="color:{{colorInput}}" class="text">
+            <!-- <text>{{multiArray[1][multiIndex[1]]}}</text> -->
+            <text>{{testType.name}}</text>
+          </view>
+        </view>
+        <image src='../../pages/images/Arrow.png'  class='com-sBtn'  animation="{{animationData}}"></image>
+    </view>
+    </view>
+</picker>
+</view>
+<!-- 默认排序 -->
+<view class="section">
+  <view class="section__title"></view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+    <view class='com-selectBox'>
+    <view class='com-sContent' bindtap='selectToggle2'>
+        <view class='com-sTxt'>
+          <view bindtap="{{BeginSearch}}" style="color:{{colorInput}}" class="text">
+            <text>{{array[index]}}</text>
+          </view>
+        </view>
+        <image src='../../pages/images/Arrow.png'  class='com-sBtn'  animation="{{animationData2}}"></image>
+    </view>
+</view>
+      <!-- 当前选择：{{array[index]}} -->
+    </view>
+  </picker>
+</view>
+</view>
+<!-- 商品分类显示结束 -->
+ <view class="page-body">
+  <view>
+   <block wx:for="{{show}}" wx:key="{{image}}" >
+     <view hover-class="none" class="nav" bindtap='jumpDetail' data-id="{{item.id}}"> 
+      <view class="left">
+          <image src="{{item.image}}" style="width:250rpx;"></image>
+      </view>
+      <view class="right">
+        <view class="title">
+          <text>{{item.title}}</text>
+        </view>
+        <!-- <view class="money">
+          <text>￥{{item.price}}</text>
+        </view> -->
+        <view class="btm">
+          <view class="date">
+          <text>日期：{{item.date}}</text>
+          </view>
+          <view class="add" catchtap='addCart' data-typeId="{{item.typeId}}" data-gooodId="{{item.goodId}}">
+          <text>+</text>
+          </view>
+          <!-- <view class="add" catchtap='add' data-index="{{index}}" wx:else>
+          <text>+</text>
+          </view> -->
+        </view>
+      </view>
+      </view>
+    </block>
+    <view class="hasmoreData" hidden='{{hasmoreData}}'>
+　　　　<view class="hasmoreData-text">暂无更多数据</view>
+　　</view>
+    </view>
+  </view>
+  <!-- 购物车 -->
+  <view class="cart" bindtap='jumpCart'>
+    <image src="../images/cart(1).png" style="width:70rpx;height:70rpx;"></image>
+     <view class="num">
+      <text>{{totalNum}}+</text>
+    </view>
+  </view>

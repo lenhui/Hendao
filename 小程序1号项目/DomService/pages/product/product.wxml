@@ -1,0 +1,132 @@
+<!--pages/demo/product.wxml-->
+<view>
+	<!-- <graceSwiper swiperId="garce-swiper-1" interval="3000" items="{{product.imgs}}"></graceSwiper> -->
+  <Broadcast img-urls="{{imgUrls}}"></Broadcast>
+	<view class="garce-padding grace-nowrap" style="background:#FFF; padding:30rpx 2%;">
+		<view class="grace-product-title">{{product.name}}</view>
+		<button class="grace-product-share grace-iconfont icon-share3" bindtap="share" open-type="share"></button>
+	</view>
+	<view class="grace-product-price garce-padding">
+		￥{{product.price}}<text>￥{{product.originalPrice}}</text>
+	</view>
+	<view class="grace-product-desc">
+		<text>运费 ￥{{product.freightPrice}}</text>
+		<text>已售 {{product.soldNumber}}件</text>
+		<text>浏览 {{product.browseNumber}}次</text>
+	</view>
+	<view class="grace-product-menu">
+		<view class="{{active == 1 ? 'active' : ''}}" bindtap="showInfo">商品详情</view>
+		<view class="{{active == 2 ? 'active' : ''}}" bindtap="showComments">商品评论</view>
+	</view>
+	<!-- 详情 -->
+	<view class="grace-product-info" hidden="{{active == 2}}">
+		<image src="https://img30.360buyimg.com/sku/jfs/t22021/327/2281785192/48707/57806074/5b4f1579Nae7adb49.jpg" mode="widthFix"></image>
+		<image src="https://img30.360buyimg.com/sku/jfs/t21838/18/2275707529/311540/cba1d04c/5b4f155fNac3aa2f0.jpg" mode="widthFix"></image>
+		<image src="https://img30.360buyimg.com/sku/jfs/t21682/256/2344553276/204456/cf7a2ddb/5b4ffbbfN48c54307.jpg" mode="widthFix"></image>
+    <block wx:for="{{imageListDetail}}">
+      <image src="{{item}}" mode="widthFix"></image>
+    </block>
+	</view>
+	<!-- 评论 -->
+	<view class="grace-product-info"  hidden="{{active == 1}}">
+		<view class="grace-comment">
+			<view class="grace-comment-list">
+      	<view class="grace-comment-face"><image src="{{staticUrl + 'logo.png'}}" mode="widthFix"></image></view>
+				<view class="grace-comment-body">
+					<view class="grace-comment-top">
+						<text>今生缘</text>
+					</view>
+					<view class="grace-comment-content">非常好的，速度很快！</view>
+					<view class="grace-comment-date">
+						<text>08/10 07:55</text>
+					</view>
+				</view>
+			</view>
+			<view class="grace-comment-list">
+      	<view class="grace-comment-face"><image src="{{staticUrl + 'logo.png'}}" mode="widthFix"></image></view>
+				<view class="grace-comment-body">
+					<view class="grace-comment-top">
+						<text>客户002</text>
+					</view>
+					<view class="grace-comment-imgs">
+						<view class="imgs">
+							<image src="https://i1.mifile.cn/a2/1541206648_8078524_s850_638wh.jpg" mode="widthFix"></image>
+						</view>
+						<view class="imgs">
+							<image src="https://i1.mifile.cn/a2/1541158583_8499492_s1008_756wh.jpg" mode="widthFix"></image>
+						</view>
+						<view class="imgs">
+							<image src="../images/dev9.png" mode="widthFix"></image>
+						</view>
+					</view>
+					<view class="grace-comment-content">物理很快，设备很喜欢！</view>
+					<view class="grace-comment-date">
+						<text>08/10 07:55</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view style="height:60px;"></view>
+	<!-- 底部 -->
+	<view class="grace-footer">
+		<view style="width:40%;" class="grace-nowrap">
+				<view class="icons grace-iconfont icon-home" bindtap='jumpIndex'></view>
+				<view class="icons grace-iconfont icon-like"></view>
+		</view>
+		<view class="grace-product-btn" style="background:#FFAA21;" bindtap='addCart'>加入购物车</view>
+		<view class="grace-product-btn" bindtap='buyNow'>立即购买</view>
+	</view>
+	<!-- 商品属性  start -->
+		<view class="grace-mask" style="z-index:5;" wx:if="{{attrIsShow}}">
+			<view class="grace-product-attr" wx:if="{{attrIsShow}}">
+				<form bindsubmit="attrSubmit" class="grace-form">
+					<!-- 关闭按钮  -->
+					<view class="grace-product-attr-close" bindtap="closeAttr">
+						<text class="grace-iconfont icon-close2"></text>
+					</view>
+					<!-- 头部商品信息 -->
+					<view class="grace-product-attr-info">
+						<image src="/imgs/logo.png" mode="widthFix"></image>
+						<view class="title">
+							{{product.name}}
+							<text>\n库存 : 1999件</text>
+						</view>
+					</view>
+					<!-- 属性列表区 -->
+					<view style="height:calc(100% - 155px); overflow-y:auto;">
+						<view class="grace-product-attr-list">
+							<view class="title">颜色</view>
+							<view class="grace-select-tips">
+								<radio-group bindchange="colorChange" name="color">
+									<label wx:for="{{colorTips}}" wx:key="idnex" class="{{item.checked ? 'grace-checked' : ''}}">
+										<radio value="{{item.value}}" checked="{{item.checked}}"></radio> {{item.name}}
+									</label>
+								</radio-group>
+							</view>
+						</view>
+						<view class="grace-product-attr-list">
+							<view class="title">套餐类型</view>
+							<view class="grace-select-tips">
+								<radio-group bindchange="typeChange" name="type">
+									<label wx:for="{{typeTips}}" wx:key="idnex" class="{{item.checked ? 'grace-checked' : ''}}">
+										<radio value="{{item.value}}" checked="{{item.checked}}"></radio> {{item.name}}
+									</label>
+								</radio-group>
+							</view>
+						</view>
+						<view class="grace-items" style="margin-top:8px;">
+							<view class="grace-label">购买数量</view>
+							<!-- input 用于记录购买数量隐藏形式并参与表单提交 -->
+							<input type="number" name="buynum" value="{{buyNum}}" style="display:none;" />
+							<graceNumberBox value="{{buyNum}}" bind:change="buyNumChange"></graceNumberBox>
+						</view>
+					</view>
+					<view class="grace-product-attr-btn">
+						<button type="warn" formType="submit" bindtap='jumpTotal'>确定</button>
+					</view>
+				</form>
+			</view>
+		</view>
+		<!-- 商品属性 end -->
+</view>

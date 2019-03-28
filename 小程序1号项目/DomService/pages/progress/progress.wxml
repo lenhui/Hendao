@@ -1,0 +1,64 @@
+<!--pages/demo/timeline.wxml-->
+<graceHeader title="时间轴" desc="页面 : /pages/demo/timeline"></graceHeader>
+<view class="grace-timeline" style="margin-top:30rpx; background:#FFF;">
+	<view class="rows">
+		<view class="grace-timeline-time">
+			<view>09/26/2018</view>
+			<view>18:30</view>
+		</view>
+		<view class="grace-timeline-tips">
+			<view class="grace-timeline-circular">
+				<text class="grace-iconfont icon-time"></text>
+			</view>
+		</view>
+		<view class="grace-timeline-content">
+			<view class="grace-h5 grace-blod">等待接单</view>
+  		<view class="grace-text">预计2018-09-20 12:32到达</view>
+		</view>
+		<view class="grace-timeline-line"></view>
+	</view>
+	<view class="rows">
+		<view class="grace-timeline-time">
+			<view>07/08/2018</view>
+			<view>20:15</view>
+		</view>
+		<view class="grace-timeline-tips">
+			<view class="grace-timeline-circular">1</view>
+		</view>
+		<view class="grace-timeline-content">
+			<view class="grace-h5 grace-blod">家政服务已接单</view>
+  		<view class="grace-text">预计2018-09-20 12:32到达</view>
+		</view>
+		<view class="grace-timeline-line"></view>	
+	</view>
+	<view class="rows">
+		<view class="grace-timeline-time">
+			<view>06/21/2018</view>
+			<view>15:18</view>
+		</view>
+		<view class="grace-timeline-tips">
+			<view class="grace-timeline-circular">2</view>
+		</view>
+		<view class="grace-timeline-content">
+			<view class="grace-h5 grace-blod">家政服务已开始</view>
+  		<view class="grace-text">预计2018-09-20 12:32到达</view>
+		</view>
+		<view class="grace-timeline-line"></view>	
+	</view>
+	<view class="rows">
+		<view class="grace-timeline-time">
+			<view>05/19/2018</view>
+			<view>09:28</view>
+		</view>
+		<view class="grace-timeline-tips">
+			<view class="grace-timeline-circular">
+				3
+				<!-- <image src="{{staticUrl + 'logo.png'}}" mode="widthFix"></image> -->
+			</view>
+		</view>
+		<view class="grace-timeline-content">
+			<view class="grace-h5 grace-blod">家政服务已完成</view>
+  		<view class="grace-text"></view>
+		</view>
+	</view>
+</view>

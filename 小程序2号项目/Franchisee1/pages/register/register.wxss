@@ -1,0 +1,146 @@
+/* pages/register/register.wxss */
+page{
+  /* background: #eee; */
+}
+.body{
+  margin-top:30rpx;
+}
+.row{
+  width: 90%;
+  height:100rpx;
+  border-bottom:1px solid #eee;
+  margin:0 auto;
+  /* margin-bottom:30rpx; */
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 30rpx;
+  /* font-family:"grace-iconfont"; */
+  /* border-radius: 5rpx; */
+}
+.info{
+  width:100%;
+  padding-left:30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.info .left{
+  color:#8f8f8f;
+}
+.info .right{
+ font-size: 35rpx;
+ color:#8f8f8f;
+}
+.grace-list{
+  padding:none;
+  border:none;
+  /* padding-left:60rpx;
+  padding-right:60rpx; */
+}
+.grace-accordion-items{
+ width: 90%;
+ margin:0 auto;
+ border:none;
+}
+.grace-accordion-title{
+  color:#8f8f8f;
+  font-size: 28rpx;
+  padding-left:30rpx;
+  border-bottom:1px solid #eee;
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  align-items: center;
+  width:95%;
+  padding:none;
+  font-family:none;
+
+}
+.grace-list .items .title{
+  /* padding-left: 30rpx; */
+  width: 100%;
+  font-size: 28rpx;
+  color:#8f8f8f;
+  border-bottom:1px solid #eee;
+  font-family:none;
+}
+.grace-list .items .title:last-child{
+  border-bottom:1px solid #eee !important;
+}
+.radio-group{
+  width: 100%;
+  height: 100rpx;
+  /* border-bottom:1px solid #eee; */
+}
+.radio checkbox{
+  transform:scale(0.7,0.7)
+}
+/* 位置定位 */
+/* 位置定位 */
+.section{
+  width:90%;
+  margin:0 auto;
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  border-bottom:1px solid #eee;
+}
+picker{
+  width: 100%;
+}
+.pos{
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+.picker{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  /* border-bottom:1px solid #eee; */
+  font-size: 30rpx;
+  color:#7F7F7F;
+}
+.picker view{
+  margin-left:20rpx;
+	color:#818288;
+}
+/* 详细地址 */
+.address{
+  width: 90%;
+  margin:0 auto;
+  padding-top:20rpx;
+  border:1px solid #eee;
+  margin-top:20rpx;
+  /* border-bottom:1px solid #eee;
+  border-left:1px solid #eee;
+  border-right:1px solid #eee; */
+}
+.address textarea{
+  line-height: 20rpx;
+  width: 95%;
+  margin:0 auto;
+}
+
+.btn{
+  width:250rpx;
+  height: 70rpx;
+  line-height: 70rpx; 
+  background: #06C2F6;
+  text-align: center;
+  color:#fff;
+  margin-right: 30rpx;
+  border-radius: 10rpx;
+}
+.submit{
+  width: 90%;
+  margin:0 auto;
+  margin-top:100rpx;
+  margin-bottom:50rpx;
+  height: 100rpx;
+  background:#06C2F6;
+  color:#fff; 
+}

@@ -1,0 +1,18 @@
+<!--pages/search/search.wxml-->
+<view class="search">
+  <input type="text" placeholder='输入关键字搜索' bindinput='searchText'></input>
+  <image src="../../pages/images/search.png" style="width:60rpx;height:60rpx" bindtap='search'></image>
+</view>
+<!-- 热门搜索 -->
+<view class="hot" >
+  <view class="title">
+    <text>热门搜索</text>
+  </view>
+  <view class="listBlock">
+    <block wx:for="{{hotList}}">
+      <view class="listItem" bindtap='jumpRes' data-id="{{item.id}}">
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+</view>

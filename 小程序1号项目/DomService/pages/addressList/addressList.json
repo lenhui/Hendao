@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {},
+  "navigationBarTitleText": "管理地址",
+  "navigationBarBackgroundColor": "#feb70f",
+  "navigationBarTextStyle": "white"
+}

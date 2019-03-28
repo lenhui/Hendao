@@ -1,0 +1,69 @@
+<!--pages/demo/tabfullpage.wxml-->
+<scroll-view class="grace-tab-title grace-center" scroll-x="true" id="grace-tab-title">
+	<view wx:for="{{tabs}}" style="width:20%" wx:for-index="index" wx:for-item="tab" class="{{tabCurrentIndex == index ? 'grace-tab-current' : ''}}" id="tabTag-{{index}}" wx:key="unique" bindtap="tabChange">{{tab.name}}</view>
+</scroll-view>
+<view class="line"></view>
+<swiper class="grace-tab-swiper-full" current="{{swiperCurrentIndex}}" bindchange="swiperChange" style="height:{{tabHeight}}px;">
+	<!-- 循环新闻项目 -->
+	<swiper-item wx:for="{{newsAll}}" wx:for-item="news" wx:for-index="newsIndex" wx:key="unique">
+		<scroll-view scroll-y="true" data-scindex="{{newsIndex}}" bindscrolltolower="scrollend">
+			<view class="grace-news-list">
+				<view wx:for="{{news}}" style="width:100%" catchtap='jumpDetails'>
+					<view class="order-box" style="padding-left:25rpx;padding-right:25rpx;padding-bottom:25rpx;width:700rpx;">
+						<view class="orderType">
+							<text>{{item.orderType}}</text>
+							<text class="state">{{item.state}}</text>
+						</view>
+						<view class="order-content">
+							<view class="pic">
+								<image src="{{item.src}}" style="width:100%;height:100%"></image>
+							</view>
+							<view class="right-content">
+								<view class="order-des">
+                <text>{{item.orderName}}</text>
+								</view>
+								<view class="order-money">
+                    <view>￥{{item.price}}</view>
+                    <view>x{{item.num}}</view>
+								</view>
+							</view>
+						</view>
+            <!-- 判断订单的状态 -->
+						<view class="comment-box">
+							<view class="comment" wx:if="{{item.comment == '取消订单'}}" data-id="{{item.id}}" data-index="{{index}}">
+              <view class="commment1" catchtap='orderCancel'>
+                {{item.comment}}
+              </view>
+              <view catchtap='orderPay'>
+                {{item.pay}}
+              </view>
+              </view>	
+            <view class="comment" wx:elif="{{item.comment == '修改地址'}}" catchtap='orderAddress'>
+            <view class="comment2">
+                {{item.comment}}
+              </view>
+            </view>
+            <view class="comment" wx:elif="{{item.comment == '确认收货'}}" catchtap='orderEvaluate'>
+            <view class="comment2">
+              {{item.comment}}
+            </view>
+            </view>
+            <view class="comment" wx:elif="{{item.comment == '去评价'}}" catchtap='orderToEvaluate'>
+            <view class="comment2">
+              {{item.comment}}
+            </view>
+            </view>
+            <view class="comment" wx:elif="{{item.comment == '交易完成'}}" catchtap='orderEvaluated'>
+            <view class="comment2">
+              {{item.comment}}
+            </view>
+            </view>
+						</view>
+					</view>
+					<view class="line"></view>
+					</view>
+			</view>
+      <graceLoading loadingType="{{tabs[newsIndex].loadingType}}"></graceLoading>
+		</scroll-view>
+	</swiper-item>
+</swiper>

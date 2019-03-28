@@ -1,0 +1,16 @@
+<!--Componet/Icon/Icon.wxml-->
+<!-- <text>Componet/Icon/Icon.wxml</text> -->
+<view class="icon-box">
+  <block wx:for="{{iconArray}}" wx:key="">
+  <navigator url="{{item.linkUrl}}" hover-class="navigator-hover" class="icon-nav">
+  <!-- <view class="box"> -->
+  <view class="pic-box" style = "background:{{item.colorBg}}">
+    <image src="{{item.image}}" style="width: {{widthSize}}; height: {{heightSize}};border-radius: 50%;margin:0 auto;"></image>
+  </view>
+  <view class="Text">
+    <text>{{item.text}}</text>
+  </view>
+  <!-- </view> -->
+  </navigator>
+  </block>
+</view>

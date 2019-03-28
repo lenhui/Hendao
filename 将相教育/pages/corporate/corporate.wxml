@@ -1,0 +1,31 @@
+<!--pages/activeMore/activeMore.wxml-->
+<view class="container1">
+  <view class="page-body">
+  <view>
+   <block wx:for="{{activeList}}" wx:key="{{image}}" >
+     <view data-id="{{item.id}}" hover-class="none" class="nav" bindtap='jumpMore'> 
+      <view class="left">
+          <image src="{{item.image}}" style="width:250rpx;"></image>
+      </view>
+      <view class="right">
+        <view class="title">
+          <text>{{item.title}}</text>
+        </view>
+        <view class="scale">
+          <text>{{item.mainContent}}</text>
+        </view>
+        <view class="btm">
+          <text>{{item.date}}</text>
+      </view>
+      </view>
+      </view>
+    </block>
+    <view class="hasmoreData" hidden='{{hasmoreData}}'>
+　　　　<view class="hasmoreData-text">暂无更多数据</view>
+　　</view>
+    </view>
+  </view>
+</view>
+
+
+

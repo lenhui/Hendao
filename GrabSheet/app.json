@@ -1,0 +1,72 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/wxLogin/wxLogin",
+    "pages/register/register",
+    "pages/modifyInfo/modifyInfo",
+    "pages/certificate/certificate",
+    "pages/inquiryAll/inquiryAll",
+    "pages/order/order",
+    "pages/information/information",
+    "pages/login/login",
+    "pages/tender/tender",
+    "pages/allOrder/allOrder",
+    "pages/activeMore/activeMore",
+    "pages/inquiry/inquiry",
+    "pages/active/active",
+    "pages/serDetails/serDetails",
+    "pages/feedBack/feedBack",
+    "pages/search/search",
+    "pages/my/my",
+    "pages/about/about",
+    "pages/orderDetails/orderDetails",
+    "pages/shop/shop",
+    "pages/shopDestails/shopDestails",
+    "pages/logs/logs",
+    "pages/management/management",
+    "pages/ordering/ordering",
+    "pages/Customer/Customer",
+    "pages/cart/cart"
+  ],
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance":50,
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "color":"#9E9E9E",
+    "selectedColor":"#06C2F6",
+    "backgroundColor":"#fff",
+    "borderStyle":"white",
+    "list":[{
+      "pagePath":"pages/index/index",
+      "iconPath":"pages/images/index.png",
+      "selectedIconPath":"pages/images/index1.png",
+      "text":"首页"
+    },{
+      "pagePath": "pages/order/order",
+      "iconPath": "pages/images/order.png",
+      "selectedIconPath": "pages/images/order1.png",
+      "text": "订单中心"
+    },
+    {
+      "pagePath": "pages/Customer/Customer",
+      "iconPath": "pages/images/Customer.png",
+      "selectedIconPath": "pages/images/Customer1.png",
+      "text": "客服"
+    },{
+      "pagePath": "pages/cart/cart",
+      "iconPath": "pages/images/cart.png",
+      "selectedIconPath": "pages/images/cart1.png",
+      "text": "购物车"
+    },{
+      "pagePath": "pages/my/my",
+      "iconPath": "pages/images/my.png",
+      "selectedIconPath": "pages/images/my1.png",
+      "text": "我的"
+    }]
+  }
+}

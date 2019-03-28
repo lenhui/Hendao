@@ -1,0 +1,26 @@
+<view class="page-body">
+  <view class="container1">
+    <view class="bc">
+  <view class="bc_my">
+  <image style="width: 60px; height: 60px;" src="../images/my1.png" class="my"></image>
+</view>
+</view>
+    <view class="login-from">
+      <view class="inputView">
+        <input class="user_input" placeholder='请输入用户名' bindinput='userInput' />
+      </view>
+      <view class="line"></view>
+      <!--密码-->
+      <view class="inputView2">
+      <view class="code">
+        <input class="inputCode" placeholder="请输入密码" bindinput='handleCode' type="password" />
+        </view>
+      </view>
+      <view class="line"></view>
+      <!--按钮-->
+      <view class="loginBtnView">
+        <button class="loginBtn" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" bindtap="loginBtn" disabled='{{dlDisable}}'>登录</button>
+      </view>
+    </view> 
+  </view>
+</view>

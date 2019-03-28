@@ -1,0 +1,13 @@
+/* pages/demo/login.wxss */
+page{
+	width:750rpx; 
+	min-height:100%; 
+	background: linear-gradient(45deg,#04B2EC 0,#02A4E3 33%,#02A4E3 66%,#04B2EC 100%);
+	/* background-image:linear-gradient(to bottom,#06C2F6 10%,#ACD598 90%); */
+  background-size: 400%; 
+	background-position:0 100%; 
+	animation: gradient 20s ease-in-out infinite;
+}
+.btn{
+  font-size: 35rpx;
+}

@@ -1,0 +1,82 @@
+<!--page/me/me.wxml-->
+<!-- 头像部分 -->
+<view class="head">
+  <view class="account">
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{avatarUrl}}" mode="cover"></image>
+    </view>
+    <view class="account-phone" bindtap='jumpLogin' wx:if="{{!ordinaryMember}}">
+      <text>点击登录</text>
+    </view>
+     <view class="userName" wx:else>
+      <text>{{ordinaryMember.userName}}</text>
+      <text>{{userName}}</text>
+    </view>
+  </view>
+</view>
+<!-- 头像部分结束 -->
+<!-- 我的列表开始 -->
+<view class="myList">
+   <!-- <view class="viewBlock" bindtap='JumpAbout' data-link = "{{index}}">
+      <view class="left">
+        <view class="text">
+          <text>关于我们</text>
+        </view>
+      </view>
+      <view class="right">
+      <text>></text>
+      </view>
+    </view> -->
+    <!-- <view class="viewBlock" bindtap='Jumpwarehouset' data-link = "{{index}}">
+      <view class="left">
+        <view class="text">
+          <text>我的仓库</text>
+        </view>
+      </view>
+      <view class="right">
+      <text>></text>
+      </view>
+    </view> -->
+  <view class="viewBlock" bindtap='Jumpkefu' data-link = "{{index}}">
+      <view class="left">
+        <view class="text">
+          <text>联系客服</text>
+        </view>
+      </view>
+      <view class="right">
+      <text>></text>
+      </view>
+    </view>
+  <view class="viewBlock" bindtap='jumpFeedback' data-link = "{{index}}">
+      <view class="left">
+        <view class="text">
+          <text>意见反馈</text>
+        </view>
+      </view>
+      <view class="right">
+      <text>></text>
+      </view>
+    </view>
+    <!-- <view class="viewBlock" bindtap='JumpMallOrder' data-link = "{{index}}">
+      <view class="left">
+        <view class="text">
+          <text>我的商城订单</text>
+        </view>
+      </view>
+      <view class="right">
+      <text>></text>
+      </view>
+    </view> -->
+  <view class="viewBlock" bindtap='loginOut' data-link = "{{index}}">
+      <view class="left">
+        <view class="text">
+          <text>退出登录</text>
+        </view>
+      </view>
+      <view class="right">
+      <text>></text>
+      </view>
+    </view>
+</view>
+
+<!-- 我的列表结束 -->

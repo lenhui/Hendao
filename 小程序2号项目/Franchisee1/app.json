@@ -1,0 +1,70 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/order/order",
+    "pages/orderDetails/orderDetails",
+    "pages/video/video",
+    "pages/devDestail/devDestail",
+    "pages/addressList/addressList",
+    "pages/address/address",
+    "pages/severType/severType",
+    "pages/comment/comment",
+    "pages/modifyInfo/modifyInfo",
+    "pages/register/register",
+    "pages/confirmation/confirmation",
+    "pages/mallOrder/mallOrder",
+    "pages/shopping/shopping",
+    "pages/product/product",
+    "pages/navigation/navigation",
+    "pages/routeLine/routeLine",
+    "pages/customer/customer",
+		"pages/login/login",
+    "pages/management/management",
+    "pages/warehouse/warehouse",
+    "pages/feedBack/feedBack",
+    "pages/serDetails/serDetails",
+    "pages/my/my",
+    "pages/wxLogin/wxLogin",
+    "pages/addServer/addServer",
+    "pages/wareDestail/wareDestail",
+    "pages/about/about"
+  ],
+	 "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#9E9E9E",
+    "selectedColor": "#06C2F6",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [{
+      "pagePath":"pages/index/index",
+      "text": "首页",
+      "iconPath": "pages/images/index-1.png",
+      "selectedIconPath": "pages/images/index-2.png"
+    },{
+      "pagePath": "pages/management/management",
+      "text": "发布",
+      "iconPath":"pages/images/management-1.png",
+      "selectedIconPath": "pages/images/management-2.png"
+    },{
+      "pagePath": "pages/order/order",
+      "text": "服务订单",
+      "iconPath": "pages/images/order-1.png",
+      "selectedIconPath": "pages/images/order-2.png"
+    },{
+      "pagePath": "pages/my/my",
+      "text": "我的",
+      "iconPath": "pages/images/my-1.png",
+      "selectedIconPath": "pages/images/my-2.png"
+    }]
+  }
+}

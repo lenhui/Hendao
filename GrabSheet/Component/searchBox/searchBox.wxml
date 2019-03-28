@@ -1,0 +1,7 @@
+<!--page/component/Componet/searchBox/searchBox.wxml-->
+<view class="searchBox">
+<view class='search-sTxt'>
+<!-- <icon type="search" size="20" class="icon"/> -->
+<input type='text' placeholder="请输入商品或设备关键词" bindinput="searchInput" maxlength="-1" adjust-position="true" class="search-input" confirm-type="search"/>
+</view>
+</view>

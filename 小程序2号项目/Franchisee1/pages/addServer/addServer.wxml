@@ -1,0 +1,142 @@
+<!--pages/addServer/addServer.wxml-->
+<view class="container1">
+<view class="head">
+  <view class="top">
+    <view class="title">
+    <text>上传展示图片:</text>
+    </view>
+    <!-- 上传照片 -->
+    <view class="Upload">
+      <block wx:for="{{pic}}" wx:key="{{item.id}}">
+      <image src="{{item}}" style="width:120rpx;height:120rpx" data-index="{{index}}" bindlongpress="deletePic"></image>
+      </block>
+      <view class="{{photoBox}}" bindtap="chooseimage">
+        <image src="../../pages/images/photo.png" style="width:60rpx;height:60rpx"></image>
+    </view>
+</view>
+  </view>
+</view>
+<view class="goodsName">
+  <view class="title">
+    <text>服务名称：</text>
+  </view>
+  <input type="text" placeholder='请输入服务名称' style="font-size:30rpx;"></input>
+</view>
+<view class="goodsType" bindtap='jumpType'>
+  <view class="title">
+    <text>选择服务类型：</text>
+  </view>
+  <!-- <input type="text" placeholder='请输入服务类型' style="font-size:30rpx;"></input> -->
+  <view class="type">
+    <text>{{severType}}</text>
+    <text>></text>
+  </view>
+</view>
+<view class="severDes">
+  <text>服务描述:</text>
+</view>
+<!-- 文本框 -->
+<textarea placeholder='请填写服务描述' style="background:#eee;padding:20rpx;font-size:30rpx"></textarea>
+<!-- 上传服务项目图片，上传6张 -->
+<view class="project">
+  <text>上传服务项目图</text>
+</view>
+<view class="proPic">
+  <block wx:for="{{proPic}}" wx:key="{{item.id}}">
+    <view class="proView">
+      <image src="{{item}}" style="width:100%;height:300rpx" data-index="{{index}}" bindlongpress="deletePro"></image>
+    </view>
+      </block>
+      <view class="{{photoPro}}" bindtap="choosePro">
+        <image src="../../pages/images/add1.png" style="width:200rpx;height:200rpx"></image>
+    </view>
+</view>
+<!-- 上传设备展示图 ，上传-->
+<view class="equipment">
+  <text>上传设备展示图</text>
+</view>
+<view class="equPic">
+<block wx:for="{{equPic}}" wx:key="{{item.id}}">
+    <view class="equView">
+      <image src="{{item}}" style="width:100%;height:550rpx" data-index="{{index}}" bindlongpress="deleteEqu"></image>
+    </view>
+      </block>
+      <view class="{{photoEqu}}" bindtap="chooseEqu">
+        <image src="../../pages/images/add1.png" style="width:200rpx;height:200rpx"></image>
+    </view>
+
+</view>
+<!-- 项目优势图 ，上传4张，分别描述市场优势，品牌优势，设备优势，资源优势-->
+<view class="advantage">
+  <text>项目优势</text>
+</view>
+<!-- 设备优势 -->
+<view class="advPic">
+      <view class="photoAdv">
+        <view wx:if="{{advPic.length == 1}}" class="advView">
+      <image src="{{advPic[0]}}" style="width:100%;height:300rpx" data-index="{{index}}" bindlongpress="deleteAdv"></image>
+        </view>
+        <view wx:else class="{{img}}" bindtap="chooseAdv">
+        <image src="../../pages/images/add1.png" style="width:200rpx;height:200rpx"></image>
+        <!-- </view> -->
+        </view>
+        <view class="advText">
+          <view class="title">
+            <text>设备优势</text>
+          </view>
+          <view class="des">
+            <textarea placeholder='请输入您的设备优势。'></textarea>
+          </view>
+        </view>
+    </view>
+</view>
+<!-- 品牌优势 -->
+<view class="braPic">
+      <view class="photoBra">
+        <view wx:if="{{braPic.length == 1}}" class="braView">
+      <image src="{{braPic[0]}}" style="width:100%;height:300rpx" data-index="{{index}}" bindlongpress="deleteBra"></image>
+        </view>
+        <view wx:else class="{{img}}" bindtap="chooseBra">
+        <image src="../../pages/images/add1.png" style="width:200rpx;height:200rpx"></image>
+        <!-- </view> -->
+        </view>
+        <view class="braText">
+          <view class="title">
+            <text>品牌优势</text>
+          </view>
+          <view class="des">
+            <textarea placeholder='请输入您的品牌优势。'></textarea>
+          </view>
+        </view>
+    </view>
+    </view>
+<!-- 市场优势 -->
+<view class="marPic">
+      <view class="photoMar">
+        <view wx:if="{{marPic.length == 1}}" class="marView">
+      <image src="{{marPic[0]}}" style="width:100%;height:300rpx" data-index="{{index}}" bindlongpress="deleteMar"></image>
+        </view>
+        <view wx:else class="{{img}}" bindtap="chooseMar">
+        <image src="../../pages/images/add1.png" style="width:200rpx;height:200rpx"></image>
+        <!-- </view> -->
+        </view>
+        <view class="marText">
+          <view class="title">
+            <text>市场优势</text>
+          </view>
+          <view class="des">
+            <textarea placeholder='请输入您的市场优势。'></textarea>
+          </view>
+        </view>
+    </view>
+</view>
+<view class="btn">
+  <view class="Upper" bindtap ='jumpUpper'>
+  <text>上架</text>
+  </view>
+  <view class="Warehouse" bindtap ='jumpWarehouse'>
+  <text>加入仓库</text>
+  </view>
+</view>
+</view>
+

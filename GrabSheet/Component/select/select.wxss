@@ -1,0 +1,61 @@
+/* page/component/Componet/select/select.wxss */
+.com-selectBox{
+    width:100%;
+    box-sizing: border-box;
+    /* border-left:1px solid #e2e2e2; */
+    position: relative;
+    background: #fff;
+}
+.com-sContent{
+  width: 100%;
+  /* border: 1px solid #e2e2e2; */
+  font-size: 30rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+}
+.com-sContent .text{
+  text-align: center;
+}
+.com-sBtn{
+    width: 30%;
+    height:60rpx;
+    transition: all .3s ease;
+    line-height: 60rpx;
+    font-size: 40rpx;
+    color:rgb(133, 130, 128);
+}
+.com-sTxt{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 30rpx;
+    padding-left:10rpx;
+}
+.com-sList{
+    background: white;
+    width: 100%;
+    position: absolute;
+    border: 1px solid #e2e2e2;
+    border-top: none;
+    box-sizing: border-box;
+    z-index: 3;
+    top:62rpx;
+    /* max-height: 130rpx; */
+    overflow: auto;
+}
+.com-sItem{
+    height: 30px;
+    line-height: 30px;
+    border-top: 1px solid #e2e2e2;
+    /* padding: 0 6px; */
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 30rpx;
+}
+.com-sItem:first-child{
+    border-top: none;
+}

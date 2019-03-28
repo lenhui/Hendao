@@ -1,0 +1,119 @@
+<!--pages/tender/tender.wxml-->
+<!--pages/active/active.wxml-->
+<view class="container">
+  <!-- <block wx:for="{{contentData}}"> -->
+  <view class="headTitle">
+    <view class="text">{{contentTitle}}</view>
+    <view class="date">
+    <text>{{contentDate}}</text>
+    <image src="../images/eye1.png" style="width:50rpx;height:50rpx;margin-left:20rpx"></image>
+    <text>{{count}}次</text>
+  </view>
+  </view>
+  <!-- 图片 -->
+  <view wx:if="{{login}}">
+    <!-- <view class="tel"> -->
+      <!-- <view class="name">
+        <view class="left">
+          <text>联系人：</text>
+        </view>
+        <view class="right">
+          <text>{{contentName}}</text>
+        </view>
+      </view>
+      <view class="telCall">
+      <view class="left">
+          <text>联系电话：</text>
+        </view>
+        <view class="right">
+          <text>{{contentPhone}}</text>
+        </view>
+      </view>
+      <view class="call">
+        <view class="callIcon">
+          <image src="../images/call.png" style="width:100%;height:100%"></image>
+        </view>
+        <view class="telNum">
+          <text>拨打电话</text>
+        </view>
+      </view> -->
+      <!-- <view class="btn" bindtap='memberLogin'>
+        <text>选择成为我们的会员即可进行抢单</text>
+      </view> -->
+    <!-- </view> -->
+    <!-- 详细描述 -->
+    <view class="detailTitle">
+      <text>详请描述</text>
+    </view>
+    <!-- 详情内容 -->
+    <view class="destailContent">
+      <view class="main-title">
+        <text>{{contentMain}}</text>
+      </view>
+      <view class="textdes">
+        <text>{{contentDes}}</text>
+      </view>
+      <!-- 联系方式 -->
+      <!-- <view class="contact-method">
+        <view>
+          <text>十二、联系方式：</text>
+        </view>
+        <view class="desInfo">
+          <text>{{contactMethod}}</text>
+        </view>
+      </view> -->
+       <view class="relevant">
+      <text>相关信息</text>
+    </view>
+    <block wx:for="{{relevants}}" wx:key="">
+    <view bindtap='jumpPage' class="nav" data-id="{{item.id}}">
+      <view class="listAll">
+       <view class="leftText">
+       <text>【{{item.city}}】</text>
+          <text>{{item.title}}</text>
+        </view>
+        <view class="rightDate">
+          <text>{{item.date}}</text>
+        </view>
+      </view>
+      </view>
+    </block>
+    </view>
+  <!-- </block> -->
+  <!-- 声明 -->
+  <!-- <view class="say">
+    <text>声明：所载文章、图片、数据等内容以及相关文章评论纯属个人观点和网友自行上传，并不代表本站立场，如发现有违法信息或侵权行为，请留言，或直接与本站管理员联系，我们将在收到您的信息后24小时内做出删除处理</text>
+  </view> -->
+  </view>
+  <view wx:else>
+    <view class="relevant">
+      <text>相关信息</text>
+    </view>
+    <block wx:for="{{hotList}}" wx:key="">
+    <view bindtap='jumpPage' class="nav">
+      <view class="listAll">
+       <view class="leftText">
+          <text>{{item.text}}</text>
+        </view>
+        <view class="rightDate">
+          <text>{{item.date}}</text>
+        </view>
+      </view>
+      </view>
+    </block>
+  </view>
+  <navigator url="../information/information" class="tenderMore">
+    <text>查看更多招标信息>></text>
+  </navigator>
+  <!-- 商标信息 -->
+  <view class="contact">
+    <text>Copyright © {{companyInfo.company}}</text>
+    <view bindtap='telCall1'>
+    <text>资讯热线：{{companyInfo.phone}}</text>
+    </view>
+    <view bindtap='telCall2'>
+    <text>固话热线：{{companyInfo.landline}}</text>
+    </view>
+  </view>
+  <!-- 商标信息结束 -->
+</view>

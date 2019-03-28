@@ -1,0 +1,197 @@
+.container{ 
+ height: 100%; 
+ background: #fff;
+}   
+.bc{
+  width:100%;
+  height:250rpx;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction:column;
+}
+.bc_my{
+  width: 180rpx;
+  height: 180rpx;
+  background: #fff;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  border-radius: 50%;
+  border:1px solid #06C2F6
+}
+.my{
+  color: #06C2F6;
+  width: 100%;
+}
+/*表单内容*/
+.login-from { 
+ margin-top:80rpx; 
+ flex: auto; 
+ height:100%; 
+} 
+.inputView{
+  width: 86%;
+display: flex;
+/* justify-content: space-between; */
+align-items: center;
+height: 125rpx;
+font-size: 30rpx;
+}
+.inputView2 { 
+  width: 86%;
+display: flex;
+/* justify-content: start; */
+align-items: center;
+justify-content: space-between;
+height: 125rpx;
+font-size: 30rpx;
+} 
+.user_input{
+  /* margin-left:160rpx; */
+  width: 100%;
+  position: relative;
+  margin-left:50rpx; 
+}
+.inputView2 .code{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  margin-left: 50rpx;
+}
+.inputWchat{
+  font-size: 30rpx;
+  height: 125rpx;
+  line-height: 125rpx;
+  margin-left:50rpx;
+}
+.loginWchat{
+  color:#545454;
+}
+/*输入框*/
+.loginLab { 
+ margin-left: 10rpx;
+ color: #545454; 
+font-size: 30rpx;
+ width: 16%;
+} 
+.Lab{
+  display: flex;
+  width:16%;
+  margin-left: 35rpx;
+}
+.loginCode{
+  width: 250rpx;
+  text-align:center;
+  color:#fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  /* text-align: right; */
+ /* color:#545454; */
+ background: #06C2F6;
+}
+.loginCodeSend{
+ width: 250rpx;
+  text-align:center;
+  height: 80rpx;
+  line-height: 80rpx;
+  /* text-align: right; */
+ color:#707070;
+ background: #bfbfbf;
+}
+
+.inputText { 
+ text-align:right; 
+  margin-right: 30rpx;    
+ /* margin-top: 11px;  */
+ color: #cccccc; 
+ font-size:30rpx
+} 
+.inputCode{
+  color: #545454;
+  font-size: 30rpx;
+}
+ switch{
+  position: absolute;
+  right:1em;
+} 
+ .line { 
+ width: 86%; 
+ margin: 0 auto;
+ height: 1px; 
+ background-color: #eee; 
+ margin-top: 1px;
+ } 
+/* 用户服务协议 */
+.radio {
+  display: block;
+}
+.radio checkbox{
+  transform:scale(0.8,0.8)
+}
+.protocol{
+  color:#06C2F6;
+  font-size: 20rpx;
+}
+.agreement{
+  margin-left:68rpx;
+  font-size: 30rpx;
+  align-items: center;
+  height: 2em;
+  display: flex;
+  margin-top:30rpx;
+}
+/*按钮*/
+.loginBtnView { 
+ width: 100%; 
+ height: auto; 
+ margin-top: 50rpx; 
+ margin-bottom: 0px; 
+ padding-bottom: 0px; 
+} 
+.flex-wrp{
+  margin-top: 60rpx;
+  display:flex;
+}
+.flex-item{
+  width: 200rpx;
+  height: 300rpx;
+   font-size: 30rpx;
+}
+.flex-item-V{
+  margin: 0 auto;
+  width: 300rpx;
+  height: 200rpx;
+}
+.loginBtn{
+  width: 80%;
+  background:#06C2F6;
+  height:110rpx;
+  line-height: 110rpx;
+  color:#fff;
+  font-size:40rpx; 
+  border-radius: 80rpx;
+  border:1px solid #eee
+}
+ button::after{
+  border:none
+}
+.loginBtn1{
+  width: 80%;
+  background:#eee;
+  height:110rpx;
+  line-height: 110rpx;
+  color:#545454;
+  font-size:40rpx; 
+  border-radius: 80rpx;
+  border:1px solid #eee
+}
+/* 注册 */
+.register{
+  width: 75%;
+  margin: 0 auto;
+  margin-top:70rpx;
+  text-align: right;
+  color:#06C2F6;
+  font-size: 30rpx;
+}

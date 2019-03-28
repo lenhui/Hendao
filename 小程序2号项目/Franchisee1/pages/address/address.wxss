@@ -1,0 +1,81 @@
+/* @import '../../utils/weui.wxss'; */  
+.weui-cell{
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  border-bottom:1px solid #bfbfbf;
+}
+.weui-label{
+  font-size: 30rpx;
+}
+.weui-label-area{
+  font-size: 30rpx;
+}
+.weui-input,.weui-select{
+  margin-left:50rpx;
+  font-size: 30rpx;
+}
+.weui-select-area{
+  font-size: 28rpx;
+  margin-left: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.weui-cells:before{
+  top:0;
+  border-top:1rpx solid white;
+  }
+.weui-cell{
+  line-height: 3.5rem;
+}
+.weui-cells:after{
+  bottom:0;border-bottom:1rpx solid white
+} 
+.weui-btn{
+  margin-top:50rpx;
+  width: 80%;
+}
+/* 位置定位 */
+.section{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  line-height:3.5rem;
+  border-bottom:1px solid #bfbfbf;
+}
+picker{
+  width: 100%;
+}
+.pos{
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+.picker{
+  height: 3.5rem;
+  line-height:3.5rem;
+  display: flex;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  align-items: center;
+  /* border-bottom:1px solid #eee; */
+  font-size: 30rpx;
+  /* color:#7F7F7F; */
+}
+.picker view{
+  /* margin-left:20rpx; */
+	/* color:#818288; */
+}
+.picker view:nth-child(1){
+  /* margin-left:0rpx; */
+}
+.Arrow{
+  font-size:40rpx;
+  color:#7F7F7F;
+  width: 50rpx;
+  margin-right:0rpx; 
+  text-align: right;
+}

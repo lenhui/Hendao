@@ -1,0 +1,131 @@
+page{
+  background: #eee;
+}
+.grace-tab-title.grace-center{
+	display: flex;
+	justify-content: space-around !important;
+	text-align: none !important;
+}
+.order-state-number{
+	font-size: 20rpx;
+	margin-top:30rpx;
+	background: red;
+	display: block;
+	color:#fff;
+	border-radius: 50%;
+}
+.grace-tab-current{
+	width: 30%;
+	display: flex;
+	color:#E96F1E;
+	border-bottom:6rpx solid #E96F1E !important;
+}
+.container1 {
+  background: #F0F1F5;
+}
+.video-card {
+  background: #FFFFFF;
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+}
+.video-box {
+  position: relative;
+  width: 100%;
+  height: 424rpx;
+}
+.video-video {
+  width: 100%;
+  height: 100%;
+}
+.videoCss{
+  width: 100%;
+}
+.video-coverview {
+  width: 100%;
+  height: 100%;
+}
+.video-cover {
+  width: 100%;
+  height: 100%;
+}
+.player {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 120rpx;
+  height: 120rpx;
+  transform: translate(-50%, -50%);
+}
+.video-info {
+  box-sizing: border-box;
+}
+.video-title {
+  color: #E96F1E;
+  font-size: 32rpx;
+  line-height: 44rpx;
+  font-weight: 500;
+  margin-left:20rpx;
+  margin-top:20rpx;
+}
+.video-more {
+  position: relative;
+  width: 100%;
+  height: 184rpx;
+  margin-top: 23rpx;
+}
+.y-split {
+  display: inline-block;
+  width: 2rpx;
+  height: 24rpx;
+  background: #D9D9E2;
+  margin: 0 24rpx;
+  vertical-align: middle;
+}
+.share-number {
+  color: #B0B0BB;
+}
+
+.longline {
+  margin-top:20rpx;
+  width: 100%;
+  height: 2rpx;
+  background: #eee;
+}
+.back-index {
+  position: fixed;
+  right: 10rpx;
+  bottom: 90rpx;
+  width: 182rpx;
+  height: 176rpx;
+  z-index: 100;
+}
+.modal-content {
+  padding: 48rpx 80rpx;
+  box-sizing: border-box;
+}
+.temp-pic {
+  width: 480rpx;
+  height: 710rpx;
+  /* background: #D9D9E2; */
+  vertical-align: middle;
+}
+.videoLoad{
+  width: 100%;
+  text-align: center;
+  background: #eee;
+  padding:20rpx 0;
+  color:#000;
+  font-size:35rpx;
+}
+.cover{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top:0;
+}
+::-webkit-scrollbar {
+ width: 0;
+ height: 0;
+ color: transparent;
+}

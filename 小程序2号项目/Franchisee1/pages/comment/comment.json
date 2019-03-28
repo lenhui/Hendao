@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "graceStar": "../../graceUI/components/graceStar"
+  },
+  "navigationBarTitleText": "评价",
+  "navigationBarBackgroundColor": "#06C2F6",
+  "navigationBarTextStyle": "white"
+}

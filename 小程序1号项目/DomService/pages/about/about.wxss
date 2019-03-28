@@ -1,0 +1,38 @@
+/* page/component/pages/about/about.wxss */
+/* 图片 */
+.pic{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  /* margin-top:50rpx; */
+}
+image{
+   width:100%; 
+   height: 150px;
+}
+/* 标题 */
+.about{
+ width:100%;
+ display: flex;
+ justify-content: center;
+ margin-top:50rpx;
+ color:#E96F1E;
+}
+.title{
+  width:50%;
+  font-size:40rpx;
+  height:20rpx;
+  line-height: 20rpx;
+  text-align: center;
+}
+.des{
+  width: 80%;
+  font-size:30rpx;
+   text-indent: 20rpx; 
+  margin: -10rpx auto;
+}
+/* 描述 */
+.des_word{
+   line-height: 50rpx; 
+  text-align: center;
+}

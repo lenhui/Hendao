@@ -1,0 +1,75 @@
+/* page/me/me.wxss */
+page{
+  /* background: #eee; */
+}
+.head{
+  height:350rpx;
+  width:100%;
+ background:#feb70f;
+  /* border:1px solid #eee; */
+}
+.account{
+  height:350rpx;
+  margin:0 auto;
+  /* margin-top:20rpx; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.text{
+  text-align: center;
+  font-size: 28rpx;
+}
+.account-phone{
+  color:#fff;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  margin-left:20rpx;
+}
+/* 我的列表 */
+.myList{
+  width: 100%;
+  margin:0 auto;
+  margin-top:20rpx;
+}
+.viewBlock{
+  width:100%;
+  /* margin: 0 auto; */
+  margin-bottom: 10rpx;
+  background: #fff;
+  border-bottom:1px solid #eee;
+  display:flex;
+  align-items: center;
+  justify-content: space-between
+}
+.viewBlock .left{
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  margin-left:20rpx;
+}
+.viewBlock .left .text{
+  margin-left:10rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.viewBlock .right{
+  font-size: 60rpx;
+  color:#bfbfbf;
+  margin-right: 20rpx;
+}
+.out{
+  width:80%;
+  margin: 0 auto;
+  margin-top:80rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #06C2F6;
+  color:#fff;
+  text-align: center;
+
+}

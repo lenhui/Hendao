@@ -1,0 +1,372 @@
+/* pages/addServer/addServer.wxss */
+/* page/news/news.wxss */
+.container1{
+  width:93%;
+  margin: 0 auto;
+}
+.container1 .title{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color:#06C2F6
+}
+/* 上传照片 */
+.Upload{
+  width: 100%;
+  height: 150rpx;
+  line-height: 150rpx;
+  margin: 0 auto;
+  display:flex;
+  align-items: center;
+  justify-content: start;
+  display: hidden; 
+}
+.Upload>image{
+  margin-left:20rpx; 
+}
+video{
+  width: 100%;
+}
+.Upload>image:nth-child(5){
+  margin-right: 20rpx;
+}
+.photoBox{
+  width: 120rpx;
+  height: 120rpx;
+  border:1px solid #bfbfbf;
+  margin-left:20rpx;
+  position: relative;
+}
+.photoBox1{
+  display: none
+}
+.photoBox>image{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+.goodsName{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  /* border-top:1px solid #eee; */
+  border-bottom:1px solid #eee;
+  /* color:#06C2F6 */
+}
+.goodsName .title text:nth-child(1){
+  width:50%;
+  color:#06C2F6
+}
+.goodsName .title text:nth-child(2){
+  color:red;
+}
+.goodsName input{
+  width: 55%;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-left:20rpx;
+}
+/* 服务类型 */
+.goodsType{
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  align-items: center;
+  border-bottom:1px solid #eee;
+} 
+.goodsType .type{
+  height: 100rpx;
+  line-height: 100rpx;
+  color:#bfbfbf;
+  font-size: 60rpx;
+}
+
+
+.severDes{
+  height: 100rpx;
+  line-height: 100rpx;
+  color:#06C2F6
+}
+textarea{
+  width:95%;
+  /* margin-top:50rpx;  */
+  height: 200rpx;
+}
+/* 上传服务项目图 */
+.project{
+  height: 100rpx;
+  line-height: 100rpx;
+  color:#06C2F6
+}
+.proPic{
+  width: 100%;
+  /* height: rpx; */
+  /* line-height: 150rpx; */
+  margin: 0 auto;
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:flex-start;
+  display: hidden; 
+}
+.proView{
+  width: 46%;
+  margin-left:20rpx;
+  margin-bottom:20rpx;
+}
+.proPic image{
+ border-radius: 10rpx;
+}
+.proPic>image:nth-child(5){
+  /* margin-right: 20rpx; */
+}
+.proPic .photoPro{
+  width: 46%;
+  height: 300rpx;
+  border:1px solid #bfbfbf;
+  margin-left:20rpx;
+  margin-bottom:20rpx;
+  position: relative;
+}
+.proPic .photoPro1{
+  display: none
+}
+.proPic .photoPro>image{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+/* 设备展示图 */
+.equipment{
+  height: 100rpx;
+  line-height: 100rpx;
+  color:#06C2F6
+}
+.equPic{
+  width: 100%;
+  /* height: rpx; */
+  /* line-height: 150rpx; */
+  margin: 0 auto;
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:flex-start;
+  display: hidden; 
+}
+.equView{
+  width: 100%;
+  margin-left:20rpx;
+  margin-right:20rpx;
+  margin-bottom:20rpx;
+}
+.equPic image{
+ border-radius: 10rpx;
+}
+.equPic>image:nth-child(5){
+  /* margin-right: 20rpx; */
+}
+.equPic .photoEqu{
+  width: 100%;
+  height: 425rpx;
+  border:1px solid #bfbfbf;
+  margin-left:20rpx;
+  margin-right:20rpx; 
+  margin-bottom:20rpx;
+  position: relative;
+}
+.equPic .photoEqu1{
+  display: none
+}
+.equPic .photoEqu>image{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+/* 项目优势 */
+.advantage{
+   height: 100rpx;
+  line-height: 100rpx;
+  color:#06C2F6
+}
+/* 设备优势 */
+.photoAdv{
+  display: flex;
+  background: #eee;
+  margin-bottom:30rpx;
+}
+.photoAdv .advView{
+  width:48%;
+  height: 300rpx;
+}
+.photoAdv .img{
+  width: 48%;
+  height: 300rpx;
+  box-sizing: border-box;
+  border:1px solid #bfbfbf;
+  position: relative;
+}
+.photoAdv .img image{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+.photoAdv .advText{
+  width: 46%;
+  margin-left:10rpx;
+  height: 270rpx;
+ overflow: hidden;
+}
+.photoAdv .advText{
+  width: 50%;
+}
+.photoAdv .advText .title{
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 35rpx;
+}
+.photoAdv .advText .des{
+  font-size: 30rpx;
+  height: 270rpx;
+  overflow: hidden;
+ white-space:normal !important;
+  display: -webkit-box;
+ -webkit-box-orient: vertical;
+ -webkit-line-clamp:5;
+}
+.photoAdv .advText .des textarea{
+  line-height: 40rpx;
+}
+/* 品牌优势 */
+.photoBra{
+  display: flex;
+  background: #eee;
+  margin-bottom:30rpx;
+}
+.photoBra .braView{
+  width:48%;
+  height: 300rpx;
+  overflow: hidden;
+}
+.photoBra .img{
+  width: 48%;
+  height: 300rpx;
+  box-sizing: border-box;
+  border:1px solid #bfbfbf;
+  position: relative;
+}
+.photoBra .img image{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+.photoBra .braText{
+  width: 46%;
+  margin-left:10rpx;
+  height: 270rpx;
+ overflow: hidden;
+}
+.photoBra .braText{
+  width: 50%;
+}
+.photoBra .braText .title{
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 35rpx;
+}
+.photoBra .braText .des{
+  font-size: 30rpx;
+  height: 270rpx;
+  overflow: hidden;
+ white-space:normal !important;
+  display: -webkit-box;
+ -webkit-box-orient: vertical;
+ -webkit-line-clamp:5;
+}
+.photoBra .braText .des textarea{
+  line-height: 40rpx;
+}
+/* 市场优势
+ */
+.photoMar{
+  display: flex;
+  background: #eee;
+  margin-bottom:30rpx;
+}
+.photoMar .marView{
+  width:48%;
+  height: 300rpx;
+  overflow: hidden;
+}
+.photoMar .img{
+  width: 48%;
+  height: 300rpx;
+  box-sizing: border-box;
+  border:1px solid #bfbfbf;
+  position: relative;
+}
+.photoMar .img image{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+.photoMar .marText{
+  width: 46%;
+  margin-left:10rpx;
+  height: 270rpx;
+ overflow: hidden;
+}
+.photoMar .marText{
+  width: 50%;
+}
+.photoMar .marText .title{
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 35rpx;
+}
+.photoMar .marText .des{
+  font-size: 30rpx;
+  height: 270rpx;
+  overflow: hidden;
+ white-space:normal !important;
+  display: -webkit-box;
+ -webkit-box-orient: vertical;
+ -webkit-line-clamp:5;
+}
+.photoMar .marText .des textarea{
+  line-height: 40rpx;
+}
+.btn{ 
+  display: flex;
+  justify-content: space-between;
+  width:95%;
+  margin:0 auto;
+  margin-top:80rpx;
+  height: 100rox;
+  align-items: center;
+  font-size: 33rpx;
+  margin-bottom:30rpx;
+}
+.btn .Upper{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color:#fff;
+   font-size: 33rpx;
+  background: #06C2F6
+}
+.btn .Warehouse{
+  width: 40%;
+  height:80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color:#fff;
+  background: #06C2F6
+}

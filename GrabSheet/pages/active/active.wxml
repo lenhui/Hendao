@@ -1,0 +1,46 @@
+<!--pages/active/active.wxml-->
+<view class="container">
+  <view class="headTitle">
+    <view class="text">{{title}}</view>
+    <view class="date">
+    <text>{{date}}</text>
+  </view>
+  </view>
+  <view class="mainContent">
+    <text>{{mainContent}}</text>
+  </view>
+  <!-- 图片 -->
+  <!-- <block wx:for="{{activePic}}" wx:if="{{image_array != ''}}">
+  <view class="activePic" style="">
+    <image src="{{item}}" style="width:100%;"></image>
+  </view>
+  </block>
+   <view class="content">
+    <text>{{content}}</text>
+  </view> -->
+  <block wx:for="{{contentArrays}}" wx:for-item="classify">
+    <view class="contentText">
+      <text>{{classify.content}}</text>
+    </view>
+    <view wx:for="{{classify.imageArray}}" wx:for-item="each" class="img">
+      <image src="{{each}}" style="height:100%;width:100%"></image>
+    </view>
+  </block>
+  <!-- 声明 -->
+  <view class="say">
+    <view>
+    <text>声明：所载文章、图片、数据等内容以及相关文章评论纯属个人观点和网友自行上传，并不代表本站立场，如发现有违法信息或侵权行为，请留言，或直接与本站管理员联系，我们将在收到您的信息后24小时内做出删除处理</text>
+    </view>
+  </view>
+  <!-- 商标信息 -->
+  <view class="contact">
+    <text>Copyright © {{companyInfo.company}}</text>
+    <view bindtap='telCall1'>
+    <text>资讯热线：{{companyInfo.phone}}</text>
+    </view>
+    <view bindtap='telCall2'>
+    <text>固话热线：{{companyInfo.landline}}</text>
+    </view>
+  </view>
+  <!-- 商标信息结束 -->
+</view>

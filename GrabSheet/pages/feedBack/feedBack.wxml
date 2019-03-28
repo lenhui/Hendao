@@ -1,0 +1,31 @@
+<!--page/feedBack/feedBack.wxml-->
+<!-- 意见反馈 -->
+<!-- 文本框 -->
+<view>
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class="textarea-wrp">
+    <textarea type='text' style='height:200rpx;width:100%' placeholder='{{initText}}' bindinput='textInput' value='{{text}}' />
+</view> 
+<!-- 上传照片 -->
+<view class="Upload">
+    <block wx:for="{{pic}}" wx:key="{{item.id}}">
+      <image src="{{item}}" style="width:120rpx;height:120rpx" data-index="{{index}}" bindlongpress="deletePic"></image>
+    </block>
+    <view class="{{photoBox}}" bindtap="chooseimage">
+      <image src="../../pages/images/photo.png" style="width:60rpx;height:60rpx"></image>
+    </view>
+    <view class="textDes">
+      <text>最多三张</text>
+      <text style="color:#06C2F6">（长按可删除）</text>
+    </view>
+</view>
+<view class="line">
+<!-- 输入邮箱号 -->
+<input class="phone" type='text' placeholder="请输入邮箱号" value='{{phone}}' bindchange="bindChangeEmail" value='{{email}}'></input>
+</view>
+<!-- 提交 -->
+<view class="submit">
+<view class='btn_login' bindtap='submit'>提交</view>
+</view>
+</form>
+</view>

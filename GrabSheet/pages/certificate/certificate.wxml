@@ -1,0 +1,54 @@
+<!--page/myOrder/myOrder.wxml-->
+<!-- <text>page/myOrder/myOrder.wxml</text> -->
+<!-- Tab横向切换 -->
+  <view class="body">
+  <view class="nav bc_white" >
+    <block wx:for="{{certificateClass}}" wx:key="">
+    <view class="{{curNav == item.id ?'red':'default'}}" bindtap="selected" data-id="{{item.id}}">{{item.name}}</view>
+    </block>
+  </view>
+<!-- 全部订单 -->
+  <view class="explain" wx:if="{{curNav == 1}}">
+    <view class="title">资质挂靠说明：</view>
+    <view class="content">{{content}}</view>
+    <view class="call">详细就资讯{{contactPerson}}{{phone}}</view>
+  </view>
+    <block wx:for="{{lists1}}" wx:key="">
+        <view class="leftOrder">
+          <image src="{{item.image}}" style="width:100%;height:100%;"></image>
+        </view>
+    </block>
+  <!-- </view> -->
+  <!-- 已完成订单 -->
+  <view class="{{selected1?'show':'hidden'}}">
+   <block wx:for="{{lists2}}" wx:key="">
+    <navigator url="../orderDetails/orderDetails" hover-class="none">
+      <!-- <view class="listAll"> -->
+        <view class="leftOrder">
+          <image src="{{item}}" style="width:100%;height:100%;"></image>
+        </view>
+        
+      <!-- </view> -->
+      </navigator>
+    </block>
+  </view>
+  <!-- 未完成订单 -->
+  <view class="{{selected2?'show':'hidden'}}">
+   <block wx:for="{{lists3}}" wx:key="">
+    <navigator url="../orderDetails/orderDetails" hover-class="none">
+      <!-- <view class="listAll"> -->
+        <view class="leftOrder">
+          <image src="{{item}}" style="width:100%;height:100%;"></image>
+        </view>
+        
+      <!-- </view> -->
+      </navigator>
+    </block>
+  </view>
+</view>
+<!-- 商标信息 -->
+  <view class="contact">
+    <text>Copyright © {{companyInfo.company}}</text>
+  </view>
+  <!-- 商标信息结束 -->
+

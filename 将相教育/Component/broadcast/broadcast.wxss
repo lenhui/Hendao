@@ -1,0 +1,13 @@
+/* Componet/broadcast/broadcast.wxss */
+image{
+  width:100%;
+}
+.swiper-box{
+  height: 380rpx;
+}
+.swiper-box .wx-swiper-dot-active::after{
+    background:rgba(244,0,0,0.8);   
+}
+.swiper-nav{
+  width: 100%;
+}

@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "需求描述",
+    "navigationBarBackgroundColor": "#feb70f",
+    "navigationBarTextStyle": "white",
+	"usingComponents": {
+		"graceDate": "/graceUI/components/graceDate"
+	}
+}

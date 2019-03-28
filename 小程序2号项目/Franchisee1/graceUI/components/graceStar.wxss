@@ -1,0 +1,4 @@
+/* graceUI/components/graceStar.wxss */
+.grace-stars{padding:5px; display:flex; flex-wrap:nowrap; justify-content:space-between;}
+.grace-stars-items{width:100%; margin:0 5px;}
+.grace-stars-items image{width:100%;}

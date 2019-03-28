@@ -1,0 +1,99 @@
+/* pages/comment/comment.wxss */
+.comment-top{
+	display: flex;
+	margin-top:20rpx;
+}
+.comment-top .img{
+	width:250rpx;
+	height: 250rpx;
+	/* border:1px solid #000; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.comment-top .img image{
+	width:200rpx;
+	height: 200rpx;
+}
+.right-comment{
+	width:490rpx;
+	/* border:1px solid #000; */
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+}
+.right-comment .comment-title{
+	height: 100rpx;
+	line-height: 100rpx;
+	font-size: 40rpx;
+	/* font-weight: 600; */
+	padding-left:25rpx;
+	color:#feb70f;
+}
+.comment-text{
+	display: flex;
+	align-items: center;
+}
+.comment-text .text{
+	margin-left:10rpx;
+	color:#feb70f;
+	font-size:25rpx;
+	/* height:80rpx; */
+	/* line-height: 100rpx; */
+}
+/* 用户评论 */
+.comment-textarea{
+	width: 100%;
+	margin-top:30rpx;
+}
+.comment-textarea textarea{
+	background: #eee;
+	margin:0 auto;
+	width: 80%;
+	height: 200rpx;
+	padding:50rpx;
+	font-size:35rpx;
+	color:#808080
+}
+/* 上传照片 */
+.Upload{
+  width: 100%;
+  height: 180rpx;
+  /* line-height: 180rpx; */
+  /* margin: 0 auto; */
+  display:flex;
+  align-items: center; 
+}
+.Upload>image{
+  margin-left:20rpx; 
+}
+.photoBox{
+  width: 120rpx;
+  height: 120rpx;
+  border:1px solid #bfbfbf;
+  margin-left:20rpx;
+  position: relative;
+}
+.photoBox1{
+  display: none
+}
+.photoBox>image{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%)
+}
+.pic{
+  position: relative;
+}
+.tijiao{
+	width: 90%;
+	margin:0 auto;
+	text-align:center;
+	height: 100rpx;
+	line-height: 100rpx;
+	background: #feb70f;
+	margin-top:80rpx;
+	color:#fff;
+	font-size: 36rpx;
+}

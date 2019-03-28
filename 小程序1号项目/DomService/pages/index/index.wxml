@@ -1,0 +1,186 @@
+<!--page/index/index.wxml-->
+<!-- 引入轮播图组件 -->
+<scroll-view bindscroll="scroll" scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}rpx;" bindscrolltolower="bindDownLoad" bindscroll="scroll" class="body">
+<view class="head">
+  <view class="posSearch">
+    <!-- 位置定位 -->
+    <view class="position">
+      <image src="../../pages/images/pos.png" style="width:50rpx;height:50rpx"></image>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+         <block wx:if="{{region[1] == '全部'}}">
+          {{region[0]}}
+        </block>
+        <block wx:elif="{{region[1] != '全部' && region[2] == '全部'}}">
+          {{region[1]}}
+        </block>
+         <block wx:else="{{region[2] != customItem}}">
+          {{region[2]}}
+        </block>
+        </view>
+       </picker>
+      </view>
+    <!-- <view class="search" bindtap='search'>
+        <image src="../../pages/images/search.png" style="width:50rpx;height:50rpx"></image>
+        <text>请输入关键词</text>
+  </view>  -->
+  </view>
+  <Broadcast img-urls="{{imgUrls}}"></Broadcast>
+ </view>
+
+ <!-- 下单用户 -->
+ <view class="orderUser">
+    <view class="notice">
+    <!-- <image src="../../pages/images/notice.png" style="width:50rpx;height:50rpx;margin:0 auto"></image> -->
+    <text>家政公告</text>
+    </view>
+    <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="2000" scroll-with-animation="true"> 
+  <block wx:for="{{notice}}" wx:key=""> 
+    <navigator url="/pages/index/index?title={{item.url}}" open-type="navigate">  
+      <swiper-item>  
+        <view class="swiper_item">{{item.content}}</view>  
+      </swiper-item> 
+    </navigator> 
+  </block>
+</swiper>
+  </view>
+ <!-- 下单用户结束 -->
+ <!-- 服务类型 -->
+ <view class="service">
+  <block wx:for="{{serviceType}}">
+    <view class="serviceType" bindtap='jumpClassType' data-id="{{item.id}}">
+      <view class="icon">
+      <image src="{{item.image}}"style="width:70%; height:130rpx;"></image>
+  </view>
+  <text>{{item.name}}</text>
+  </view>
+  </block>
+  <block wx:if="{{show}}">
+  <navigator url="../../pages/shopping/shopping" class="serviceType" hover-class="none">
+  <!-- <block wx:if="{{show}}"> -->
+  <view class="icon">
+    <image src="../../pages/images/server2.jpg"style="width:70%; height:130rpx;"></image>
+  </view>
+  <text>商城</text>
+  </navigator>
+  </block>
+ </view>
+ <!-- 为你优选 -->
+ <view>
+ <view class="optimization">
+	 <text>为你优选</text>
+ </view>
+ <!-- 横向滑动 -->
+ <view class="grace-bg-white grace-common-mt grace-padding grace-common-border">
+ <!-- <view class="grace-text-small grace-center" style="margin:30rpx 0;">横向滚动</view> -->
+	<view>
+		<scroll-view class="grace-scroll-x" scroll-x>
+			<block wx:for="{{10}}">
+			<view class="grace-items grace-items-demo1" bindtap="jumpGoodShop">
+				<image src="../../imgs/banner.png"></image>
+				<text>(小新唐店)</text>
+				<text class="text">根据你看过的商家推荐你看过的商家</text>
+			</view>
+			</block>
+		</scroll-view>
+	</view>
+</view>
+ <!-- 横向滚动结束 -->
+ </view>
+ <!-- 为你优选结束 -->
+	<view class="near">
+		<text>力臣服务</text>
+		<text class="title1">包您满意的优质服务</text>
+	</view>
+	<!-- 筛选 -->
+<view class="{{shaixuan?'shaixuan':''}}">
+<view>
+	<view class="{{grace_filter}}" id="grace-filter-header">
+		<view class="items" bindtap='showOptions1'>{{orderList[orderIndex]}}<text class="grace-iconfont icon-arrow-down"></text></view>
+		<view class="items" bindtap='showOptions2'>{{cateList[cateIndex]}}<text class="grace-iconfont icon-arrow-down"></text></view>
+		<view class="items" bindtap='changePriceOrder'>
+			价格
+			<image src='../../imgs/sort1.png' mode='widthFix' hidden="{{priceOrder == 2}}"></image>
+			<image src='../../imgs/sort2.png' mode='widthFix' hidden="{{priceOrder == 1}}"></image>
+		</view>
+		<view class="items" bindtap='showOptions99'>筛选<text class="grace-iconfont icon-shaixuan"></text></view>
+		<!-- 第一个选项 -->
+		<view class='{{grace_filter_options}}' wx:if="{{showingIndex == 1}}">
+			<view class="option {{index ==  orderIndex ? 'current' : ''}}" wx:for="{{orderList}}" bindtap='changeOrder' data-itemid='{{index}}'>
+				{{item}}<text class="grace-iconfont icon-right" wx:if="{{index ==  orderIndex}}"></text>
+			</view>
+		</view>
+		<!-- 第二个选项 -->
+		<view class='{{grace_filter_options}}' wx:if="{{showingIndex == 2}}">
+			<view class="option {{index ==  cateIndex ? 'current' : ''}}" wx:for="{{cateList}}" bindtap='changeCate' data-itemid='{{index}}'>
+				{{item}}<text class="grace-iconfont icon-right" wx:if="{{index ==  cateIndex}}"></text>
+			</view>
+		</view>
+		<!-- 筛选 start -->
+		<view class='{{grace_filter_options}}' style="width:100%; height:{{filterHeight}}px; padding:0;" wx:if="{{showingIndex == 99}}">
+				<form bindsubmit='formsubmit' bindreset='formReset'>
+					<scroll-view scroll-y="true" style="width:96%; padding:20rpx 1% 0 3%; height:{{filterHeight + 'px'}}">					
+						<view class="grace-h5 grace-blod">分类</view>
+						<view style='padding:20rpx 0;' class="grace-select-tips">
+							<radio-group name="where1" bindchange="changeFunc">
+								<label wx:for="{{where1Tips}}" class="{{item.checked ? 'grace-checked' : ''}}">
+									<radio value="{{item.value}}" checked="{{item.checked}}"></radio> {{item.name}}
+								</label>
+							</radio-group>
+						</view>
+						<view class="grace-h5 grace-blod">产品分类</view>
+						<view style='padding:20rpx 0;' class="grace-select-tips">
+							<checkbox-group name="where2" bindchange="changeFunc2">
+								<label wx:for="{{where2Tips}}" class="{{item.checked ? 'grace-checked' : ''}}">
+									<checkbox value="{{item.value}}" checked="{{item.checked}}"></checkbox> {{item.name}}
+								</label>
+							</checkbox-group>
+						</view>
+						<!-- 占位视图组件 -->
+						<view style="height:150rpx;"></view>
+					</scroll-view>
+					<!-- 按钮  -->
+					<view class='{{grace_filter_buttons}}'>
+						<view>
+							重置
+							<button form-type='reset'>重置</button>
+						</view>
+						<view>
+							确定
+							<button form-type='submit'>确定</button>
+						</view>
+					</view>
+				</form>
+		</view>
+		<!-- 筛选 end -->
+	</view>
+	
+		<!-- 新闻列表 -->
+	<view class="{{grace_news_list}}">
+		<block wx:for="{{nearLists}}">
+			<view class="nav" bindtap="jumpShop" data-id="{{item.id}}">
+				<view class="grace-news-list-items">
+					<image style="height:200rpx;" src="{{item.src}}" class="grace-news-list-img grace-list-imgs-l" mode="widthFix"></image>
+					<view class="grace-news-list-title">
+            <view>
+            <view class="grace-news-list-title-main">{{item.title}}</view>
+            </view>
+						<view>
+            <text class="grace-news-list-title-desc grace-text-overflow">{{item.desTilte}}</text>
+            </view>
+						<view class="money">
+            <text class="grace-text-money">￥{{item.price}}</text>
+            <text class="grace-text-after">.40</text>
+            </view>
+            
+					</view>
+			    <view class="grace-news-tips">{{item.tips}}</view>
+				</view>
+			</view>
+		</block>
+	</view>
+	</view>
+	<view class="{{!mask?'grace-mask1':'grace-mask'}}"></view>
+	<!-- 演示内容结束 -->
+</view>
+ </scroll-view>

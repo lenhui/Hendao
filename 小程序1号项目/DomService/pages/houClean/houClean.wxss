@@ -1,0 +1,248 @@
+/* page/class/class.wxss */
+page{
+  background: #eee;
+}
+.body{
+  width: 100%;
+  background: #eee;
+  margin-bottom:50rpx;
+}
+/* 搜索你想要的商品 */
+.goodsSearch{
+  /* position: fixed; */
+  top:0rpx;
+  z-index: 10;
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  background: #feb70f;
+}
+.searchGoods{
+  width: 90%;
+  margin: 0 auto;
+  height: 60rpx;
+  border-radius: 30rpx;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  color:#bfbfbf;
+}
+.searchGoods .goods{
+  font-size: 28rpx;
+}
+.head{
+  width: 100%;
+  position: absolute;
+  top:0rpx;
+  z-index: 100;
+  /* bottom:382rpx; */
+}
+.head .headImg{
+  position: fixed;
+  margin-top:80rpx; 
+  width: 100%;
+  height: 300rpx;
+}
+page {
+	height: 100%;
+	overflow: hidden;
+}
+.container {
+	height: 100%;
+	overflow: hidden;
+}
+.header {
+	position: relative;
+	background: #feb70f;
+	padding: 20rpx 40rpx;
+	color: #000;
+	-webkit-transition: all 0.6s ease-in-out;
+}
+.header.hidden {
+	/*-webkit-transform: translate3d(0,-290rpx,0);*/
+	margin-top: -290rpx;
+}
+.header .logo {
+	float: left;
+	width: 160rpx;
+	height: 160rpx;
+	border: 2rpx solid #fff;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+.header .name {
+	padding-top: 20rpx;
+	font-size: 36rpx;
+	line-height: 60rpx;
+}
+.header .welcome {
+	color: #333;
+	font-size: 30rpx;
+	width: 360rpx;
+	line-height: 70rpx;
+}
+.header .follow {
+	position: absolute;
+	right: 20px;
+	top: 50px;
+	font-size: 30rpx;
+	line-height: 2;
+	padding: 0 0.7em;
+	border: 1rpx solid;
+	border-radius: 30rpx;
+}
+.header .line {
+	clear: both;
+	width: 100%;
+	height: 1px;
+	border-bottom: 1px dashed #000;
+	padding-top: 20rpx;
+}
+.header .desc {
+	color: #333;
+	font-size: 30rpx;
+	line-height: 40rpx;
+	padding-top: 20rpx;
+}
+
+.content-container {
+	display: -webkit-flex;
+	height: 100%;
+	box-sizing: border-box;
+	padding-bottom: 100rpx;
+}
+.classify-container {
+	width: 180rpx;
+	background: #efefef;
+	height: 100%;
+  
+}
+::-webkit-scrollbar {
+ width: 0;
+ height: 0;
+ color: transparent;
+}
+.classify-container .classify {
+	/* padding: 50rpx 30rpx; */
+	height:100rpx;
+	/* line-height: 100rpx; */
+  display: flex;
+  align-items: center;
+	text-align: center;
+	border-bottom: 1px dashed #aaa;
+  padding-left:15rpx;
+  padding-right: 5rpx;
+}
+.classify-container .classify.active {
+	background: #fff;
+}
+.classify-container .classify .name {
+	display: inline-block;
+	font-size: 30rpx;
+	color: #646464;
+	line-height: 1.2;
+	text-align: left;
+	pointer-events: none;
+}
+.rightText{
+  width:70%;
+}
+.goods-container {
+	-webkit-flex: 1;
+	background: #ffffff;
+	height: 100%;
+}
+.goods-container .title {
+	/* padding: 20rpx 25rpx; */
+	height: 100rpx;
+	color: #000;
+	font-size: 30rpx;
+	line-height: 100rpx;
+	margin-left:20rpx;
+	/* background: #f7f7f7; */
+}
+.goods-container .goods {
+  display: flex;
+  height: 150rpx;
+  margin-left:10rpx;
+}
+.goods-container .goods .pic {
+	float: left;
+	width: 130rpx;
+	height: 130rpx;
+	margin-right: 20rpx;
+}
+.goods-container .goods .name {
+	color: #5c5a5a;
+	font-size: 33rpx;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+  padding-right: 50rpx;
+	/* line-height: 46rpx; */
+}
+.goods-container .goods .sold {
+	color: #f45044;
+	font-size: 30rpx;
+	line-height: 46rpx;
+  text-align: right;
+  margin-top:30rpx;
+}
+.goods-container .goods .price {
+	color: #f45044;
+	font-size: 36rpx;
+	line-height: 46rpx;
+}
+.goods-container view:last-child{
+  margin-bottom:50rpx;
+}
+.cart-detail, .cart-detail .mask {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.cart-detail .mask {
+	background: rgba(0,0,0,0.7);
+}
+.cart-detail .list {
+	position: absolute;
+	left: 0;
+	bottom: 100rpx;
+	width: 100%;
+	background: #f7f7f7;
+	padding: 30rpx 0;
+}
+.cart-detail .list .item {
+	display: -webkit-flex;
+	color: #333;
+	font-size: 36rpx;
+	line-height: 50rpx;
+	padding: 20rpx 40rpx;
+}
+.cart-detail .list .item .name {
+	-webkit-flex: 1;
+}
+.cart-detail .list .item .total {
+	width: 120rpx;
+}
+.cart-detail .list .item .reduce,
+.cart-detail .list .item .add {
+	font-size: 50rpx;
+	background: #feb70f;
+	width: 50rpx;
+	height: 50rpx;
+	text-align: center;
+	border-radius: 50%;
+}
+.cart-detail .list .item .num {
+	width: 50rpx;
+	text-align: center;
+	margin: 0 5rpx;
+}
+.price1{
+  color:#808080;
+  font-size: 28rpx;
+}

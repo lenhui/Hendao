@@ -1,0 +1,85 @@
+/* page/myOrder/myOrder.wxss */
+/* page{
+	background: #eee;
+} */
+.grace-tab-title.grace-center{
+	display: flex;
+	justify-content: space-around !important;
+	text-align: none !important;
+}
+.order-state-number{
+	font-size: 20rpx;
+	margin-top:30rpx;
+	background: red;
+	display: block;
+	color:#fff;
+	border-radius: 50%;
+}
+.grace-tab-current{
+	width: 30%;
+	display: flex;
+	color:#E96F1E;
+	border-bottom:6rpx solid #E96F1E !important;
+}
+.orderType{
+	display: flex;
+	height: 100rpx;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 33rpx;
+	border-bottom:1px solid #ccc;
+	}
+.orderType .state{
+	color:#E96F1E
+}	
+.order-content{
+	display: flex;
+	align-items: center;
+	margin-top:20rpx;
+}
+.order-content .pic{
+	width: 150rpx;
+	height: 150rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.order-content .pic image{
+  border-radius: 10rpx;
+}
+.order-content .right-content{
+	margin-left:20rpx;
+}
+.order-des{
+	height: 80rpx;
+	display: flex;
+	align-items: center;
+	font-size:33rpx;
+}
+.comment-box{
+	width:100%;
+	display: flex;
+	justify-content: flex-end;
+}
+.comment-box .comment{
+	width:180rpx;
+	height: 70rpx;
+	line-height: 70rpx;
+	text-align: center;
+	background: #E96F1E;
+	color:#fff;
+	font-size: 30rpx;
+}
+.line{
+	width: 100%;
+	margin:0 auto;
+	/* margin-top:10rpx; */
+	/* border-top:1px solid #eee; */
+	height: 20rpx;
+	background: #eee;
+}
+::-webkit-scrollbar {
+ width: 0;
+ height: 0;
+ color: transparent;
+}

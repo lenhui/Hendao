@@ -1,0 +1,63 @@
+<view class="container-index">
+  <!-- 引入轮播图组件 -->
+  <view class="broad">
+    <Broadcast img-urls="{{imgUrls}}"></Broadcast>
+  </view>
+  <view class="container-box">
+    <view class="box">
+       <view class="title">
+          <text style="display:block;width:100%">将相教育</text>
+       </view>
+       <view class="content-box">
+        <view class="box-item" bindtap='jumpVideo'>
+          <view class="box-top">
+            <image src="../images/learn.jpg" style="width:65%;height:100%"></image>
+          </view>
+        </view>
+        <!-- 第二个 -->
+         <view class="box-item" bindtap='jumpUpVideo'>
+          <view class="box-top">
+            <image src="../images/upVideo.jpg" style="width:65%;height:100%"></image>
+          </view>
+        </view>
+        <!-- 第二个结束 -->
+       </view>
+       <view class="line"></view>
+       <!-- 企业文化 -->
+       <view class="qyWenhua-box">
+          <view class="title" bindtap='corporateMore'>
+            <view class="corporate">
+              <text>企业文化</text>
+            </view>
+            <view class="more">
+              <text>更多>></text>
+            </view>
+          </view>
+          <view class="wenhua-lists">
+          <block wx:for="{{corporate}}" wx:key="">
+            <view class="wenhua-item" bindtap='jumpMore' data-id="{{item.id}}">
+                <view class="left">
+                <image src="{{item.image}}" style="width:100%;height:100%;"></image>
+                </view>
+                <view class="right">
+                  <view class="title-top">
+                    <text>{{item.title}}</text>
+                  </view>
+                  <!-- 主内容 -->
+                   <view class="scale">
+                     <text>{{item.main_content}}</text>
+                  </view>
+                  <!-- 主内容结束 -->
+                  <view class="date">
+                    <text>{{item.create_time}}</text>
+                  </view>
+                </view>
+            </view>
+            </block>
+           
+          </view>
+       </view>
+       <!-- 企业文化结束 -->
+  </view>
+  </view>
+</view>

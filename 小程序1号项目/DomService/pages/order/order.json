@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {"graceLoading": "/graceUI/components/graceLoading"},
+  "navigationBarTitleText": "我的订单",
+  "navigationBarBackgroundColor": "#feb70f",
+  "navigationBarTextStyle": "white"
+}

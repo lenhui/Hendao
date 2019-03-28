@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "行业资讯",
+  "navigationBarBackgroundColor": "#06C2F6",
+  "enablePullDownRefresh": true,
+  "navigationBarTextStyle": "white",
+  "backgroundTextStyle": "dark"
+}

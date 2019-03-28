@@ -1,0 +1,19 @@
+/**app.wxss**/
+.container {
+ 
+} 
+/*特殊按钮*/
+button.yellow {
+	color: #fff;
+	background: #06C2F6;
+}
+button.yellow:after {
+	border-color: rgba(255, 133, 111, 0.3);
+}
+button.yellow.hover {
+	background: #06C2F6;
+}
+button.yellow.disabled {
+	background: rgb(110, 213, 241);
+}
+@import "graceUI/graceUI.wxss";

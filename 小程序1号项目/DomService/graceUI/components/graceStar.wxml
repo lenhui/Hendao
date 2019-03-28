@@ -1,0 +1,6 @@
+<!--graceUI/components/graceStar.wxml-->
+<view class="grace-stars">
+  <view class="grace-stars-items" wx:for="{{starNum}}" wx:key="index" bindtap="changNum" data-val="{{index}}">
+    <image src="{{value > index ? starImg[1] : starImg[0]}}" mode="widthFix"></image>
+  </view>
+</view>

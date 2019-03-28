@@ -1,0 +1,105 @@
+<!--pages/orderDetails/orderDetails.wxml-->
+<view class="cantainer">
+  <view class="orderState">
+    <view class="state">
+      <!-- <block wx:if="{{order.status == 4}}"> -->
+      <text wx:if="{{order.status == 4}}">订单状态：已核销</text>
+      <text wx:else>订单状态：待核销</text>
+      <!-- <> -->
+    </view>
+    <view class="img">
+      <image src="../images/orderDetails.png" style="width:80rpx;height:80rpx"></image>
+    </view>
+  </view>
+  <view class="order-info">
+    <view class="contact">
+      <view class="contact-man">
+        <view class="pic">
+          <image src="../images/adr.png" style="width:50rpx;height:50rpx"></image>
+        </view>
+        <view class="name">
+          <text>{{name}}</text>
+        </view>
+        <view class="contact-phone">
+          <text>{{phone}}</text>
+        </view>
+      </view>
+      <!-- 地址 -->
+      <view class="contact-address">
+        <text>{{address}}{{addressDetail}}</text>
+      </view>
+    </view>
+   
+  <view class="line"></view>
+  <!-- 订单详情 -->
+  <view class="order-message">
+  <view class="order-item">
+    <view class="order-title">
+      <text>订单编号</text>
+    </view>
+    <view class="order-number">
+      <text>{{orderNumber}}</text>
+    </view>
+    <view class="copy" bindtap='copyText'>
+      <text>复制</text>
+    </view>
+  </view>
+  <!-- 第二行 -->
+  <view class="order-item">
+    <view class="order-title">
+      <text>下单时间</text>
+    </view>
+    <view class="order-number">
+      <text>{{createTime}}</text>
+    </view>
+  </view>
+  <!-- 第三行 -->
+  <view class="order-item">
+    <view class="order-title">
+      <text>支付方式</text>
+    </view>
+    <view class="order-number">
+      <text>微信支付</text>
+    </view>
+  </view>
+  </view>
+   <view class="line"></view>
+  <view class="server-type">
+    <view class="server-item">
+      <view class="left">
+        <text>服务类型</text>
+      </view>
+       <view class="right">
+        <text>{{serverType}}</text>
+      </view>
+    </view>
+    <view class="server-item">
+      <view class="left">
+        <text>服务金额</text>
+      </view>
+       <view class="right1">
+        <text>￥{{price}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="line"></view> -->
+  <!-- 订单二维码 -->
+  <view class="order-code" wx:if="{{status != 0}}">
+      <view class="code">
+        <text>订单核销码：（凭以下券码上门服务）</text>
+      </view>
+      <view class="codema">
+       <canvas canvas-id="qrcode" />
+      </view>
+    </view>
+    <!-- 订单二维码结束 -->
+ <view class="order-btn">
+    <view class="del-order">
+      <text>删除订单</text>
+    </view>
+    <view class="angin-order">
+      <text>再次服务</text>
+    </view>
+  </view>
+  </view>
+</view>

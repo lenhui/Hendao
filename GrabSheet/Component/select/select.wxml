@@ -1,0 +1,18 @@
+<!--page/component/Componet/select/select.wxml-->
+<view class='com-selectBox'>
+    <view class='com-sContent' bindtap='selectToggle'>
+        <view class='com-sTxt'>
+          <view bindtap="{{BeginSearch}}" style="color:{{colorInput}}" class="text">
+            <text>{{startText}}</text>
+          </view>
+         
+        <!-- <input  focus="{{focus}}" bindtap="{{BeginSearch}}"  maxlength="20" placeholder="{{startText}}" value="{{nowText}}" placeholder-style="color:{{colorInput}}" readonly="readonly" unselectable="on" /> -->
+        </view>
+        <!-- <view class='com-sBtn' bindtap="toggle" animation="{{animationData}}">2</view> -->
+
+        <image src='../../pages/images/Arrow.png'  class='com-sBtn'  animation="{{animationData}}"></image>
+    </view>
+    <view class='com-sList' wx:if="{{selectShow}}">
+        <view wx:for="{{propArray}}" data-index="{{index}}" wx:key='' class='com-sItem' bindtap='setText'>{{item.text}}</view>
+    </view>
+</view>

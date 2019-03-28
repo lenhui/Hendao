@@ -1,0 +1,13 @@
+/* pages/demo/timeline.wxss */
+/* 页面个性化样式 */
+.grace-h5{line-height:1.6em;}
+.grace-text{line-height:1.5em; font-size:22rpx;}
+.grace-timeline-content{
+	background:#E96F1E;
+}
+.grace-timeline-circular{
+	background:#E96F1E ;
+}
+.grace-timeline-time view:last-child{
+	color:#E96F1E ;
+}

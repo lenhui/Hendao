@@ -1,0 +1,95 @@
+
+<!--page/index/index.wxml-->
+<!-- 引入轮播图组件 -->
+<scroll-view bindscroll="scroll" scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}rpx;" bindscrolltolower="bindDownLoad" bindscroll="scroll" class="body">
+<view class="head">
+  <view class="posSearch">
+    <!-- 位置定位 -->
+    <view class="position">
+      <image src="../../pages/images/pos.png" style="width:50rpx;height:50rpx"></image>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker">
+         <block wx:if="{{region[1] == '全部'}}">
+          {{region[0]}}
+        </block>
+        <block wx:elif="{{region[1] != '全部' && region[2] == '全部'}}">
+          {{region[1]}}
+        </block>
+         <block wx:else="{{region[2] != customItem}}">
+          {{region[2]}}
+        </block>
+        </view>
+       </picker>
+      </view>
+    <!-- <view class="search" bindtap='search'>
+        <image src="../../pages/images/search.png" style="width:50rpx;height:50rpx"></image>
+        <text>请输入关键词</text>
+  </view>  -->
+  </view>
+  <Broadcast img-urls="{{imgUrls}}"></Broadcast>
+ </view>
+ <!-- 服务类型 -->
+ <!-- bindtap='classDestail' -->
+ <view class="service">
+  <block wx:for="{{serviceType}}">
+  <view class="serviceType" bindtap='classDestail' data-title="{{item.title}}">
+	<view class="icon-box">
+  <view class="icon">
+    <image src="{{item.img}}" style="width:60%; height:60%;"></image>
+  </view>
+	</view>
+  <text>{{item.title}}</text>
+  </view>
+  </block>
+ </view>
+ <view class="settled" catchtap="registerUser">
+	 <view class="left-side">
+		 <view class='register'>
+			 <text>入驻商注册</text>
+		 </view>
+		 <view class='hendao'>
+		 			 <text>恒道家政服务</text>
+		 </view>
+	 </view>
+	 <view class="img">
+		 <image src="../images/noice.png" style="height:90%;width:90%"></image>
+	 </view>
+	 <!-- <view class="clear"></view> -->
+ </view>
+ <view class="bottom">
+	 <view class="bottom-left" catchtap='lianxiKefu'>
+		 <view class="icon-left">
+			 <image src="../images/addWe.png" style="width:50rpx;height:50rpx"></image>
+		 </view>
+		 <view class="textDes">
+			 <view class="our" bindtap='iji' data-id=''>
+			 	 <text>联系客服</text>
+			 </view>
+			 <view>
+			 	 <text>共创大业，共享双赢</text>
+			 </view>
+		 </view>
+	 </view>
+	 <view class="bottom-right" catchtap='feedBackJump'>
+	 		 <view class="icon-left">
+	 		 			 <image src="../images/edit1.png" style="width:50rpx;height:50rpx"></image>
+	 		 </view>
+	 		 <view class="textDes">
+	 		 			 <view class="our">
+	 		 			 	 <text>意见反馈</text>
+	 		 			 </view>
+	 		 			 <view>
+	 		 			 	 <text>让我们变得更好</text>
+	 		 			 </view>
+	 		 </view>   
+	 </view>
+ </view>
+ </scroll-view>
+ <view class="view" bindtap='hexiao'>
+  <image class="cover-9" src="../images/erweima.png" bindtap="img"></image>
+  <view class="text">
+    <text>扫描码券，一键核销</text>
+    <!-- <text>{{show}}ddsds</text> -->
+  </view>
+  <!-- <button type="primary" bindtap="scan" id="scan">扫一扫</button> -->
+</view>

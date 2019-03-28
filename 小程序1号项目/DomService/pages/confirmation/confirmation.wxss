@@ -1,0 +1,240 @@
+/* pages/confirmation/confirmation.wxss */
+page{
+  background: #eee;
+}
+.address1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  background: #fff;
+  padding-top:50rpx;
+  padding-bottom:50rpx;
+}
+.address1 .title1{
+  margin: 0 auto;
+  color:#808080;
+  font-size:33rpx;
+}
+.address1 .tips{
+  margin: 0 auto;
+  color:#FFB76A;
+  margin-top:10rpx;
+}
+.address2{
+  background: #fff;
+  padding-top:50rpx;
+  padding-bottom:50rpx;
+  padding-left:30rpx;
+}
+.address2 .consignee{
+  font-size:33rpx;
+  font-weight: 800;
+}
+.position{
+  display: flex;
+  margin-top:10rpx;
+  /* flex-direction: column; */
+}
+.position image{
+  margin-left:-10rpx;
+}
+.position .posText{
+  color:#9A9A9A;
+}
+.address2 .tips{
+  color:#FFB76A;
+}
+.shop-info{
+  width:100%;
+  height: 200rpx;
+  background: #fff;
+  margin-top:20rpx;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.shop-info .left{
+  width:30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .shop-info .left image{
+
+} */
+.shop-info .right{
+  width:68%;
+}
+.shop-info .right .title{
+  margin-top:30rpx;
+}
+.shop-info .price{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 30rpx;
+  margin-top:10rpx;
+  color:#EA8E45;
+  font-size: 33rpx;
+}
+.price .number{
+  display: flex;
+}
+.price .number text:nth-child(1){
+  color:#9A9A9A;
+  margin-right: 5rpx;
+}
+/* 优惠信息 */
+.discount{
+  background: #fff;
+  margin-top:20rpx;
+}
+.discount .discount-item{
+  display: flex;
+  justify-content: space-between;
+  height: 110rpx;
+  align-items: center;
+  padding-left:30rpx;
+  padding-right:30rpx;
+  border-bottom:1px solid #eee;
+  /* margin-top:5rpx; */
+}
+.discount .discount-item .left{
+  font-size: 33rpx;
+}
+.discount .discount-item .right{
+  font-size: 33rpx;
+  /* height: 110rpx;
+  align-items: center; */
+}
+.discount .discount-item .right text:nth-child(2){
+  font-size: 40rpx;
+  margin-left:5rpx;
+  color:#9A9A9A;
+}
+.total{
+  margin-top:20rpx;
+  background: #fff;
+  padding:40rpx;
+}
+.total .total-item{
+  /* height: 200rpx; */
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top:10rpx;
+}
+.total .total-item .left{
+  font-size: 35rpx;
+}
+.total .total-item .right{
+  font-size: 35rpx;
+  color:#EA8E45;
+}
+.realPay{
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  font-size: 35rpx;
+  justify-content: flex-end;
+  padding-right: 20rpx;
+}
+.realPay text:nth-child(1){
+  color:#EA8E45;
+}
+.wxPay{
+  width:90%;
+  margin: 0 auto;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background: #1AA034;
+  color:#fff;
+  font-size: 35rpx;
+  margin-bottom:20rpx;
+}
+.cover{
+  position: fixed;
+  top:0;
+  height: 100%;
+  width:100%;
+  background: rgba(0,0,0,0.5)
+}
+/* 支付界面 */
+.payment-box{
+  position: fixed;
+  top:40%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 90%;
+  margin:0 auto;
+  background: #fff;
+  border-radius: 10rpx;
+  margin-top:30rpx;
+}
+.payment-box .title{
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+  /* margin-top:10rpx; */
+}
+.payment-box .title text{
+  font-size: 40rpx;
+}
+.payment-box .bianhao{
+  width: 90%;
+  margin:0 auto;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  font-size: 35rpx;
+  color:#808080;
+}
+.payment-box .bianhao .money{
+  color:#EA8E45;
+  font-size: 48rpx;
+}
+.payment-box .pwd-input{
+  height: 120rpx;
+  display: flex;
+  width: 90%;
+  margin:0 auto;
+  background: #eee;
+}
+.payment-box .pwd-input input{
+  height: 120rpx;
+  line-height: 100rpx;
+  width: 100%;
+  text-align: left;
+  /* border:1px solid #000; */
+  padding-left:20rpx;
+  font-size: 40rpx;
+  color:#808080;
+}
+.box-bottom{
+  height: 120rpx;
+  width:90%;
+  margin:0 auto;
+  margin-top:50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.box-bottom .left{
+  width:47%;
+  text-align: center;
+  background: #eee;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 40rpx;
+}
+.box-bottom .right{
+  width:47%;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  background:#EA8E45; 
+  color:#fff;
+  font-size: 40rpx;
+}

@@ -1,0 +1,14 @@
+<!--pages/about/about.wxml-->
+    <!-- 图片 -->
+     <view class="pic">
+      <image src="{{imageurl}}"></image>
+    </view> 
+    <view class="about">
+      <text class="title">{{title}}</text>
+    </view>
+    <!-- 描述 -->
+    <view class="des">
+      <text class="des_word">
+        {{content}}
+      </text>
+    </view>

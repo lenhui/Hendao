@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "Broadcast": "../../Component/broadcast/broadcast"
+  },
+  "navigationBarTitleText": "将相教育",
+  "navigationBarBackgroundColor": "#06C2F6",
+  "navigationBarTextStyle": "white"
+}

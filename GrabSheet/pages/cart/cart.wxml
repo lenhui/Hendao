@@ -1,0 +1,35 @@
+<!--page/cart/cart.wxml-->
+<view class="body">
+  <view class="head">
+    <view class="goodsShop" bindtap='goodsShop'>
+      <text>进人商城</text>
+    </view>
+  </view>
+  <!-- 购物车商品列表 -->
+  <view class="List">
+    <block wx:for="{{cartList}}" wx:key="">
+      <view class="cartList" bindtap='shopDes' data-id="{{item.id}}" data-gooodId="{{item.goods_id}}">
+      <view class="listleft">
+        <image src="{{item.image}}"></image>
+      </view>
+      <view class="listRight">
+        <view class="listTitle">
+          <text>{{item.goods_name}}</text>
+        </view>
+        <view class="rightBottom">
+          <!-- <view class="goodsPrice">
+            <text>￥</text>
+            <text>{{item.price}}</text>
+          </view> -->
+          <view class="count">
+            <view class="minus" catchtap='minusCart' data-typeId="{{item.goods_type_id}}" data-gooodId="{{item.goods_id}}" data-count="{{item.count}}">-</view>
+            {{item.count}}
+            <view class="add" catchtap='addCart' data-typeId="{{item.goods_type_id}}" data-gooodId="{{item.goods_id}}">+</view>
+          </view>
+        </view>
+      </view>
+      </view>
+    </block>
+  </view>
+</view>
+

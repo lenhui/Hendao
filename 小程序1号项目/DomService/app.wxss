@@ -1,0 +1,25 @@
+/**app.wxss**/
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}  */
+/*特殊按钮*/
+button.yellow {
+	color: #fff;
+	background: #feb70f;
+}
+button.yellow:after {
+	border-color: rgba(255, 133, 111, 0.3);
+}
+button.yellow.hover {
+	background: #e4b203;
+}
+button.yellow.disabled {
+	background: #f4e283;
+}
+@import "graceUI/graceUI.wxss";

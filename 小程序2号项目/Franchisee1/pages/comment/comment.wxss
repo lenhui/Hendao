@@ -1,0 +1,74 @@
+/* pages/comment/comment.wxss */
+/* 全部订单 */
+.listAll{
+  width: 95%;
+  margin: 0 auto;
+  margin-top:30rpx;
+  height: 200rpx;
+  /* border:1px solid #eee; */
+  display: flex;
+  margin-bottom: 20rpx;
+  /* justify-content: space-around; */
+  /* align-items: center; */
+}
+/* 订单左侧 */
+.leftOrder{
+  width: 30%;
+}
+.leftOrder image{
+  border-radius: 15rpx;
+}
+/* 订单右侧 */
+.rightorder{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-left:20rpx;
+}
+.rightorder .title{
+  margin-top:20rpx;
+  text-align: left;
+  font-size: 35rpx;
+}
+.rightorder .bottom{
+  width: 100%;
+  display: flex;
+  margin-top:30rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+.rightorder .bottom .number{
+  font-size: 33rpx;
+  color:#8293A8;
+}
+.rightorder .bottom .price{
+  color:#DD2727;
+}
+.rightorder .bottom .dollar{
+  font-size: 40rpx;
+}
+/* 用户评论 */
+.comment-textarea{
+	width: 100%;
+	margin-top:30rpx;
+}
+.comment-textarea textarea{
+	background: #eee;
+	margin:0 auto;
+	width: 80%;
+	height: 200rpx;
+	padding:50rpx;
+	font-size:35rpx;
+	color:#808080
+}
+.tijiao{
+	width: 90%;
+	margin:0 auto;
+	text-align:center;
+	height: 100rpx;
+	line-height: 100rpx;
+	background: #06C2F6;
+	margin-top:80rpx;
+	color:#fff;
+	font-size: 36rpx;
+}

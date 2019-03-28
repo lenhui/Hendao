@@ -1,0 +1,51 @@
+<!--pages/addServer/addServer.wxml-->
+<view class="container1">
+<view class="head">
+</view>
+<view class="goodsName">
+  <view class="title">
+    <text>上传人姓名：</text>
+  </view>
+  <input type="text" placeholder='请输您的姓名' style="font-size:30rpx;" bindinput='nameInput'></input>
+</view>
+<view class="goodsType" bindtap='jumpType'>
+  <view class="title">
+    <text>选择上传部门：</text>
+    <text>{{departmentArray[1]}}</text>
+  </view>
+  <!-- <input type="text" placeholder='请输入服务类型' style="font-size:30rpx;"></input> -->
+  <view class="type">
+    <text>{{severType}}</text>
+    <text>></text>
+  </view>
+</view>
+<view class="severDes">
+  <text>上传视频描述:</text>
+</view>
+<!-- 文本框 -->
+<textarea placeholder='请填写视频描述' style="background:#eee;padding:20rpx;font-size:30rpx" bindinput='desInput'></textarea>
+<!-- 上传设备展示图 ，上传-->
+<view class="equipment">
+  <text>请选择上传的视频</text>
+</view>
+<view class="equPic">
+<block wx:for="{{equPic}}" wx:key="{{item.id}}">
+    <view class="equView">
+      <video src="{{equPic}}" bindlongpress="deleteEqu" autoplay='true'></video>
+    </view>
+      </block>
+      <view class="{{photoEqu}}" bindtap="bindButtonTap">
+        <image src="../../pages/images/add.png" style="width:200rpx;height:200rpx"></image>
+    </view>
+
+</view>
+<view class="btn">
+  <view class="Upper" bindtap ='jumpUpper'>
+  <text>确定上传</text>
+  </view>
+  <!-- <view class="Warehouse" bindtap ='jumpWarehouse'>
+  <text>加入仓库</text>
+  </view> -->
+</view>
+</view>
+

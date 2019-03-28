@@ -1,0 +1,32 @@
+<!--page/me/me.wxml-->
+<!-- 头像部分 -->
+<view class="head">
+  <view class="account">
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{avatarUrl}}" mode="cover"></image>
+    </view>
+    <view class="account-phone">
+      <text>{{nickName}}</text>
+    </view>
+  </view>
+</view>
+<!-- 头像部分结束 -->
+<!-- 我的列表开始 -->
+<view class="myList">
+  <block wx:for="{{myList}}" wx:key = "{{index}}">
+    <view class="viewBlock" bindtap='JumpLink' data-link = "{{index}}">
+      <view class="left">
+        <!-- <view class="myIcon"> -->
+          <image src="{{item.iconPath}}" style="width:50rpx;height:50rpx"></image>
+        <!-- </view> -->
+        <view class="text">
+          <text>{{item.text}}</text>
+        </view>
+      </view>
+      <view class="right">
+      <text>></text>
+      </view>
+    </view>
+  </block>
+</view>
+<!-- 我的列表结束 -->

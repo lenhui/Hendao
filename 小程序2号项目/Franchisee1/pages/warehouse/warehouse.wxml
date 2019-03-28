@@ -1,0 +1,73 @@
+<!--pages/warehouse/warehouse.wxml-->
+  <view class="body" catchtouchend="stroke">
+  <view>
+    <block wx:for="{{orderLists}}" wx:key="">
+    <view bindtap="jumpTos" wx:if="{{bool}}">
+      <view class="listAll">
+        <view class="leftOrder">
+          <image src="{{item.img}}" style="width:200rpx;height:200rpx"></image>
+        </view>
+        <view class="rightorder">
+          <view class="title">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="bottom">
+            <view class="sever-operation">
+          <view class="{{operText}}" catchtap='operation'>
+          <text>操作</text>
+          </view>
+          <!-- <view class="{{opera}}">
+            <view class="edit" catchtap='jumpEdit'>
+             <image src="../images/edit.png" style="width:40rpx;height:40rpx;"></image>
+             <text>编辑</text>
+            </view>
+            <view class="edit" catchtap='jumpEdit'>
+             <image src="../images/down.png" style="width:40rpx;height:40rpx;"></image>
+             <text>下架</text>
+            </view>
+            <view class="del" bindtap='jumpDel' data-index="{{index}}">
+             <image src="../images/del.png" style="width:40rpx;height:40rpx;"></image>
+             <text>删除</text>
+            </view>
+          </view> -->
+          </view>
+          </view>
+        </view>
+      </view>
+      </view>
+      <view wx:else>
+      <view class="listAll">
+        <view class="leftOrder">
+          <image src="{{item.img}}" style="width:200rpx;height:200rpx"></image>
+        </view>
+        <view class="rightorder">
+          <view class="title">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="bottom">
+            <view class="sever-operation">
+          <view class="{{operText}}" catchtap='operation'>
+          <text>操作</text>
+          </view>
+          <view class="{{opera}}">
+            <view class="edit" catchtap='jumpEdit'>
+             <image src="../images/edit.png" style="width:40rpx;height:40rpx;"></image>
+             <text>编辑</text>
+            </view>
+            <view class="edit" catchtap='jumpUpper'>
+             <image src="../images/down.png" style="width:40rpx;height:40rpx;"></image>
+             <text>上架</text>
+            </view>
+            <view class="del" catchtap='jumpDel' data-index="{{index}}">
+             <image src="../images/del.png" style="width:40rpx;height:40rpx;"></image>
+             <text>删除</text>
+            </view>
+          </view>
+          </view>
+          </view>
+        </view>
+      </view>
+      </view>
+    </block>
+  </view>
+  </view>

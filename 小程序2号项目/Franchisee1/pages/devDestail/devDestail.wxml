@@ -1,0 +1,55 @@
+<!--page/myOrder/myOrder.wxml-->
+<!-- <text>page/myOrder/myOrder.wxml</text> -->
+<!-- Tab横向切换 -->
+  <view class="body">
+<!--   <view class="navClass">
+    <view class="{{selected?'active':'default1'}}" bindtap="selected">设备</view>
+    <view class="{{selected1?'active':'default1'}}" bindtap="selected1">耗材</view>
+    <view class="{{selected2?'active':'default1'}}" bindtap="selected2">待评价</view>
+  </view> -->
+<view class="navType">
+<view class="{{selected?'active':'default1'}}" bindtap="selected">设备</view>
+<view class="{{selected1?'active':'default1'}}" bindtap="selected1">耗材</view>
+<view class="{{selected2?'active':'default1'}}" bindtap="selected2">器材</view>
+</view>
+<!-- 全部订单 -->
+  <view class="{{selected?'show':'hidden'}}">
+    <block wx:for="{{orderLists}}" wx:key="">
+     <view class="leftOrder" bindtap='jumpshopDes'>
+        <image src="{{item.img}}" style="width:200rpx;height:200rpx;margin:0 auto"></image>
+        <text class="name">扁平型管道清扫</text>
+        <view class="money">
+          <text class="icon">￥</text>
+          <text class="pay">299.89</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- 已完成订单 -->
+  <view class="{{selected1?'show':'hidden'}}">
+    <block wx:for="{{Ordered}}" wx:key="">
+      <view class="leftOrder">
+        <image src="{{item.img}}" style="width:200rpx;height:200rpx;margin:0 auto"></image>
+        <text class="name">扁平型管道清扫</text>
+        <view class="money">
+          <text class="icon">￥</text>
+          <text class="pay">299.89</text>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- 待支付订单 -->
+  <view class="{{selected2?'show':'hidden'}}">
+    <block wx:for="{{Ordering}}" wx:key="">
+      <view class="leftOrder">
+        <image src="{{item.img}}" style="width:200rpx;height:200rpx;margin:0 auto"></image>
+        <text class="name">扁平型管道清扫</text>
+        <view class="money">
+          <text class="icon">￥</text>
+          <text class="pay">299.89</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+

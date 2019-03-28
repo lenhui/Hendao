@@ -1,0 +1,8 @@
+<!--page/component/Componet/searchBox/searchBox.wxml-->
+<!-- <text>page/component/Componet/searchBox/searchBox.wxml</text> -->
+<view class="searchBox">
+<view class='search-sTxt'>
+<icon type="search" size="20" class="icon"/>
+<input type='text' placeholder="请输入小区或商圈名称" focus="{{focus}}" bindinput="RentInput" maxlength="-1" adjust-position="true" class="search-input" confirm-type="search"/>
+</view>
+</view>

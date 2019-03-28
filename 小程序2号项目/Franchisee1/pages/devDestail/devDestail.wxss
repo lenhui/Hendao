@@ -1,0 +1,117 @@
+/* pages/devDestail/devDestail.wxss */
+/* page/myOrder/myOrder.wxss */
+ /* Tab横向切换 */
+  page{
+    background-color:#eee;
+  }
+.navType{
+  display: flex;
+  justify-content: space-evenly;
+  position: fixed;
+  top:0rpx;
+  /* margin-top:10rpx; */
+  /* align-items: center; */
+}
+.navType .active{
+  width:250rpx;
+  text-align: center;
+  /* border:1px solid red; */
+  height: 100rpx;
+  line-height: 100rpx;
+  color:#fff;
+  background: #007290;
+  font-size: 28rpx;
+  font-weight: 800;
+}
+.navType .default1{
+  width:250rpx;
+  text-align: center;
+  /* border:1px solid red; */
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #fff;
+  color:#007290;
+  font-size: 28rpx;
+  font-weight: 800;
+  /* margin-left:10rpx; */
+}
+.show{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top:60rpx;
+}
+.hidden{
+  display:none;
+  text-align:center;
+  /* line-height:200px; */
+}
+/* 全部订单 */
+.listAll{
+  width: 95%;
+  margin: 0 auto;
+  height: 200rpx;
+  /* border:1px solid #eee; */
+  display: flex;
+  margin-bottom: 20rpx;
+  justify-content: space-around;
+  /* align-items: center; */
+}
+/* 订单左侧 */
+.leftOrder{
+  width: 30%;
+  background: #fff;
+  margin-top:30rpx;
+  margin-left:20rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  border-bottom:1px solid #DD2727;
+}
+.leftOrder .name{
+  margin-top:20rpx;
+  font-size: 25rpx;
+}
+.leftOrder .money{
+  margin-top:10rpx;
+  margin-bottom:10rpx;
+}
+.leftOrder .money .icon{
+
+}
+.leftOrder .money .pay{
+font-size: 37rpx;
+font-weight: 800;
+}
+.leftOrder image{
+  border-radius: 15rpx;
+}
+/* 订单右侧 */
+.rightorder{
+  width: 60%;
+  /* display: flex;
+  flex-direction: column; */
+  margin-left:20rpx;
+}
+.rightorder .title{
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: left;
+  font-size: 30rpx;
+}
+.rightorder .bottom{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.rightorder .bottom .number{
+  font-size: 30rpx;
+  color:#8293A8;
+}
+.rightorder .bottom .price{
+  color:#DD2727;
+}
+.rightorder .bottom .dollar{
+  font-size: 50rpx;
+}

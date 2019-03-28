@@ -1,0 +1,6 @@
+<!--pages/severType/severType.wxml-->
+<radio-group class="radio-group" bindchange="radioChange">    
+   <label class="radio" wx:for="{{items}}" data-id='{{item.id}}' wx:key=''>   
+     <radio value="{{item.id}},{{item.value}}" checked="{{item.checked}}" color="transparent" />{{item.value}}
+   </label>
+</radio-group>

@@ -1,0 +1,7 @@
+<view class="box">
+  <block wx:for="{{orderLists}}">
+    <navigator>
+      <text>{{item.title}}</text>
+    </navigator>
+  </block>
+</view>

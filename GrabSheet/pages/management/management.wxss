@@ -1,0 +1,133 @@
+/* pages/management/management.wxss */
+page{
+  background-color:#fff;
+  height: 100%;
+}
+.shoppType{
+  display: flex;
+  background: #fff;
+  border-bottom:1px solid #e2e2e2;
+}
+.shoppType .section{
+  width:50%;
+  box-sizing: border-box;
+  border-left: 1px solid #e2e2e2;
+}
+.fff{
+  /* width:50rpx; */
+}
+.down{
+  margin-right: 30rpx;
+}
+/* 商品分类开始 */
+.com-selectBox{
+  width:100%;
+  box-sizing: border-box;
+  /* border-left:1px solid #e2e2e2; */
+  position: relative;
+  background: #fff;
+}
+.com-sContent{
+  width: 100%;
+  /* border: 1px solid #e2e2e2; */
+  font-size: 30rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+}
+.com-sContent .text{
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  /* text-overflow: ellipsis; */
+}
+.com-sBtn{
+    width: 20%;
+    height:60rpx;
+    transition: all .3s ease;
+    line-height: 60rpx;
+    font-size: 40rpx;
+    color:rgb(133, 130, 128);
+}
+.com-sTxt{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 30rpx;
+    /* padding-left:10rpx; */
+}
+.com-sList{
+    background: white;
+    width: 100%;
+    /* position: absolute; */
+    border: 1px solid #e2e2e2;
+    border-top: none;
+    box-sizing: border-box;
+    z-index: 3;
+    /* top:62rpx; */
+    /* max-height: 130rpx; */
+    overflow: auto;
+}
+.com-sItem{
+    /* height: 30px; */
+    /* line-height: 30px; */
+    border-top: 1px solid #e2e2e2;
+    /* padding: 0 6px; */
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 30rpx;
+}
+.com-sItem:first-child{
+    border-top: none;
+}
+/* 商品分类结束 */
+.nav{
+  width: 100%;
+  line-height: 60rpx;
+  border-bottom:1px solid #8293A8;
+  font-size: 35rpx;
+}
+.nav .title{
+  width:100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color:#707070;
+  margin-left:10rpx;
+}
+.nav .des{
+  font-size: 30rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color:#8293A8;
+  margin-left:10rpx;
+}
+.nav .date{
+  font-size: 28rpx;
+  margin-left:10rpx;
+  /* white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; */
+  color:#8293A8;
+}
+.nav .red{
+  color:red
+}
+.hasmoreData-text{
+  font-size: 30rpx;
+  width: 80%;
+  margin: 0 auto;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color:#8293A8;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

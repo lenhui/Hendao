@@ -1,0 +1,115 @@
+/* pages/activeMore/activeMore.wxss */
+/* page/com
+ponent/pages/Rental/Rental.wxss */
+page{
+  background: #fff;
+}
+.container{
+  background: #fff;
+}
+.search-box{
+  width: 98%;
+  margin:0 auto;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.down{
+  margin-right: 30rpx;
+}
+.nav{
+  display: flex;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  border-bottom: 1px solid #eee;
+}
+.nav:last-child{
+  border-bottom: none;
+}
+.nav .left{
+  width:200rpx;
+  height: 205rpx;
+  margin-left:20rpx; 
+  display: flex;
+  align-items: center;
+  /* overflow: hidden; */
+}
+.nav .left .Pic{
+  width:200rpx;
+  height: 200rpx;
+   display: flex;
+ align-items: center;
+}
+.nav .left image{
+  margin: 0 auto;
+  width:180rpx;
+  height: 160rpx;
+}
+.nav .right{
+  width:65%;
+  margin-left:20rpx;
+  display: flex;
+  flex-direction: column;
+  /* line-height: 45rpx; */
+  margin-right:10rpx;
+}
+.nav .right .title{
+  width: 98%;
+  margin: 0 auto;
+  font-size: 32rpx;
+  margin-top: 20rpx;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+.nav .right .scale{
+  width: 98%;
+  margin: 0 auto;
+ white-space:normal !important;
+  display: -webkit-box;
+ -webkit-box-orient: vertical;
+ -webkit-line-clamp:2;
+ overflow: hidden;
+  font-size: 28rpx;
+  color:rgb(133, 130, 128);
+  margin-top:10rpx;
+}
+.nav .right .btm{
+  /* width: 98%; */
+  /* margin: 0 auto; */
+  margin-top: 10rpx;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* justify-content: right; */
+  color:rgb(133, 130, 128);
+  font-size: 30rpx;
+  text-align: right;
+}
+.nav .right .btm .money{
+  color:red;
+  font-weight: bold;
+}
+.nav .right .btm .date{
+  margin-right: 20rpx;
+  text-align: right;
+}
+.hasmoreData-text{
+  font-size: 30rpx;
+  width: 80%;
+  margin: 0 auto;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color:#8293A8;
+}
+.increase{
+  position: fixed;
+  bottom:40rpx;
+  right: 30rpx;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
