@@ -1,0 +1,19 @@
+npm install vue-cli -g
+vue init webpack one
+cd one
+npm run dev
+一、引入axios
+npm install axios -S
+npm install vue-axios -S
+npm run dev
+在上边（"dependencies"）
+npm install --save axios vue-axios
+出现在下边（"devDependencies"）
+npm install axios --save-dev
+在main.js引入
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)
+二、引入less
+npm install less less-loader --save
+修改完要npm install
