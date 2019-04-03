@@ -1,1 +1,2 @@
 https://blog.csdn.net/youshi520000/article/details/51492606  免费接口调用
+出现“快递公司网络异常，请稍后查询”，是因为api.kuaidi100.com这种API不支持EMS、顺丰、圆通、中通和韵达等几家，我们的支持列表中有说明:这几家建议用另一种API：
