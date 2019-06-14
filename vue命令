@@ -28,3 +28,4 @@ const px2remLoader = {
       remUnit: 75
     }
   引入jq的方法：https://blog.csdn.net/ddwddw4/article/details/81102417
+引入轮播图：https://blog.csdn.net/qq_34611721/article/details/80683527
