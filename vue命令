@@ -20,6 +20,7 @@ https://blog.csdn.net/weixin_40776188/article/details/85067568
 修改完要npm install
 三、MintUI 是移动端的UI库
 https://blog.csdn.net/winnershili/article/details/80958707
+Mint UI的使用1、安装   npm install mint-ui -S         -S表示  --save	2、在main.js中引入mint Ui的css 和 插件		        import Mint from 'mint-ui';		        Vue.use(Mint);		        import 'mint-ui/lib/style.css'3、查看文档，直接复制文档中提供的组件代码到项目中，即可使用。4、文档中提供的部分组件，如果直接复制代码到咱们的项目中，是无法运行的。解决办法如下：（1）下载 Mint UI 组件库，网址： https://github.com/ElemeFE/mint-ui
 四、安装px2rem-loader
 https://www.jianshu.com/p/e03c1b1e8777
 const px2remLoader = {
