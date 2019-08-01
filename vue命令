@@ -84,3 +84,5 @@ const px2remLoader = {
   引入jq的方法：https://blog.csdn.net/ddwddw4/article/details/81102417
 引入轮播图：https://blog.csdn.net/qq_34611721/article/details/80683527
 https://www.jianshu.com/p/70e809044e73
+五、引入vuex
+https://blog.csdn.net/u014196765/article/details/78022065
