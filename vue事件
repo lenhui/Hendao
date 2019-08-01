@@ -14,3 +14,5 @@ this.$router.push({name: 'dispatch', params: {paicheNo: obj.paicheNo}})
 this.$router.push({path: '/transport/dispatch', query: {paicheNo: obj.paicheNo}})
 
 取数据：this.$route.query.paicheNo
+3.this.$router.push({path: 'ListsDestail', query: {clickType: e.clickType,dataId:e.dataId}})
+4.<router-link :to="{path: 'ListsDestail', params: {clickType:item.clickType, dataId: item.id},query: {clickType:item.clickType, dataId: item.id}}"> -->
