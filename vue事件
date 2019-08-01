@@ -1,1 +1,16 @@
 https://www.cnblogs.com/zzsdream/p/10211892.html：子级监听父级的变化
+vue 路由跳转带参数
+2018-11-01 17:05:21 qq_28687183 阅读数 243
+1  params 传参
+注意⚠️：params传参 ，路径不能使用path 只能使用name,不然获取不到传的数据
+
+this.$router.push({name: 'dispatch', params: {paicheNo: obj.paicheNo}})
+
+ 
+
+取数据：this.$route.params.paicheNo
+
+2   query传参
+this.$router.push({path: '/transport/dispatch', query: {paicheNo: obj.paicheNo}})
+
+取数据：this.$route.query.paicheNo
