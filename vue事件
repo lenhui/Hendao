@@ -19,5 +19,4 @@ this.$router.push({path: '/transport/dispatch', query: {paicheNo: obj.paicheNo}}
 5.子组件向父组件传值
 https://blog.csdn.net/sisi_chen/article/details/81635216
 6.vuex来管理我们用户填写的地址。
- GitHub：https://github.com/Ewall1106/mall
- https://cloud.tencent.com/developer/article/1354412
+ https://www.codercto.com/a/46381.html
