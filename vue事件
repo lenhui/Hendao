@@ -88,5 +88,23 @@ import { mapState } from 'vuex'
    created(){
    console.log(this.addressList)
    }
+ vue 中使用vuex和localStorage保存登录状态
  
+
+
+需求：刷新页面，登录状态不会因此改变
+
+首先说一下vuex和localStorage的区别
+
+1.实质区别
+vuex存的是状态，存储在内存；localStorage是浏览器提供的接口，让你存的是接口，以文件的形式存储到本地
+2.应用场景
+vuex用于组件之间的传值，localStorage则主要用于页面之间的传值
+3.永久性
+ 当刷新页面时，vuex存储的值会丢失，localStorage不会
+总结
+localStorage可以代替vuex，对于不变的数据确实可以，但是当两个组件共同用以数据源，如果其中一个组件中的数据源改变，希望另一个组件响应变化，这时候就要选择用vuex。vuex是vue的状态管理机制，是方便组件之间通信的。一个组件的数据变化是会映射到使用这个数据的其他组件。而localStorage是本地存储，是将数据存储到浏览器的方法，一般在跨页面时使用。
+
+注意：localStorage 保存对象的时候，需要先将对象转换成json字符串，然后获取的时候在转换成对象形式
+
  
