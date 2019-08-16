@@ -20,3 +20,73 @@ this.$router.push({path: '/transport/dispatch', query: {paicheNo: obj.paicheNo}}
 https://blog.csdn.net/sisi_chen/article/details/81635216
 6.vuex来管理我们用户填写的地址。
  https://www.codercto.com/a/46381.html
+ 7.vueX存储数据
+ export default new Vuex.Store({
+	state: {
+		// 登录状态
+		token: '',
+		// 地址管理
+		addressList: [{
+				id: 1,
+				username: "小明",
+				phone: '15612345678',
+				addressDetail: "广东省广州市天河区大观中路49号科汇园G栋楼403"
+			},
+			{
+				id: 2,
+				username: "小红",
+				phone: '13812345678',
+				addressDetail: "广东省广州市天河区大观中路49号科汇园G栋4楼403"
+			},
+			{
+				id: 3,
+				username: "小花",
+				phone: '18612345678',
+				addressDetail: "广东省广州市天河区大观中路49号科汇园G栋4楼403"
+			}
+		]，
+  nameLists:[{
+			name:'People',
+			age:'12',
+			phone:'12345678987',
+			addr:'广东天河区大观中路'
+		},{
+			name:'Mary',
+			age:'15',
+			phone:'12345678987',
+			addr:'广东天河区大观中路'
+		}]
+		
+	},
+ 通过地址的id获取到点击选中的地址
+	getters: {
+		getAddress: (state, getters) => (id) => {
+			return state.addressList.find(address => address.id === id)
+		}
+	},
+ 通过新增地址追加到地址列表中
+	mutations: {
+		set_token(state, token) {
+			state.token = token
+			sessionStorage.token = token
+		},
+		del_token(state) {
+			state.token = ''
+			sessionStorage.removeItem('token')
+		},
+		// 地址管理
+		addAddress(state, address) {
+			return state.addressList.push(address)
+		}
+	}
+})
+从vueX中取出数据
+import { mapState } from 'vuex'
+ computed: {
+        ...mapState(["addressList"，"nameLists"])
+   },
+   created(){
+   console.log(this.addressList)
+   }
+ 
+ 
