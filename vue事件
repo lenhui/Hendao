@@ -106,5 +106,27 @@ vuex用于组件之间的传值，localStorage则主要用于页面之间的传�
 localStorage可以代替vuex，对于不变的数据确实可以，但是当两个组件共同用以数据源，如果其中一个组件中的数据源改变，希望另一个组件响应变化，这时候就要选择用vuex。vuex是vue的状态管理机制，是方便组件之间通信的。一个组件的数据变化是会映射到使用这个数据的其他组件。而localStorage是本地存储，是将数据存储到浏览器的方法，一般在跨页面时使用。
 
 注意：localStorage 保存对象的时候，需要先将对象转换成json字符串，然后获取的时候在转换成对象形式
-
+以及在App.vue中添加：
+	mounted() {
+            window.addEventListener('unload', this.saveState)
+        },
+        methods: {
+            saveState() {
+                sessionStorage.setItem('state', JSON.stringify(this.$store.state))
+            }
+        }
+更改store文件下index文件state的定义
+	const store = new Vuex.Store({
+    state:sessionStorage.getItem('state') ? JSON.parse(sessionStorage.getItem('state')): {
+        //id
+        skillId:'',
+        //技能状态
+        checkStatus:''
+    }
+})
+	
+vue - 将数据存入vuex中以及从vuex中取出数据
+https://blog.csdn.net/liaofengji/article/details/95181156
+Vuex的使用详解及理解：
+ https://www.jianshu.com/p/27aae39f0f87
  
